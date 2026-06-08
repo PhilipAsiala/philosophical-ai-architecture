@@ -10,7 +10,7 @@ See [ARCHITECTURE.md](../../ARCHITECTURE.md) for the strategic rationale and [Bu
 
 - Lower risk of acting on hallucinations or unsupported conclusions.
 - Better audit and appeals posture through evidence-backed explanations.
-- Stronger public trust when decisions can be justified clearly.
+- Stronger stakeholder trust when decisions can be justified clearly.
 - Reduced dependence on vendor claims about model reliability.
 
 ## Core Capabilities That Deliver These Outcomes
@@ -26,5 +26,5 @@ See [ARCHITECTURE.md](../../ARCHITECTURE.md) for the strategic rationale and [Bu
 
 - Can each conclusion be traced to source evidence that an auditor or reviewer could inspect?
 - What happens when the system is uncertain or unsupported by the available evidence?
-- Are validation controls mandatory before outputs affect taxpayers, staff, or operations?
+- Are validation controls mandatory before outputs affect customers, staff, or operations?
 - Can the organization explain and defend the system's conclusions in an audit, appeal, or hearing?

@@ -1,6 +1,6 @@
 # philosophical-ai-architecture
 
-A proposed AI strategy and governance framework for government leaders, organized around five layers: Metrology, Ontology, Epistemology, Praxeology, and Axiology.
+A proposed AI strategy and governance framework for organization leaders, organized around five layers: Metrology, Ontology, Epistemology, Praxeology, and Axiology.
 
 This repository is intended to support priority-setting, investment decisions, and governance oversight, not just technical design.
 

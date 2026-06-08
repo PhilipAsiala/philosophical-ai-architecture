@@ -2,7 +2,7 @@
 
 ## Why Leaders Should Care
 
-Ontology determines whether the organization has a coherent model of its institutional reality. If this layer is weak, leaders may fund AI systems that appear capable but cannot reason consistently across taxpayers, businesses, programs, or policy domains.
+Ontology determines whether the organization has a coherent model of its institutional reality. If this layer is weak, leaders may fund AI systems that appear capable but cannot reason consistently across customers, businesses, programs, or policy domains.
 
 High risk if this layer scores below 3.
 
@@ -46,5 +46,5 @@ High risk if this layer scores below 3.
 
 - What are the key entities and relationships this proposal depends on?
 - Who owns those definitions, and how are changes governed?
-- If two systems disagree about a taxpayer, business, or relationship, how is that resolved?
+- If two systems disagree about a customer, business, or relationship, how is that resolved?
 - Is the semantic model reusable beyond this one project or vendor?

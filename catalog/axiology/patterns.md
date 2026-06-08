@@ -2,7 +2,7 @@
 
 ## Why These Patterns Matter to Leaders
 
-Weak governance patterns rarely fail quietly. They show up as compliance incidents, fairness concerns, privacy failures, and erosion of public trust.
+Weak governance patterns rarely fail quietly. They show up as compliance incidents, fairness concerns, privacy failures, and erosion of stakeholder trust.
 
 ## Durable Governance Patterns
 

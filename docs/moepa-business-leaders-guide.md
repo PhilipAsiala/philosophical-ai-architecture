@@ -1,19 +1,19 @@
 # MOEPA: A Business Leader's Guide to Owning AI Strategy
 
-## A Strategic Handout for Government Executives and Decision-Makers
+## A Strategic Handout for Executives and Decision-Makers
 
 ## Executive Summary
 
-Government agencies are investing heavily in AI, yet many are allowing technology vendors and technical teams to define strategy. This approach creates long-term dependency, hidden costs, compliance risks, and weak accountability.
+Organizations are investing heavily in AI, yet many are allowing technology vendors and technical teams to define strategy. This approach creates long-term dependency, hidden costs, compliance risks, and weak accountability.
 
 MOEPA is a simple and practical framework that puts business and mission leadership back in charge of AI decisions. It uses five clear layers, grounded in philosophy but translated into business terms, to help leaders:
 
-- Decide what the agency must own versus what it can safely rent
+- Decide what the organization must own versus what it can safely rent
 - Evaluate AI proposals and use cases from a rational business perspective
 - Establish clear governance and accountability
-- Protect sovereignty, auditability, and long-term taxpayer value
+- Protect sovereignty, auditability, and long-term stakeholder value
 
-This is not a technical manual. It is a strategic decision framework for government leaders who set direction, approve investments, and manage risk.
+This is not a technical manual. It is a strategic decision framework for leaders who set direction, approve investments, and manage risk.
 
 ## Why the Five Layers Matter in Real Life
 
@@ -33,13 +33,13 @@ AI is not magic. In practical terms, it is these same five human steps running t
 
 ## Business Leads Technology
 
-Technology changes quickly. Mission, values, accountability, and public trust do not.
+Technology changes quickly. Mission, values, accountability, and stakeholder trust do not.
 
-When technical teams or vendors lead AI strategy, agencies often end up with fragmented tools, vendor lock-in, weak data ownership, and systems that are difficult to explain or defend to oversight bodies.
+When technical teams or vendors lead AI strategy, organizations often end up with fragmented tools, vendor lock-in, weak data ownership, and systems that are difficult to explain or defend to oversight bodies.
 
 MOEPA reverses this dynamic. It starts with enduring principles, measurement, structure, truth, action, and values, and uses them to guide technology choices. This keeps AI investments aligned to mission and governance instead of vendor convenience.
 
-By adopting this approach, government leaders regain the ability to ask the right questions and make confident decisions about where to invest, what to control, and what risks are acceptable.
+By adopting this approach, leaders regain the ability to ask the right questions and make confident decisions about where to invest, what to control, and what risks are acceptable.
 
 ## The Five Layers of AI in Business Terms
 
@@ -53,19 +53,19 @@ MOEPA organizes AI into five interdependent layers. Each layer represents a dist
 | Praxeology | How the system takes action and makes decisions | Do we control workflows and maintain human oversight? | Autonomous actions without proper guardrails |
 | Axiology | Values, rules, and mission alignment | Does this system reflect mission values, and can we enforce them? | Mission drift, policy bypass, ethical failures |
 
-Leaders do not need to understand every technical implementation detail. They do need to understand what must be owned at each layer to protect the agency's interests.
+Leaders do not need to understand every technical implementation detail. They do need to understand what must be owned at each layer to protect the organization's interests.
 
 ## The Own vs. Rent Decision Framework
 
-One of the most important AI strategy decisions is determining what government should own versus what it can safely rent.
+One of the most important AI strategy decisions is determining what the organization should own versus what it can safely rent.
 
 Core principle:
 Own the layers that represent institutional knowledge, decision authority, values, and accountability. Rent commoditized capabilities that do not create long-term dependency.
 
 Recommended approach:
 
-- Metrology and Ontology: strongly prefer ownership. These layers contain agency data and meaning. Losing control here creates durable dependency.
-- Epistemology: own verification and truth standards. Rent raw model capability only if verification remains under government control.
+- Metrology and Ontology: strongly prefer ownership. These layers contain organization data and meaning. Losing control here creates durable dependency.
+- Epistemology: own verification and truth standards. Rent raw model capability only if verification remains under organizational control.
 - Praxeology: own decision workflows and human oversight points. Rent execution engines only when guardrails are strong.
 - Axiology: must be owned. Values, policy, and mission alignment cannot be safely outsourced.
 
@@ -78,21 +78,21 @@ Not every AI opportunity deserves investment. Use the MOEPA layers to evaluate p
 Recommended evaluation process:
 
 1. Map the proposed use case to all five layers.
-2. Assess current maturity of each layer inside the agency.
+2. Assess current maturity of each layer inside the organization.
 3. Identify what must be owned versus what can be rented.
 4. Score the proposal on risk, mission alignment, and long-term control.
-5. Determine whether the proposal strengthens or weakens agency position in each layer.
+5. Determine whether the proposal strengthens or weakens organizational position in each layer.
 6. Make a clear GO, CONDITIONAL, or NO-GO recommendation with documented rationale.
 
 This reframes the conversation from "What technology should we buy?" to "Does this investment increase control, reduce risk, and serve mission?"
 
-## Key Questions Every Government Leader Should Ask
+## Key Questions Every Leader Should Ask
 
 Use these questions when reviewing AI proposals, vendor pitches, or internal initiatives:
 
 - Who will own the data, meaning, and decision logic five years from now?
 - What happens if a vendor changes pricing or terms, or exits the market?
-- Can we explain to Congress, auditors, or the public how this system reached a decision?
+- Can we explain to executives, auditors, or regulators how this system reached a decision?
 - Where are the human oversight points, and are they meaningful?
 - Does this solution make us more or less dependent on external parties over time?
 - What are we giving up by choosing convenience over ownership?
@@ -109,11 +109,11 @@ Allowing technology decisions to drive strategy without strong business governan
 - Erosion of institutional knowledge as capabilities are rented instead of built
 - Political and reputational risk when systems cannot be defended to oversight bodies
 
-These risks are not theoretical. They appear repeatedly when agencies treat AI as a procurement exercise rather than a governance challenge.
+These risks are not theoretical. They appear repeatedly when organizations treat AI as a procurement exercise rather than a governance challenge.
 
 ## Recommended Path Forward
 
-Government leaders can begin applying MOEPA immediately:
+Organization leaders can begin applying MOEPA immediately:
 
 - Require all new AI proposals to be evaluated against the five layers
 - Establish clear ownership criteria before approving funding
@@ -121,4 +121,4 @@ Government leaders can begin applying MOEPA immediately:
 - Start with high-visibility or high-risk use cases to demonstrate value
 - Use the framework in vendor conversations to shift discussion from features to control and accountability
 
-The goal is not to slow AI adoption. The goal is to adopt AI on agency terms, with clear ownership, manageable risk, and alignment to mission and public trust.
+The goal is not to slow AI adoption. The goal is to adopt AI on the organization's terms, with clear ownership, manageable risk, and alignment to mission and stakeholder trust.

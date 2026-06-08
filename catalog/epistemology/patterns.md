@@ -2,7 +2,7 @@
 
 ## Why These Patterns Matter to Leaders
 
-Weak validation patterns create public risk. They allow plausible but unsupported outputs to appear authoritative, which is especially dangerous in regulated or taxpayer-facing contexts.
+Weak validation patterns create public risk. They allow plausible but unsupported outputs to appear authoritative, which is especially dangerous in regulated or customer-facing contexts.
 
 ## Durable Governance Patterns
 

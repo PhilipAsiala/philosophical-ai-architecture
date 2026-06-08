@@ -7,7 +7,7 @@ These are examples of policy, fairness, privacy, and compliance artifacts leader
 ## Example Governance Artifacts
 
 - policy/golden-master/ai-governance.rego
-- fairness/thresholds/taxpayer-outcomes.yaml
+- fairness/thresholds/customer-outcomes.yaml
 - privacy/control-matrix.csv
 - compliance/evidence/quarterly-review-2026q2.md
 

@@ -107,7 +107,7 @@ Enterprise Translation: Hard-coding organizational values, regulatory constraint
 Key Artifacts:
 
 - "Golden Master" config.yaml with OS-level write locks (icacls / Windows ACLs).
-- IRS DXP preferred/forbidden verb enforcement.
+- Preferred/forbidden verb enforcement (allowed vs. prohibited agent actions).
 - Zero Trust policy blocks.
 - Constitutional guardrails that survive prompt injection.
 
@@ -121,8 +121,8 @@ The five layers are interdependent. Weakness in any layer undermines the integri
 | 5. Axiology | Minimizes compliance costs and legal liabilities by hardcoding mandatory operational boundaries. | Enforces policy-as-code at the OS/Infrastructure level, eliminating client-side manipulation. |
 | 4. Praxeology | Lowers operational risk by replacing erratic manual loops with highly predictable, auditable processes. | Implements deterministic state-machines and strict slash-command agentic boundaries. |
 | 3. Epistemology | Protects the statistical validity of decision models by preventing data pollution and hallucinations. | Deploys cryptographic SHA-256 validation pipelines and automated CI/CD security gates. |
-| 2. Ontology | Models complex corporate relational networks (e.g., Schedule M-3 tracking) into clean, queryable realities. | Generates abstract syntax trees, semantic knowledge graphs, and local context embedding indices. |
-| 1. Metrology | Establishes baseline data integrity, ensuring that econometric profiling relies on uncorrupted metrics. | Restricts compute to quantized open-weight models inside secure, zero-egress GovCloud VPCs. |
+| 2. Ontology | Models complex corporate relational networks (e.g., entity ownership and dependency tracking) into clean, queryable realities. | Generates abstract syntax trees, semantic knowledge graphs, and local context embedding indices. |
+| 1. Metrology | Establishes baseline data integrity, ensuring that econometric profiling relies on uncorrupted metrics. | Restricts compute to quantized open-weight models inside secure, zero-egress VPCs. |
 
 ## 4. MOEPA Intake & Scoring Framework
 ### 4.1 Purpose
