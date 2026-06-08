@@ -1,6 +1,6 @@
 # MOEPA Catalog
 
-The MOEPA Catalog is the executive decision-support layer for the Owned-Brain Strategy. It helps government leaders set priorities, evaluate AI proposals, manage risk, ensure sovereignty, and make GO or NO-GO investment and governance decisions across the full MOEPA framework.
+The MOEPA Catalog is the executive decision-support layer for the Owned-Brain Strategy. It helps government leaders set priorities, evaluate AI proposals, manage risk, ensure sovereignty, and make GO, CONDITIONAL, or NO-GO investment and governance decisions across the full MOEPA framework.
 
 Rather than treating AI as a collection of disconnected tools, the catalog provides a structured way to decide which capabilities should be funded, governed, scaled, deferred, or rejected. Its purpose is to support mission alignment, risk reduction, compliance, auditability, taxpayer value, and long-term ownership of cognitive assets.
 
@@ -54,7 +54,7 @@ This workflow should be used as a governance and priority-setting process for ex
 3. Flag gaps scoring below level 3 and define remediation.
 4. Confirm integration dependencies between adjacent layers.
 5. Record ownership metadata and controls in the catalog.
-6. Present GO or NO-GO recommendation to governance reviewers.
+6. Present a GO, CONDITIONAL, or NO-GO recommendation to governance reviewers.
 
 ## Governance Notes
 

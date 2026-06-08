@@ -12,7 +12,7 @@ High risk if this layer scores below 3.
 | --- | --- | --- | --- |
 | 1 | Outputs are largely unverified and difficult to defend. | High-risk investment. | NO-GO for any consequential decision support or automation. |
 | 2 | Some checks exist, but evidence and reliability remain inconsistent. | Limited experimental value only. | CONDITIONAL only for low-risk pilots with strong supervision. |
-| 3 | Core validation and provenance controls exist. | Baseline viable investment. | GO for bounded use cases if leadership accepts residual risk and oversight. |
+| 3 | Core validation and provenance controls exist. | Baseline viable investment. | CONDITIONAL GO for bounded use cases if leadership accepts residual risk and oversight. |
 | 4 | Reliability, traceability, and consistency are strong. | Strong candidate for mission use. | GO with regular performance and compliance review. |
 | 5 | Conclusions are audit-grade, evidence-backed, and operationally defensible. | Strategic trust asset. | GO and prioritize for high-value, high-accountability use cases. |
 

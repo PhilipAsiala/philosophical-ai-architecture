@@ -12,7 +12,7 @@ High risk if this layer scores below 3.
 | --- | --- | --- | --- |
 | 1 | Data is fragmented, poorly governed, and difficult to trust. | Do not scale. Foundational weakness will contaminate higher-layer investment. | NO-GO for production or enterprise funding. Require data governance remediation first. |
 | 2 | Some controls exist, but they are inconsistent and not sufficient for regulated use. | Limited pilot value only. Risk remains elevated. | CONDITIONAL only for tightly bounded experiments with remediation plan. |
-| 3 | Data governance is defined, repeatable, and suitable for controlled operational use. | Baseline viable investment. | GO if higher layers are also acceptable and oversight is in place. |
+| 3 | Data governance is defined, repeatable, and suitable for controlled operational use. | Baseline viable investment. | CONDITIONAL GO if higher layers are also acceptable and oversight is in place. |
 | 4 | Data operations are well governed, measurable, and audit-ready. | Strong investment candidate. | GO with normal governance oversight and periodic review. |
 | 5 | Data is sovereign, portable, and fully defensible for high-trust mission use. | Strategic asset. | GO and prioritize as a model for reuse across programs. |
 

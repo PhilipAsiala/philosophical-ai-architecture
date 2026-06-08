@@ -12,7 +12,7 @@ High risk if this layer scores below 3.
 | --- | --- | --- | --- |
 | 1 | There is no shared semantic model for core entities and relationships. | Weak strategic value. Reuse and interoperability will be poor. | NO-GO for mission-critical investment. Require foundational modeling first. |
 | 2 | Some semantic structure exists, but it is inconsistent across teams or programs. | Limited pilot value only. | CONDITIONAL only where scope is narrow and semantic risk is low. |
-| 3 | Core entities and relationships are defined and governable. | Baseline viable investment. | GO if the ontology is sufficient for the specific mission use case. |
+| 3 | Core entities and relationships are defined and governable. | Baseline viable investment. | CONDITIONAL GO if the ontology is sufficient for the specific mission use case. |
 | 4 | Semantic governance is strong and reusable across domains. | Strong cross-program investment case. | GO and encourage reuse as a shared institutional asset. |
 | 5 | The organization owns a durable, exportable, and audit-ready model of domain reality. | Strategic asset with enterprise leverage. | GO and prioritize for long-term institutional capability building. |
 
