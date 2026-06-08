@@ -112,7 +112,7 @@ Key Artifacts:
 - Constitutional guardrails that survive prompt injection.
 
 ## 3. The MOEPA Stack Specification
-The five layers are interdependent. Weakness in any layer undermines the integrity of the whole system. Layers are numbered bottom-up (1 = foundation, 5 = highest governance). All layers must score ≥3 for a project to receive a GO decision.
+The five layers are interdependent. Weakness in any layer undermines the integrity of the whole system. Layers are numbered bottom-up (1 = foundation, 5 = highest governance). All layers must score ≥3 to avoid an automatic NO-GO; an unconditional GO requires every layer to score ≥4, and a layer at exactly 3 yields a CONDITIONAL GO.
 
 ### Strategic Evaluation Matrix
 
@@ -129,13 +129,19 @@ The five layers are interdependent. Weakness in any layer undermines the integri
 Every AI procurement request, vendor pitch, internal use-case, or model deployment must be audited against the five MOEPA layers before funding or infrastructure provisioning is approved.
 
 ### 4.2 Scoring Rubric (1–5 Scale)
-Minimum Threshold: A project receives a "GO" only if it scores ≥3 in every single layer. Any layer scoring 1 or 2 triggers an automatic "NO-GO" with required remediation.
+Decision Bands: Each layer is scored 1–5, and the lowest layer score sets the overall recommendation.
+
+- NO-GO: any layer scores 1 or 2 (automatic NO-GO with required remediation).
+- CONDITIONAL GO: every layer scores ≥3 and at least one layer scores exactly 3 — approved only if that layer's named controls and oversight are demonstrably active.
+- GO: every layer scores ≥4.
+
+Minimum Threshold: A score of 3 is the minimum acceptable standard for a layer and does not trigger a NO-GO, but a project is not an unconditional GO until every layer scores ≥4.
 
 Score Definitions:
 
 - 1: Completely Missing or Free-Form Prompt Dependent — High Risk
 - 2: Partial / Ad-Hoc Controls — Elevated Risk
-- 3: Defined & Contained — Minimum Acceptable Standard
+- 3: Defined & Contained — Minimum Acceptable Standard (Conditional)
 - 4: Strongly Enforced & Measurable — Good Practice
 - 5: Immutable / Cryptographically Proven & Fully Decoupled — Gold Standard
 

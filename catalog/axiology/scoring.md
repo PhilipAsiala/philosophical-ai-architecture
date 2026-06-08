@@ -12,7 +12,7 @@ High risk if this layer scores below 3.
 | --- | --- | --- | --- |
 | 1 | Governance is mostly advisory and easy to bypass. | High-risk investment with weak accountability. | NO-GO for any regulated or public-facing use. |
 | 2 | Some policy and privacy controls exist, but enforcement is inconsistent. | Limited pilot value only. | CONDITIONAL only for low-risk cases with explicit board scrutiny. |
-| 3 | Core policy, privacy, and alignment controls are defined and enforceable. | Baseline viable investment. | GO if fairness, compliance, and transparency obligations are actively managed. |
+| 3 | Core policy, privacy, and alignment controls are defined and enforceable. | Baseline viable investment. | CONDITIONAL GO if fairness, compliance, and transparency obligations are actively managed. |
 | 4 | Governance is strong, measurable, and linked to ongoing oversight. | Strong investment candidate for regulated use. | GO with periodic executive and compliance review. |
 | 5 | Governance is mission-grade, durable, and tightly aligned to institutional values and law. | Strategic public-trust asset. | GO and prioritize where accountability and legitimacy are essential. |
 

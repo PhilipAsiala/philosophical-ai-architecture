@@ -12,7 +12,7 @@ High risk if this layer scores below 3.
 | --- | --- | --- | --- |
 | 1 | Automation is unbounded, opaque, or poorly supervised. | Unacceptable operational risk. | NO-GO for production use or delegated action authority. |
 | 2 | Some workflow controls exist, but governance is inconsistent. | Limited pilot value only. | CONDITIONAL only for tightly bounded tasks with manual oversight. |
-| 3 | Workflows are defined, reviewable, and governable. | Baseline viable investment. | GO for bounded operational use with clear approvals and monitoring. |
+| 3 | Workflows are defined, reviewable, and governable. | Baseline viable investment. | CONDITIONAL GO for bounded operational use with clear approvals and monitoring. |
 | 4 | Action pathways are strongly governed, monitored, and resilient. | Strong candidate for scaled mission operations. | GO with standard executive oversight and periodic control review. |
 | 5 | Automation is mission-grade, fully auditable, and tightly aligned to policy and approvals. | Strategic operational capability. | GO and prioritize where reliable scaled execution is needed. |
 
