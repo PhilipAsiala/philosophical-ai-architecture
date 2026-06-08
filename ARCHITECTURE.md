@@ -1,6 +1,6 @@
 # Strategic Architecture & Governance
 ## The MOEPA Cognitive Architecture Framework
-Version: 2.3 — Full Ownership & Catalog Focus (Complete Merge of v2.0 content + requested updates)
+Version: 2.3 — Full Ownership & Catalog Focus
 
 Author: Philip Asiala
 
@@ -42,7 +42,7 @@ Philosophical Definition: The study of measurement, standards, and the condition
 
 Mathematical Grounding: Set theory, measure theory, statistics, and boundary conditions.
 
-Enterprise Translation (v2.3 Update): Establishing the foundational data layer—ensuring all data is measured, quality-assured, observable, and traceable before it enters higher cognitive layers. This is the bedrock that prevents "garbage in, garbage out" across the entire architecture.
+Enterprise Translation: Establishing the foundational data layer—ensuring all data is measured, quality-assured, observable, and traceable before it enters higher cognitive layers. This is the bedrock that prevents "garbage in, garbage out" across the entire architecture.
 
 Key Artifacts:
 
@@ -145,7 +145,7 @@ Score Definitions:
 - 4: Strongly Enforced & Measurable — Good Practice
 - 5: Immutable / Cryptographically Proven & Fully Decoupled — Gold Standard
 
-### 4.3 Layer-by-Layer Evaluation Criteria (Updated for v2.3)
+### 4.3 Layer-by-Layer Evaluation Criteria
 #### Layer 1 — Metrology Evaluation (Data Foundation)
 Risk: Poor data quality, uncontrolled lineage, vendor lock-in on the data layer, loss of sovereignty over organizational truth.
 
@@ -258,6 +258,8 @@ MOEPA is designed to be complementary to major AI governance frameworks:
 - Executive Order 14110 (Safe AI)
 
 ## 9. Governance of the MOEPA Framework Itself
+The practices below describe how an organization adopting MOEPA should govern its own instance of the framework. To propose changes to this repository itself, see [CONTRIBUTING.md](CONTRIBUTING.md).
+
 - Semantic versioning (MAJOR.MINOR.PATCH).
 - Quarterly review by Architecture Review Board.
 - Time-boxed exception process for high-value innovation pilots.

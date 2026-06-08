@@ -1,0 +1,19 @@
+name: Feedback / Question
+description: Ask a question or share feedback on the framework.
+title: "[Feedback] "
+labels: ["feedback"]
+body:
+  - type: textarea
+    id: feedback
+    attributes:
+      label: Your feedback or question
+      description: What is unclear, inconsistent, missing, or worth reconsidering?
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: Relevant document or section
+      description: Optional. e.g. ARCHITECTURE.md §4.2, or catalog/axiology/scoring.md
+    validations:
+      required: false
