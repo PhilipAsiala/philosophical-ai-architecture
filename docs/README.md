@@ -1,0 +1,33 @@
+# Documentation
+
+This repository is a strategic AI governance framework for leadership decision-making, not a finished product or deployed system.
+
+## Start Here
+
+- [Leader Guide](moepa-business-leaders-guide.md) for executive decision support
+- [Catalog](../catalog/README.md) for capabilities by layer and GO/NO-GO scoring
+- [Quick Start](quick-start.md) for a short reading path
+- [Glossary](glossary.md) for the core MOEPA terms
+- [Layer Diagram](layer-diagram.md) for a visual overview
+- [FAQ](faq.md) for common questions
+- [Business Value](business-value.md) for use case and investment framing
+- [Architecture Specification](../ARCHITECTURE.md) for the full proposal
+
+## What This Docs Set Covers
+
+- The idea behind the architecture
+- The five MOEPA layers
+- The scoring and governance model
+- The proposed implementation approach
+- A visual layer map
+- A short FAQ for new readers
+- A business-value lens for use cases and investment decisions
+- A PDF-friendly leadership handout for priority and governance decisions
+- A concrete catalog of capabilities, tools, patterns, and scoring by layer
+
+## What Is Not Covered Yet
+
+- A reference implementation
+- Operational runbooks
+- Benchmarks and validation results
+- Contributor process and release notes
