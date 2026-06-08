@@ -6,10 +6,10 @@ These are examples of governance artifacts leaders should expect to exist before
 
 ## Example Governance Artifacts
 
-- data-contracts/taxpayer-returns.schema.json
-- pipelines/ingest-returns.yaml
-- quality/rules/returns-critical-suite.yml
-- catalog/metadata/taxpayer-returns.json
+- data-contracts/customer-records.schema.json
+- pipelines/ingest-records.yaml
+- quality/rules/records-critical-suite.yml
+- catalog/metadata/customer-records.json
 
 ## Example Configuration Ideas
 

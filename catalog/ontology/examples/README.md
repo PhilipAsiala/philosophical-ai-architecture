@@ -6,8 +6,8 @@ These are examples of governed semantic assets that help leadership ensure the o
 
 ## Example Governance Artifacts
 
-- ontology/entities/taxpayer.yaml
-- ontology/relationships/filing-ownership.yaml
+- ontology/entities/customer.yaml
+- ontology/relationships/account-ownership.yaml
 - ontology/taxonomies/business-hierarchy.ttl
 - ontology/release-notes/v1.2.0.md
 

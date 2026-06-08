@@ -4,7 +4,7 @@ Metrology is the measurement and data foundation layer. It ensures data is inges
 
 ## Executive Summary
 
-Bottom line: if this layer is weak, no higher-layer AI investment is trustworthy. Government leaders should view Metrology as the foundation for auditability, compliance, sovereignty, and defensible decision-making.
+Bottom line: if this layer is weak, no higher-layer AI investment is trustworthy. Organization leaders should view Metrology as the foundation for auditability, compliance, sovereignty, and defensible decision-making.
 
 See the strategic rationale in [ARCHITECTURE.md](../../ARCHITECTURE.md) and the investment framing in [Business Value](../../docs/business-value.md).
 

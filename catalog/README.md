@@ -1,18 +1,18 @@
 # MOEPA Catalog
 
-The MOEPA Catalog is the executive decision-support layer for the Owned-Brain Strategy. It helps government leaders set priorities, evaluate AI proposals, manage risk, ensure sovereignty, and make GO, CONDITIONAL, or NO-GO investment and governance decisions across the full MOEPA framework.
+The MOEPA Catalog is the executive decision-support layer for the Owned-Brain Strategy. It helps leaders set priorities, evaluate AI proposals, manage risk, ensure sovereignty, and make GO, CONDITIONAL, or NO-GO investment and governance decisions across the full MOEPA framework.
 
-Rather than treating AI as a collection of disconnected tools, the catalog provides a structured way to decide which capabilities should be funded, governed, scaled, deferred, or rejected. Its purpose is to support mission alignment, risk reduction, compliance, auditability, taxpayer value, and long-term ownership of cognitive assets.
+Rather than treating AI as a collection of disconnected tools, the catalog provides a structured way to decide which capabilities should be funded, governed, scaled, deferred, or rejected. Its purpose is to support mission alignment, risk reduction, compliance, auditability, business value, and long-term ownership of cognitive assets.
 
 ## Strategic Context
 
 This catalog should be read alongside the core [architecture rationale](../ARCHITECTURE.md) and the [business value case](../docs/business-value.md). Together, those documents explain why the MOEPA model exists, while this catalog helps leadership decide where to invest, what to govern tightly, and what to stop early.
 
-## How Government Leaders Should Use This Catalog
+## How Leaders Should Use This Catalog
 
-Government executives, governance boards, and priority setters should use this catalog to:
+Executives, governance boards, and priority setters should use this catalog to:
 
-- Evaluate whether an AI proposal advances mission outcomes and taxpayer value
+- Evaluate whether an AI proposal advances mission outcomes and business value
 - Determine whether the proposal strengthens or weakens institutional sovereignty
 - Identify compliance, audit, privacy, and operational risks before funding decisions are made
 - Compare competing initiatives using a common maturity and governance lens
@@ -63,10 +63,10 @@ Leadership should treat this catalog as an oversight instrument, not just a refe
 - Prefer sovereign, self-hosted, and open-standard approaches where practical, especially for high-impact or regulated workloads.
 - Treat vendor-hosted capabilities as transitional unless ownership, exportability, and control boundaries are explicit.
 - Require lineage, provenance, and audit evidence for high-risk workflows and decisions.
-- Align final decisions with mission outcomes, compliance obligations, NIST-aligned governance practices, and taxpayer value.
+- Align final decisions with mission outcomes, compliance obligations, NIST-aligned governance practices, and business value.
 - Use low scores as indicators of governance debt, not merely technical incompleteness.
 - Favor investments that compound institutional capability over one-off tools that create dependency without durable ownership.
 
 ## Leadership Outcome
 
-Used correctly, the catalog helps government leaders fund the right AI initiatives, stop the wrong ones early, reduce operational and compliance risk, and steadily build an owned cognitive layer that remains governable, portable, and aligned to public mission.
+Used correctly, the catalog helps leaders fund the right AI initiatives, stop the wrong ones early, reduce operational and compliance risk, and steadily build an owned cognitive layer that remains governable, portable, and aligned to organizational mission.

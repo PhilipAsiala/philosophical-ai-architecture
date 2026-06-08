@@ -4,7 +4,7 @@ Epistemology is the truth and verification layer. It ensures model outputs are g
 
 ## Executive Summary
 
-Bottom line: this layer separates what the model guessed from what the organization can defend. Government leaders should care because public trust, auditability, and appeals depend on it.
+Bottom line: this layer separates what the model guessed from what the organization can defend. Organization leaders should care because stakeholder trust, auditability, and appeals depend on it.
 
 See the strategic rationale in [ARCHITECTURE.md](../../ARCHITECTURE.md) and the investment framing in [Business Value](../../docs/business-value.md).
 

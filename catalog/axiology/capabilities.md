@@ -2,7 +2,7 @@
 
 ## What Leaders Need to Know
 
-Bottom line: this layer keeps AI aligned to law, policy, ethics, privacy, and public mission. It determines whether an initiative deserves public trust and executive approval.
+Bottom line: this layer keeps AI aligned to law, policy, ethics, privacy, and organizational mission. It determines whether an initiative deserves stakeholder trust and executive approval.
 
 See [ARCHITECTURE.md](../../ARCHITECTURE.md) for the strategic rationale and [Business Value](../../docs/business-value.md) for the investment lens.
 
@@ -16,9 +16,9 @@ See [ARCHITECTURE.md](../../ARCHITECTURE.md) for the strategic rationale and [Bu
 ## Core Capabilities That Deliver These Outcomes
 
 - Bias and fairness monitoring for model and workflow outcomes
-- Policy and rule enforcement aligned to IRS and regulatory requirements
+- Policy and rule enforcement aligned to regulatory and compliance requirements
 - Ethical alignment scoring and strategic objective alignment
-- Privacy controls for taxpayer and sensitive enterprise data
+- Privacy controls for customer and sensitive enterprise data
 - Transparency and explainability requirements for accountable decisions
 - Compliance frameworks and value-based prioritization criteria
 
@@ -27,4 +27,4 @@ See [ARCHITECTURE.md](../../ARCHITECTURE.md) for the strategic rationale and [Bu
 - Are policy, privacy, and fairness controls mandatory rather than optional?
 - How will leadership know if those controls drift or are bypassed?
 - Can the organization produce evidence for auditors, regulators, or public oversight bodies?
-- How does this proposal advance mission outcomes without weakening public trust?
+- How does this proposal advance mission outcomes without weakening stakeholder trust?

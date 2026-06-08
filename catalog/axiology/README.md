@@ -4,7 +4,7 @@ Axiology is the value and governance layer. It enforces ethical constraints, com
 
 ## Executive Summary
 
-Bottom line: this layer determines whether AI remains aligned to law, policy, mission, and public trust. Government leaders should treat it as the final authority on what the institution is willing to permit, defend, and fund.
+Bottom line: this layer determines whether AI remains aligned to law, policy, mission, and stakeholder trust. Organization leaders should treat it as the final authority on what the institution is willing to permit, defend, and fund.
 
 See the strategic rationale in [ARCHITECTURE.md](../../ARCHITECTURE.md) and the investment framing in [Business Value](../../docs/business-value.md).
 
@@ -23,7 +23,7 @@ See the strategic rationale in [ARCHITECTURE.md](../../ARCHITECTURE.md) and the 
 
 ## Leadership Lens
 
-- Protects legitimacy, compliance posture, and public trust.
+- Protects legitimacy, compliance posture, and stakeholder trust.
 - Ensures investment decisions stay aligned to mission and statutory obligations.
 - Converts governance from advisory intent into enforceable institutional control.
 

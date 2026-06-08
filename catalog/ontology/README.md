@@ -4,7 +4,7 @@ Ontology is the structured reality layer. It transforms governed data into entit
 
 ## Executive Summary
 
-Bottom line: this layer determines whether the organization has a shared understanding of taxpayers, businesses, programs, and relationships. If it is weak, leaders will fund systems that cannot reason consistently across the enterprise.
+Bottom line: this layer determines whether the organization has a shared understanding of customers, businesses, programs, and relationships. If it is weak, leaders will fund systems that cannot reason consistently across the enterprise.
 
 See the strategic rationale in [ARCHITECTURE.md](../../ARCHITECTURE.md) and the investment framing in [Business Value](../../docs/business-value.md).
 

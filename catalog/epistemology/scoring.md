@@ -18,7 +18,7 @@ High risk if this layer scores below 3.
 
 ## GO / CONDITIONAL / NO-GO Guidance
 
-- Score 1-2: NO-GO for decisions affecting taxpayers, compliance, enforcement, or public trust.
+- Score 1-2: NO-GO for decisions affecting customers, compliance, enforcement, or stakeholder trust.
 - Score 3: CONDITIONAL GO where outputs are reviewed and validated before action.
 - Score 4-5: GO for wider use when supported by appropriate governance and human oversight.
 
