@@ -24,7 +24,7 @@ This example demonstrates the substrate pattern for the Ontology layer: the base
       "relation": "hasAmount",
       "relation_type": "DataProperty",
       "domain": "VerificationRecord",
-      "range": "xsd:integer"
+      "range": "xsd:decimal"
     },
     "object_entity": {
       "value": 85000,
