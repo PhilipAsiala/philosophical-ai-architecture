@@ -122,3 +122,7 @@ Organization leaders can begin applying MOEPA immediately:
 - Use the framework in vendor conversations to shift discussion from features to control and accountability
 
 The goal is not to slow AI adoption. The goal is to adopt AI on the organization's terms, with clear ownership, manageable risk, and alignment to mission and stakeholder trust.
+
+---
+
+*For the federal and government-specific companion to this guide—including IRS context, Taxpayer Bill of Rights examples, and federal audit framing—see [moepa-federal-leaders-guide.md](moepa-federal-leaders-guide.md).*
