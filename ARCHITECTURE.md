@@ -235,7 +235,7 @@ This substrate scales from lightweight edge deployments (JSON triples + SQLite) 
 Decisive trust-vs-form test: "Does the property describe how trustworthy/observed a value is (→ Metrology), or what formal shape and storage it has (→ Set Theory)?"
 
 | Dimension | Metrology (Trust of Measurement) | Set Theory / Data Substrate (Form & Storage) |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | Core question | Can we trust this observation? | What formal shape does this fact take and where is it stored? |
 | Mathematical grounding | Measure theory, statistics, calibration theory, boundary conditions | Set theory, relations/functions/tuples, tensor algebra, graph triple/quad structures |
 | Owns | Units, standards, calibration, error bounds, quality gates, observational lineage, observability/drift controls | Sets/multisets, relations, tensors, SPO/quad backbone, Iceberg/Parquet containers, storage layout |
@@ -243,7 +243,7 @@ Decisive trust-vs-form test: "Does the property describe how trustworthy/observe
 | Lifecycle stage | Data entering the system (quality and trust qualification) | Data at rest and query form (representation and storage) |
 | One-word summary | Adjectives of trust | Nouns |
 
-Worked example (`income = 85000`):
+Worked example (income = 85000):
 - Metrology owns the trust envelope: unit = USD, source = `ThirdPartyStudy_2025`, n = 125000, quality checks passed, drift status, observational lineage.
 - Set Theory / Data Substrate owns the form envelope: element of set `IncomeObservations`; object of triple `(IncomeVerification:TX12345, hasAmount, 85000)`; `int64` Parquet column; aggregable into a distribution object.
 
