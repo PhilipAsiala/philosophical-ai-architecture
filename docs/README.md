@@ -14,6 +14,7 @@ This repository is a strategic AI governance framework for leadership decision-m
 - [Business Value](business-value.md) for use case and investment framing
 - [Architecture Specification](../ARCHITECTURE.md) for the full proposal
 - [How to Contribute](../CONTRIBUTING.md) for feedback, questions, and proposals
+- [Slide Decks](decks/README.md) for Marp-generated PPTX/PDF presentations derived from the guides
 
 ## What This Docs Set Covers
 
