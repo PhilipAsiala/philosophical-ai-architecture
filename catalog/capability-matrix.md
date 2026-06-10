@@ -90,7 +90,7 @@ See [layer details](axiology/capabilities.md) and [scoring guide](axiology/scori
 
 ## Data Substrate (Unscored Owned Foundation)
 
-The Data Substrate is the shared owned foundation beneath the five scored layers. It is **not** a sixth scored layer and does not change the 1–5 MOEPA rubric. Its role is to provide the shared representation, lineage, and portability backbone described in [ARCHITECTURE.md](../ARCHITECTURE.md) (§5.1).
+The Data Substrate is the shared owned foundation beneath the five scored layers. It is **not** a sixth scored layer and does not change the 1–5 MOEPA rubric. Its role is to provide the shared representation, lineage, and portability backbone described in [ARCHITECTURE.md](../ARCHITECTURE.md) (§5.1). The same column shape is retained here for governance consistency; in this section, the **Minimum set? (Score 3)** column should be read as **foundational applicability**, not as a scored threshold.
 
 | Capability | Minimum set? (Score 3) | Maturity contribution (3 / 4 / 5) | Owner | Delivery tracking (illustrative: JIRA epic) |
 | --- | --- | --- | --- | --- |
