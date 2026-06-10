@@ -1,9 +1,11 @@
 # Layered Architecture Diagram
 
-This diagram shows the proposed MOEPA stack as a layered flow from measurable signals and domain structure up through knowledge validation, operational action, and value governance.
+This diagram shows the proposed MOEPA stack as a layered flow from measurable signals and domain structure up through knowledge validation, operational action, and value governance. The **Data Substrate** (Set-Theoretic Backbone) is the shared SPO/quad + lakehouse storage medium that all five layers write to and read from; it is not a scored layer.
 
 ```mermaid
 graph TD
+    SUB[["Data Substrate<br/>(Set-Theoretic Backbone)<br/>SPO/Quad + Lakehouse<br/><i>shared storage — not a scored layer</i>"]]
+
     A[Metrology] --> B[Ontology]
     B --> C[Epistemology]
     C --> D[Praxeology]
@@ -23,10 +25,17 @@ graph TD
 
     E --- E1[Human values, ethics, and strategic priorities]
     E --- E2[Governance constraints, compliance, and acceptable outcomes]
+
+    A -. stores into .-> SUB
+    B -. stores into .-> SUB
+    C -. stores into .-> SUB
+    D -. stores into .-> SUB
+    E -. stores into .-> SUB
 ```
 
 ## Reading Guide
 
+- **Data Substrate** is the shared SPO/quad backbone and lakehouse that all five layers store into; it is the set-theoretic representation medium and is **not** a scored layer.
 - **Metrology** establishes the empirical base by defining what is measured, how signals are captured, and how evidence quality is maintained.
 - **Ontology** organizes reality into usable structures, including entities, relationships, boundaries, and shared semantic models.
 - **Epistemology** determines what can be treated as knowledge through validation, reasoning, traceability, and uncertainty-aware verification.

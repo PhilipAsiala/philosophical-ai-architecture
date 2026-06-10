@@ -1,5 +1,9 @@
 # FAQ
 
+## Is the Data Substrate a sixth layer?
+
+No. The Data Substrate (Set-Theoretic Backbone) is the shared representation and storage backbone beneath all five layers — an SPO/quad triple store plus lakehouse — that every layer stores into. It is **not** a scored layer. The five scored disciplines (Metrology, Ontology, Epistemology, Praxeology, Axiology) and the 1–5 per-layer scoring model remain unchanged. See §5.1 of [ARCHITECTURE.md](../ARCHITECTURE.md) for the full substrate specification.
+
 ## Is this a finished architecture?
 
 No. This repository describes a proposed strategic governance framework and architecture model for discussion, refinement, and review.

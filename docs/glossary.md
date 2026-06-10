@@ -1,5 +1,13 @@
 # Glossary
 
+## Data Substrate (Set-Theoretic Backbone)
+
+The cross-cutting representation medium — an SPO/quad backbone (Subject-Predicate-Object, quads with context) plus lakehouse storage — that all five MOEPA layers store into. The substrate holds each base fact once; every layer attaches its own metadata envelope (epistemic, praxeological, axiological, etc.) without duplicating the base triple. It is the shared storage and representation infrastructure beneath the five scored disciplines and is explicitly **not** a sixth scored layer.
+
+## SPO Triple / Quad
+
+A Subject-Predicate-Object triple (or quad, when a context/graph identifier is added as a fourth element) used as the universal structural unit of the MOEPA Data Substrate. Example: `(IncomeVerification:TX12345, hasAmount, 85000)`. All layer-specific metadata envelopes attach to this base triple rather than replacing it.
+
 ## MOEPA
 
 The five-layer framework used in the proposal:
