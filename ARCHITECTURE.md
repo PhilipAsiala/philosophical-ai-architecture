@@ -252,6 +252,22 @@ Provenance three-way split (to avoid double-claiming):
 - Metrology: observational provenance (who measured it, against what standard, with what error bounds).
 - Epistemology: justificatory provenance (confidence, warrant, and belief revision over claims).
 
+#### 5.1.1 Per-Layer Storage Mapping
+
+Each MOEPA layer has a natural philosophical and computational representation for its knowledge artifacts. The shared substrate stores the **base triple once**; each layer attaches a **metadata envelope** (or a linked sub-graph) without duplicating the base fact.
+
+| Layer | Natural Representation | Storage on Shared Substrate |
+| :--- | :--- | :--- |
+| **Data / Set Theory** *(substrate native)* | Raw mathematical objects: sets, multisets, relations, functions, probability distributions, tuples, arrays, tensors | Tabular datasets (Apache Iceberg / Polaris), Parquet files, matrix/vector stores. This is the substrate's own native representation — not a scored MOEPA layer. |
+| **Ontology / Graph** | Entities, categories, hierarchies, typed relations; graphs, taxonomies, semantic networks | Native graph DBs (Neo4j, property graphs) or RDF-style triples; nodes = entities (from sets), edges = relations |
+| **Epistemology** | Justified beliefs, evidence trails, confidence weights, provenance chains, uncertainty models (Bayesian networks, Dempster-Shafer, argumentation frameworks) | Enriched SPO triples with epistemic metadata (confidence, source reliability, evidence-graph links, revision history); belief/probabilistic graphical models attached to the main graph; versioned facts in the lakehouse with provenance lineage (W3C PROV-O) |
+| **Praxeology** | Policies, plans, decision procedures, action sequences, outcome telemetry, production rules, goal hierarchies, MDPs / PDDL planning domains | Rule structures or procedural attachments to graph nodes (HAS_POLICY edges → decision trees / scripts); historical action logs as time-series / versioned triples; serialized RL/policy artifacts (value functions, transition models) linked into the graph |
+| **Axiology** | Value hierarchies, utility/preference functions, ethical constraints, priority rankings, multi-criteria decision models (weighted sums, lexicographic ordering, deontological rules) | Value nodes + weighted relation graphs (PREFERS / CONSTRAINS edges with weights); utility/scoring models as mathematical objects linked to the set-theoretic form; ethical rule sets / value ontologies attached via metadata |
+
+**Unification principle.** All five layers write to and read from the same SPO-centric hypergraph + lakehouse. A federation layer (LangGraph router or Trino) enables cross-layer queries such as: *"find all high-confidence (epistemic) income facts that satisfy axiological fairness and support praxeological auto-approval."* This maintains philosophical purity — each layer's knowledge is respected — while enabling recursive interaction and belief/action/value revision across the stack.
+
+**Scale range.** From GTSS edge devices (lightweight JSON triples + SQLite) to enterprise deployments (full graph + Iceberg).
+
 ## 6. Implementation Playbook
 ### 6.1 Recommended Technology Stack by Layer (Ownership-Focused)
 - Metrology (Data Foundation): Self-hosted data lakes (MinIO + Iceberg), Great Expectations or Monte Carlo for quality, DataHub for catalog — avoiding external repository/catalog ownership.
