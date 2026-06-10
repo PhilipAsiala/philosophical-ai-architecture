@@ -1,0 +1,57 @@
+name: Build Decks
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "docs/decks/**"
+      - ".github/workflows/build-decks.yml"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "docs/decks/**"
+      - ".github/workflows/build-decks.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Marp CLI
+        run: npm install -g @marp-team/marp-cli@latest
+
+      - name: Create output directory
+        run: mkdir -p out
+
+      - name: Build PPTX
+        run: |
+          marp --allow-local-files --pptx \
+            docs/decks/moepa-federal-leaders-guide.slides.md \
+            -o out/moepa-federal-leaders-guide.pptx
+
+      - name: Build PDF
+        run: |
+          marp --allow-local-files --pdf \
+            docs/decks/moepa-federal-leaders-guide.slides.md \
+            -o out/moepa-federal-leaders-guide.pdf
+        env:
+          PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: "false"
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: moepa-federal-leaders-deck
+          path: out/
