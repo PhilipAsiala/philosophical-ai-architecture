@@ -40,15 +40,15 @@ Each layer is named after a classical philosophical discipline and grounded in a
 ### Layer 1 — Metrology (Science of Measurement) — The Data Foundation Layer
 Philosophical Definition: The study of measurement, standards, and the conditions under which reliable observation is possible.
 
-Mathematical Grounding: Set theory, measure theory, statistics, and boundary conditions.
+Mathematical Grounding: Measure theory, statistics, calibration theory, and boundary conditions.
 
 Enterprise Translation: Establishing the foundational data layer—ensuring all data is measured, quality-assured, observable, and traceable before it enters higher cognitive layers. This is the bedrock that prevents "garbage in, garbage out" across the entire architecture.
 
 Key Artifacts:
 
-- Self-hosted data lakes using open formats (Iceberg, Parquet).
+- Self-hosted open-format data substrate containers (Iceberg, Parquet) that Metrology qualifies through ingress quality controls (see §5.1).
 - Internal data quality frameworks (Great Expectations, Monte Carlo, or custom).
-- Comprehensive data lineage and provenance tracking.
+- Comprehensive quality gates plus observational lineage/provenance over what enters the substrate.
 - Observability for drift, anomaly detection, and statistical profiling.
 - Encrypted, air-gappable datasets with strict egress controls.
 
@@ -215,6 +215,42 @@ Core Capabilities:
 - Role-based access aligned with Layer 5 (Axiology).
 
 Implementation Guidance: Utilize DataHub or a custom-engineered enterprise portal backed by an internally managed Neo4j instance. The catalog must interface directly with internal GitOps and CI/CD pipelines to ensure that whenever an asset's hash or schema changes, the catalog's state updates automatically. This provides an inspection-ready, auditable inventory of the entire corporate cognitive footprint.
+
+### 5.1 The MOEPA Data Substrate (Set-Theoretic Backbone)
+Set Theory in MOEPA is the representation medium, not a sixth scored layer. The five classical disciplines remain the five scored layers (Metrology, Ontology, Epistemology, Praxeology, Axiology), and the 1–5 per-layer scoring model remains unchanged.
+
+The substrate provides a single SPO/quad backbone (Subject-Predicate-Object, quads with context) plus lakehouse storage where the base triple lives once. Each MOEPA layer attaches layer-specific metadata envelopes (epistemic, praxeological, axiological, etc.) without duplicating the base fact.
+
+```json
+{
+  "triple": {"s": "IncomeVerification:TX12345", "p": "hasAmount", "o": 85000},
+  "epistemic_metadata": {"confidence": 0.98, "justification": "ThirdPartyStudy_2025_n=125000", "status": "HighReliability"}
+}
+```
+
+A federation layer (for example, LangGraph routing or Trino) supports cross-layer queries such as: "find all high-confidence income facts that satisfy axiological fairness and support praxeological auto-approval."
+
+This substrate scales from lightweight edge deployments (JSON triples + SQLite) to enterprise deployments (full graph + Iceberg). It is sovereignty-aligned with the Owned-Brain strategy: self-hosted graph control, open formats, PROV-O lineage compatibility, and one owned base triple that remains queryable as a single auditable whole.
+
+Decisive trust-vs-form test: "Does the property describe how trustworthy/observed a value is (→ Metrology), or what formal shape and storage it has (→ Set Theory)?"
+
+| Dimension | Metrology (Trust of Measurement) | Set Theory / Data Substrate (Form & Storage) |
+| :--- | :--- | :--- |
+| Core question | Can we trust this observation? | What formal shape does this fact take and where is it stored? |
+| Mathematical grounding | Measure theory, statistics, calibration theory, boundary conditions | Set theory, relations/functions/tuples, tensor algebra, graph triple/quad structures |
+| Owns | Units, standards, calibration, error bounds, quality gates, observational lineage, observability/drift controls | Sets/multisets, relations, tensors, SPO/quad backbone, Iceberg/Parquet containers, storage layout |
+| Does **not** own | Container formats, triple/quad structural model, physical lakehouse encoding | Measurement trust policies, calibration rules, quality thresholds, observational reliability controls |
+| Lifecycle stage | Data entering the system (quality and trust qualification) | Data at rest and query form (representation and storage) |
+| One-word summary | Adjectives of trust | Nouns |
+
+Worked example (income = 85000):
+- Metrology owns the trust envelope: unit = USD, source = `ThirdPartyStudy_2025`, n = 125000, quality checks passed, drift status, observational lineage.
+- Set Theory / Data Substrate owns the form envelope: element of set `IncomeObservations`; object of triple `(IncomeVerification:TX12345, hasAmount, 85000)`; `int64` Parquet column; aggregable into a distribution object.
+
+Provenance three-way split (to avoid double-claiming):
+- Set Theory / Data Substrate: structural lineage (for example, this tensor came from that table via this join).
+- Metrology: observational provenance (who measured it, against what standard, with what error bounds).
+- Epistemology: justificatory provenance (confidence, warrant, and belief revision over claims).
 
 ## 6. Implementation Playbook
 ### 6.1 Recommended Technology Stack by Layer (Ownership-Focused)
