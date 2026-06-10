@@ -39,6 +39,7 @@ The catalog helps leadership teams move from abstract AI ambition to disciplined
 
 ## Navigation
 
+- [Capability Matrix](capability-matrix.md)
 - [Metrology](metrology/README.md)
 - [Ontology](ontology/README.md)
 - [Epistemology](epistemology/README.md)
@@ -50,11 +51,14 @@ The catalog helps leadership teams move from abstract AI ambition to disciplined
 This workflow should be used as a governance and priority-setting process for executive review boards.
 
 1. Map the proposal to one or more core capabilities in each layer.
-2. Assess current maturity using each layer scoring rubric.
-3. Flag gaps scoring below level 3 and define remediation.
-4. Confirm integration dependencies between adjacent layers.
-5. Record ownership metadata and controls in the catalog.
-6. Present a GO, CONDITIONAL, or NO-GO recommendation to governance reviewers.
+2. Use the [Capability Matrix](capability-matrix.md) to identify the Score 3 minimum-set baseline and the capabilities that raise maturity toward 4 and 5.
+3. Assess current maturity using each layer scoring rubric.
+4. Flag gaps scoring below level 3 and define remediation.
+5. Link delivery work to the [Praxeology workflow](praxeology/tools.md) so live status is tracked in execution systems rather than in the catalog.
+6. Confirm integration dependencies between adjacent layers.
+7. Record ownership metadata and controls in the catalog.
+8. Present a GO, CONDITIONAL, or NO-GO recommendation to governance reviewers.
+
 
 ## Governance Notes
 
