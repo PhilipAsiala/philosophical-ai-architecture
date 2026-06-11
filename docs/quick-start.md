@@ -18,14 +18,14 @@ Leadership path:
 
 1. Start with the [Leader Guide](moepa-business-leaders-guide.md).
 2. Review [Business Value](business-value.md) for the investment lens.
-3. Use the [catalog](../catalog/README.md) for layer-by-layer governance and scoring.
+3. Use the [Catalog](../catalog/README.md) for layer-by-layer capabilities, tools, patterns, scoring, and cross-layer guidance.
 
 Reference path:
 
 1. Start with the [main README](../README.md) for the repository-level framing.
 2. Read the [architecture specification](../ARCHITECTURE.md) for the full proposal.
 3. Use the [glossary](glossary.md) to decode the layer terminology.
-4. Review the [catalog](../catalog/README.md) for layer-specific capabilities, tools, and scoring.
+4. Review the [Catalog](../catalog/README.md) for layer-specific capabilities, tools, patterns, and scoring.
 
 ## What To Look For
 

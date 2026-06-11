@@ -6,9 +6,11 @@ This matrix explicitly binds the **minimum set of capabilities** for each scored
 
 This file stores the **durable capability taxonomy**: what must exist, who owns it, and how it contributes to maturity. Live delivery progress belongs in JIRA under the Praxeology workflow, not in committed markdown. The JIRA references below are therefore **illustrative bindings only**, aligned to [Praxeology tools](praxeology/tools.md), not embedded status fields.
 
+The matrix is part of the single [MOEPA Catalog](README.md), which also contains detailed capabilities, recommended tools, patterns, scoring guides, and [cross-layer compositions](cross-layer-compositions.md).
+
 ## Related References
 
-- [Catalog overview](README.md)
+- [Catalog overview](README.md) (single holistic source for capabilities, tools, patterns, scoring, and cross-layer)
 - [Metrology capabilities](metrology/capabilities.md) and [Metrology scoring](metrology/scoring.md)
 - [Ontology capabilities](ontology/capabilities.md) and [Ontology scoring](ontology/scoring.md)
 - [Epistemology capabilities](epistemology/capabilities.md) and [Epistemology scoring](epistemology/scoring.md)

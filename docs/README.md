@@ -6,7 +6,7 @@ This repository is a strategic AI governance framework for leadership decision-m
 
 - [Leader Guide](moepa-business-leaders-guide.md) for executive decision support
 - [Federal Leader Guide](moepa-federal-leaders-guide.md) for government/IRS-facing evaluation and ownership strategy (federal companion to the Leader Guide)
-- [Catalog](../catalog/README.md) for capabilities by layer and GO/NO-GO scoring
+- [Catalog](../catalog/README.md) — the single source for capabilities, tools, patterns, scoring, and GO/NO-GO governance by layer
 - [Quick Start](quick-start.md) for a short reading path
 - [Glossary](glossary.md) for the core MOEPA terms
 - [Layer Diagram](layer-diagram.md) for a visual overview

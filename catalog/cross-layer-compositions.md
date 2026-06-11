@@ -183,9 +183,10 @@ A reference stack for a well-integrated, self-hosted MOEPA implementation:
 
 ## Related Documents
 
-- [Metrology Capabilities](metrology.md)
-- [Ontology Capabilities](ontology.md)
-- [Epistemology Capabilities](epistemology.md)
-- [Praxeology Capabilities](praxeology.md)
-- [Axiology Capabilities](axiology.md)
+- [Metrology](metrology/README.md) — capabilities, scoring, tools, and patterns
+- [Ontology](ontology/README.md) — capabilities, scoring, tools, and patterns
+- [Epistemology](epistemology/README.md) — capabilities, scoring, tools, and patterns
+- [Praxeology](praxeology/README.md) — capabilities, scoring, tools, and patterns
+- [Axiology](axiology/README.md) — capabilities, scoring, tools, and patterns
+- [Catalog Overview](README.md) — the single holistic MOEPA Catalog (governance + reference)
 - [Examples](../examples/) — end-to-end scenario walkthroughs using these compositions

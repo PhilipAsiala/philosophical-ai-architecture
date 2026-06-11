@@ -150,5 +150,5 @@ A Data Substrate can be built incrementally. A practical starting sequence:
 ## Related Documents
 
 - [MOEPA 5-Layer Framework](MOEPA-5-Layer-Framework.md) — how each layer uses the substrate
-- [Capabilities Catalog](../capabilities-catalog/README.md) — tools and patterns for building the substrate
+- [Catalog](../catalog/README.md) — capabilities, tools, patterns, and cross-layer guidance (including for the Data Substrate)
 - [Full Architecture Specification](../ARCHITECTURE.md) — technical design details

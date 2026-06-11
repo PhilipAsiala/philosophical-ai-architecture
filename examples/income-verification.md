@@ -163,7 +163,7 @@ Result: When a taxpayer challenges the decision, or oversight demands documentat
 
 ## Related Documents
 
-- [Epistemology Capabilities](../capabilities-catalog/epistemology.md) — confidence scoring and verification
-- [Praxeology Capabilities](../capabilities-catalog/praxeology.md) — workflow routing and human oversight
-- [Cross-Layer Compositions](../capabilities-catalog/cross-layer-compositions.md) — Composition 2 (High-Confidence Automated Processing)
+- [Epistemology](../catalog/epistemology/README.md) (or [capabilities](../catalog/epistemology/capabilities.md)) — confidence scoring and verification
+- [Praxeology](../catalog/praxeology/README.md) (or [capabilities](../catalog/praxeology/capabilities.md)) — workflow routing and human oversight
+- [Cross-Layer Compositions](../catalog/cross-layer-compositions.md) — Composition 2 (High-Confidence Automated Processing)
 - [5-Layer Evaluation Checklist](../docs/5-Layer-Evaluation-Checklist.md) — how this scenario would score

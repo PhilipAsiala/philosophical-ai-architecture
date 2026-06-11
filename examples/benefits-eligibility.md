@@ -219,5 +219,5 @@ An AI system that cannot produce a complete, owned decision record is not just a
 
 - [Income Verification Scenario](income-verification.md) — related pattern for tax administration
 - [5-Layer Evaluation Checklist](../docs/5-Layer-Evaluation-Checklist.md) — how this use case would be scored before deployment
-- [Cross-Layer Compositions](../capabilities-catalog/cross-layer-compositions.md) — Composition 1 (End-to-End Decision Auditability)
-- [Axiology Capabilities](../capabilities-catalog/axiology.md) — due process and equity monitoring
+- [Cross-Layer Compositions](../catalog/cross-layer-compositions.md) — Composition 1 (End-to-End Decision Auditability)
+- [Axiology](../catalog/axiology/README.md) (or [capabilities](../catalog/axiology/capabilities.md)) — due process and equity monitoring

@@ -13,6 +13,85 @@ See [ARCHITECTURE.md](../../ARCHITECTURE.md) for the strategic rationale and [Bu
 - Better visibility into fairness, privacy, and accountability obligations.
 - Reduced risk that policy becomes advisory rather than enforceable.
 
+## What Axiology Covers
+
+| Capability Domain | Description |
+|---|---|
+| **Policy enforcement** | Translating laws, regulations, and agency policy into technical constraints |
+| **Guardrail implementation** | Hard limits on what the system can and cannot do |
+| **Constitutional AI design** | Principles that the system must never violate regardless of instructions |
+| **Compliance monitoring** | Continuously verifying that the system operates within defined boundaries |
+| **Value alignment testing** | Regularly testing that guardrails work as intended |
+| **Mission priority governance** | Ensuring AI optimization objectives align to agency mission |
+
+## Core Capabilities
+
+### A1 — Policy-as-Code Enforcement
+**What it does:** Translates agency policy, legal requirements, and compliance mandates into explicit, machine-enforceable rules — not just documentation or prompt instructions.
+
+**Why it matters for government:** A prompt instruction like "do not share PII" can be bypassed by a sophisticated user or an edge-case input. A policy-as-code rule that blocks PII from being included in any outbound response cannot. The difference between soft and hard enforcement is the difference between a policy that applies in all cases and one that applies in most.
+
+**Minimum acceptable standard (Score 3):** Key compliance requirements encoded as enforceable rules; violations blocked.
+
+**Good practice (Score 4–5):** All statutory and regulatory constraints encoded as versioned, auditable policy code; enforcement at infrastructure level (not application logic); policy changes go through formal review.
+
+---
+
+### A2 — Constitutional Guardrails (Inviolable Constraints)
+**What it does:** Defines a set of constraints that the system must never violate regardless of instructions, context, or prompt engineering — and enforces those constraints at a layer the system itself cannot override.
+
+**Why it matters for government:** Constitutional guardrails are the equivalent of statutory limits that no employee, manager, or executive can waive. For AI systems, this means constraints like: never disclose PII without authorization, never process data outside the authorized environment, never take an action that waives a citizen's legal rights.
+
+**Minimum acceptable standard (Score 3):** Inviolable constraints documented; enforced at application level.
+
+**Good practice (Score 4–5):** Inviolable constraints enforced at OS/infrastructure level; enforcement tested regularly with adversarial inputs; constraints version-controlled and change-managed; enforcement logs available for audit.
+
+---
+
+### A3 — Prompt Injection Defense
+**What it does:** Detects and blocks attempts by users or external data sources to use carefully crafted inputs to override the system's instructions or bypass its constraints.
+
+**Why it matters for government:** Prompt injection is the leading attack vector against AI systems. An attacker who can inject instructions into a document the AI reads, or into data the AI retrieves, may be able to cause the AI to take unauthorized actions or disclose protected information.
+
+**Minimum acceptable standard (Score 3):** Basic input sanitization; known injection patterns blocked; suspicious inputs flagged.
+
+**Good practice (Score 4–5):** Multi-layer injection defense (input sanitization, context separation, output validation); injection attempts logged and alerted; regular red-team testing; context integrity verified before execution.
+
+---
+
+### A4 — Mission Alignment Configuration
+**What it does:** Maintains a versioned, approved configuration of the AI system's objectives, priorities, and optimization targets — aligned to agency mission and reviewed regularly.
+
+**Why it matters for government:** AI systems optimize for their defined objectives. If those objectives are set by a vendor ("maximize engagement," "minimize latency"), they may not align to agency mission ("maximize accuracy and equity," "minimize processing errors for vulnerable populations"). Mission alignment configuration makes the optimization target explicit and owned.
+
+**Minimum acceptable standard (Score 3):** System objectives documented and approved; reviewed periodically.
+
+**Good practice (Score 4–5):** Mission alignment formally encoded in system configuration; objectives reviewed against mission and statutory requirements on a defined schedule; changes require leadership approval; alignment testing included in deployment validation.
+
+---
+
+### A5 — Bias and Equity Monitoring
+**What it does:** Monitors AI outputs for systematic disparities across demographic, geographic, or population groups — and triggers review when disparities exceed defined thresholds.
+
+**Why it matters for government:** Government agencies are subject to equal protection and anti-discrimination requirements. An AI system that systematically produces different outcomes for different demographic groups — even unintentionally — creates legal and mission risk. Monitoring is the only way to detect this before it causes harm at scale.
+
+**Minimum acceptable standard (Score 3):** Periodic bias audits for high-stakes decision workflows; results reviewed.
+
+**Good practice (Score 4–5):** Continuous equity monitoring across defined demographic dimensions; automated alerting when disparities exceed thresholds; monitoring results publicly reportable; remediation process defined.
+
+---
+
+### A6 — Value Alignment Testing
+**What it does:** Regularly tests the system with boundary cases, adversarial inputs, and edge conditions designed to reveal whether guardrails are working as intended.
+
+**Why it matters for government:** Guardrails that have never been tested are wishful thinking. Regular red-team testing — including tests designed by people trying to break the system — is the only way to validate that constraints hold under real-world pressure.
+
+**Minimum acceptable standard (Score 3):** Periodic testing of key guardrails; results documented and reviewed.
+
+**Good practice (Score 4–5):** Scheduled red-team testing; adversarial test suite version-controlled alongside system; test results reviewed by governance board; failures trigger formal remediation.
+
+---
+
 ## Capability Matrix
 
 The matrix below binds the minimum set of Axiology capabilities to **Score 3 — Defined & Contained — Minimum Acceptable Standard** in the existing [Axiology scoring guide](scoring.md). Capabilities that contribute to Scores 4 and 5 lift the layer beyond that baseline. Live delivery status should be tracked through the [Praxeology workflow](../praxeology/tools.md); the JIRA epic column below is illustrative only.
@@ -32,3 +111,7 @@ The matrix below binds the minimum set of Axiology capabilities to **Score 3 —
 - How will leadership know if those controls drift or are bypassed?
 - Can the organization produce evidence for auditors, regulators, or public oversight bodies?
 - How does this proposal advance mission outcomes without weakening stakeholder trust?
+
+## Related
+
+See also the layer overview in [Axiology README](README.md), [scoring guide](scoring.md), [tools](tools.md), and [patterns](patterns.md). Cross-layer interactions are described in [cross-layer-compositions.md](../cross-layer-compositions.md).

@@ -190,5 +190,5 @@ This record is retrievable in five years when the vendor re-submits a revised pr
 ## Related Documents
 
 - [5-Layer Evaluation Checklist](../docs/5-Layer-Evaluation-Checklist.md) — the scoring rubric used in this example
-- [Cross-Layer Compositions](../capabilities-catalog/cross-layer-compositions.md) — Composition 4 (Sovereign AI Intake and Scoring)
+- [Cross-Layer Compositions](../catalog/cross-layer-compositions.md) — Composition 4 (Sovereign AI Intake and Scoring)
 - [Owned vs. Rented AI Strategy](../docs/Owned-vs-Rented-AI-Strategy.md) — why Metrology ownership is the critical gate

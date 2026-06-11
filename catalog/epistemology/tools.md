@@ -8,11 +8,20 @@ These tool categories matter because they determine whether validation, explanat
 
 | Capability | Tools | Leadership Decision Lens |
 | --- | --- | --- |
-| Retrieval infrastructure | OpenSearch, Elasticsearch, PGVector, Qdrant, Chroma | Keep indexes and source mappings inside controlled infrastructure so evidence remains exportable. |
+| Retrieval infrastructure | OpenSearch, Elasticsearch (self-managed), PGVector, Qdrant, Chroma | Keep indexes and source mappings inside controlled infrastructure so evidence remains exportable. |
 | RAG orchestration | LangChain, LlamaIndex, Haystack | Retrieval rules and grounding policies should be inspectable and versioned. |
-| Validation and guardrails | Guardrails AI, NeMo Guardrails, custom policy engines | Choose options that allow leadership and auditors to inspect how conclusions are checked. |
-| Experiment and model evaluation | MLflow, Evidently, WhyLabs (self-managed where possible) | Reliability data should remain under enterprise control, not only in vendor dashboards. |
+| Validation and guardrails | Guardrails AI, NeMo Guardrails, custom policy engines | Choose options that allow leadership and auditors to inspect how conclusions are checked. Guardrails AI is particularly strong for open, declarative constraints. |
+| Experiment and model evaluation | MLflow (self-managed), Evidently, RAGAS, TruLens, Giskard | Reliability data should remain under enterprise control, not only in vendor dashboards. |
 | Explainability and consistency | Captum, SHAP, custom consistency tests | Rationale artifacts should support audit, appeal, and oversight needs. |
+| Cryptographic signing & integrity | Sigstore / cosign, in-toto | Use for signing model configs, data artifacts, and pipeline definitions so you can prove "this is exactly what was approved." |
+| Audit / observability | OpenTelemetry + structured logging (Loguru, etc.) | Distributed traces and immutable logs are the backbone of E4 (Immutable Decision Audit Log). |
+
+## Deployment Notes
+
+- **For RAG**: LlamaIndex and Haystack both integrate well with self-hosted vector stores (Chroma, Qdrant) and self-hosted LLMs (Ollama, vLLM).
+- **For output validation**: Guardrails AI is the leading open-source tool for defining and enforcing output schemas and constraints.
+- **For audit logging**: OpenTelemetry is the open standard; integrates with most observability backends.
+- **Air-gapped**: All the above can run without internet access when paired with self-hosted models and stores.
 
 ## Leadership Guidance
 

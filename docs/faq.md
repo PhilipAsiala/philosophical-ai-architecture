@@ -24,7 +24,7 @@ The five layers provide a clean way to separate concerns:
 
 ## Where should I start?
 
-If you are a leader, start with the [Leader Guide](moepa-business-leaders-guide.md), then read [Business Value](business-value.md), then use the [catalog](../catalog/README.md).
+If you are a leader, start with the [Leader Guide](moepa-business-leaders-guide.md), then read [Business Value](business-value.md), then use the [Catalog](../catalog/README.md).
 
 If you need the full reference model, continue with [Quick Start](quick-start.md), [Glossary](glossary.md), and [ARCHITECTURE.md](../ARCHITECTURE.md).
 

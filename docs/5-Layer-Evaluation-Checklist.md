@@ -216,5 +216,5 @@
 
 - [MOEPA 5-Layer Framework](MOEPA-5-Layer-Framework.md) — detailed per-layer leadership questions
 - [Owned vs. Rented Strategy](Owned-vs-Rented-AI-Strategy.md) — ownership decision framework
-- [Full Scoring Rubric](../catalog/README.md) — detailed governance catalog with extended scoring criteria
+- [Catalog](../catalog/README.md) — single holistic source for capabilities, tools, patterns, scoring, and governance (the full rubric lives in the per-layer scoring guides)
 - [Architecture Specification](../ARCHITECTURE.md) — technical specification of scoring criteria

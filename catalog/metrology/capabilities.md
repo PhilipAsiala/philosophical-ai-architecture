@@ -13,6 +13,73 @@ See [ARCHITECTURE.md](../../ARCHITECTURE.md) for the strategic rationale and [Bu
 - Reduced vendor lock-in by owning storage, metadata, and control boundaries.
 - Stronger privacy and records-management posture for regulated workloads.
 
+## What Metrology Covers
+
+| Capability Domain | Description |
+|---|---|
+| **Data ingestion and validation** | Controls for what data enters the system and how it is checked |
+| **Data quality measurement** | Ongoing measurement of completeness, accuracy, consistency, and freshness |
+| **Provenance and lineage** | Tracking where data came from, how it was transformed, and who validated it |
+| **Observability and monitoring** | Real-time visibility into data health, drift, and anomalies |
+| **Storage and portability** | How data is stored to ensure ownership and long-term access |
+
+## Core Capabilities
+
+### M1 — Data Quality Rules Engine
+**What it does:** Enforces defined quality rules at ingestion — completeness thresholds, format validation, range checks, referential integrity.
+
+**Why it matters for government:** A tax system relying on W-2 data with 15% null fields in the employer EIN column will produce systematically incorrect income matches. Quality rules catch this before it propagates.
+
+**Minimum acceptable standard (Score 3):** Basic rules exist for core fields; failures are logged and escalated.
+
+**Good practice (Score 4–5):** Automated quality profiling on every ingestion batch; failures block downstream processing; quality metrics are published and tracked over time.
+
+---
+
+### M2 — Data Provenance Recording
+**What it does:** Creates and maintains a record of each data item's origin, collection context, and transformation history.
+
+**Why it matters for government:** When a constituent challenges a decision, the agency must demonstrate that the underlying data was collected lawfully, from an authorized source, and processed correctly. Provenance is the evidence chain.
+
+**Minimum acceptable standard (Score 3):** Source system, collection date, and basic transformation steps recorded per record.
+
+**Good practice (Score 4–5):** Cryptographic fingerprinting of source records; immutable audit log of all transformations; chain-of-custody from source to model input.
+
+---
+
+### M3 — Statistical Profiling and Drift Detection
+**What it does:** Continuously measures the statistical properties of data (distributions, null rates, value ranges) and alerts when those properties change unexpectedly.
+
+**Why it matters for government:** Model behavior can degrade silently when input data distributions shift — for example, when a third-party income reporter changes their reporting format. Drift detection catches this before it causes systematic errors.
+
+**Minimum acceptable standard (Score 3):** Periodic profiling with manual review of major anomalies.
+
+**Good practice (Score 4–5):** Automated continuous profiling; alerting on statistical drift with defined thresholds; trend tracking over time.
+
+---
+
+### M4 — Open-Format Data Storage
+**What it does:** Stores all data in open, non-proprietary formats that can be read and migrated without vendor cooperation.
+
+**Why it matters for government:** Proprietary data formats create hard lock-in. When a contract ends, you need your data — not a vendor's promise to provide an export.
+
+**Minimum acceptable standard (Score 3):** Core data exportable in a standard format (CSV, JSON, Parquet).
+
+**Good practice (Score 4–5):** All data stored natively in open-format lakehouse (Iceberg + Parquet); no proprietary format dependencies; self-hosted storage with full agency control.
+
+---
+
+### M5 — Data Access Controls and Egress Logging
+**What it does:** Enforces who can access what data, and logs all access events for audit purposes.
+
+**Why it matters for government:** Privacy Act, FOIA, and cybersecurity requirements all depend on knowing who accessed what data and when. Egress logging is the evidentiary foundation.
+
+**Minimum acceptable standard (Score 3):** Role-based access control enforced; access logs available for audit.
+
+**Good practice (Score 4–5):** Zero-trust access model; real-time egress monitoring; automated alerts on unusual access patterns; logs tamper-evident and retained per retention schedule.
+
+---
+
 ## Capability Matrix
 
 The matrix below binds the minimum set of Metrology capabilities to **Score 3 — Defined & Contained — Minimum Acceptable Standard** in the existing [Metrology scoring guide](scoring.md). Capabilities that contribute to Scores 4 and 5 lift the layer beyond that baseline. Live delivery status should be tracked through the [Praxeology workflow](../praxeology/tools.md); the JIRA epic column below is illustrative only.
@@ -31,3 +98,7 @@ The matrix below binds the minimum set of Metrology capabilities to **Score 3 �
 - Can the team show where every critical dataset came from and how it changed over time?
 - Are data quality failures blocked before they affect downstream decisions?
 - If the current platform or vendor changes, does the organization retain its data and metadata?
+
+## Related
+
+See also the layer overview in [Metrology README](README.md), [scoring guide](scoring.md), [tools](tools.md), and [patterns](patterns.md). Cross-layer interactions are described in [cross-layer-compositions.md](../cross-layer-compositions.md).

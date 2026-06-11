@@ -107,7 +107,7 @@ Detailed scenario walkthroughs are in the [examples/](examples/) folder.
 
 **If you are a program manager or technical lead:**
 1. Start with the [Quick Start Guide](docs/quick-start.md)
-2. Review the [Capabilities Catalog](capabilities-catalog/README.md) for layer-by-layer tool and pattern guidance
+2. Review the [Catalog](catalog/README.md) for layer-by-layer capabilities, tools, patterns, and governance scoring
 3. Reference the [Data Substrate Concept](docs/Data-Substrate-Concept.md) for the knowledge library design
 
 **If you want the full technical specification:**
@@ -134,14 +134,11 @@ ARCHITECTURE.md                    ← Full technical specification
 │   ├── glossary.md                        ← Term definitions
 │   └── layer-diagram.md                   ← Detailed architecture diagram
 │
-├── capabilities-catalog/
-│   ├── README.md                          ← How to use the catalog
-│   ├── metrology.md                       ← Layer 1 capabilities and tools
-│   ├── ontology.md                        ← Layer 2 capabilities and tools
-│   ├── epistemology.md                    ← Layer 3 capabilities and tools
-│   ├── praxeology.md                      ← Layer 4 capabilities and tools
-│   ├── axiology.md                        ← Layer 5 capabilities and tools
-│   └── cross-layer-compositions.md        ← Multi-layer capability patterns
+├── catalog/                               ← The single MOEPA Catalog (capabilities, tools, patterns, scoring, cross-layer compositions)
+│   ├── README.md
+│   ├── capability-matrix.md
+│   ├── cross-layer-compositions.md
+│   └── [layer folders with capabilities, scoring, tools, patterns]
 │
 ├── diagrams/
 │   ├── moepa-stack.md                     ← Full stack diagram with Data Substrate
@@ -171,7 +168,7 @@ ARCHITECTURE.md                    ← Full technical specification
 | [Data Substrate Concept](docs/Data-Substrate-Concept.md) | Technical architects | Knowledge library design |
 | [Business Leader Guide](docs/moepa-business-leaders-guide.md) | Executives | Full executive handout |
 | [Federal Leader Guide](docs/moepa-federal-leaders-guide.md) | Government leaders | Agency-specific guidance |
-| [Capabilities Catalog](capabilities-catalog/README.md) | Technical teams | Tools and patterns by layer |
+| [Catalog](catalog/README.md) | Leaders + technical teams | Capabilities, tools, patterns, scoring, and cross-layer governance reference |
 | [Full Architecture Spec](ARCHITECTURE.md) | Architects / CTO | Complete technical specification |
 
 ---

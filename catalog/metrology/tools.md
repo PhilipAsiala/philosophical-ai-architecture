@@ -9,10 +9,16 @@ These tool categories matter because they determine whether the organization own
 | Capability | Tools | Leadership Decision Lens |
 | --- | --- | --- |
 | Ingestion and orchestration | Apache Kafka, Apache NiFi, Airbyte, Apache Airflow | Prefer options that keep ingestion logic under institutional control and easy to inspect. |
-| Storage and versioning | Delta Lake, Apache Iceberg, Apache Hudi, MinIO | Favor open formats and portable storage so the data foundation can move without replatforming risk. |
-| Catalog and metadata | DataHub, OpenMetadata, Apache Atlas | Metadata ownership is strategic. Avoid making a vendor portal the only source of lineage truth. |
-| Data quality | Great Expectations, Soda Core, Deequ | Quality controls should be enforceable and reviewable, not informal or hidden inside pipelines. |
-| Access and governance | Apache Ranger, OPA, Keycloak | Access decisions should be auditable and aligned to enterprise identity and policy controls. |
+| Storage and versioning (lakehouse) | Apache Iceberg, Apache Hudi, Delta Lake, MinIO | Favor open formats (Iceberg + Parquet preferred) and portable storage so the data foundation can move without replatforming risk. |
+| Catalog and metadata / lineage | Apache Atlas, DataHub, OpenMetadata, Amundsen, OpenLineage | Metadata ownership is strategic. Avoid making a vendor portal the only source of lineage truth. OpenLineage is the open standard for pipeline lineage. |
+| Data quality | Great Expectations, Soda Core, Deequ | Quality controls should be enforceable and reviewable, not informal or hidden inside pipelines. Great Expectations is the most widely adopted open choice. |
+| Access and governance | Apache Ranger, OPA (Open Policy Agent), Keycloak | Access decisions should be auditable and aligned to enterprise identity and policy controls. |
+
+## Deployment Notes for Government
+
+- **Air-gapped / high-sovereignty environments**: Apache Iceberg + Parquet + Great Expectations + OpenLineage can be run entirely on-premises with MinIO or equivalent object storage.
+- **Lineage standard**: Adopt OpenLineage wherever possible — it integrates with Spark, dbt, Airflow, and most modern pipelines.
+- **Catalog**: Apache Atlas for enterprise-grade open-source governance; DataHub or Amundsen for lighter-weight or more modern UI needs.
 
 ## Leadership Guidance
 
