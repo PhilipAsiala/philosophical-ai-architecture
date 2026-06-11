@@ -20,7 +20,7 @@ High risk if this layer scores below 3.
 
 - Score 1-2: NO-GO for enterprise deployment. Consider only narrow pilots with explicit remediation and leadership approval.
 - Score 3: CONDITIONAL GO if data quality, lineage, and access controls are stable enough for the mission context.
-- Score 4-5: GO for broader operational use, subject to normal compliance and oversight processes.
+- Score 4-5: GO for broader operational use, subject to normal compliance and oversight processes. Score 4–5 additionally requires (a) documented EDP data availability assessment (preferring existing governed assets) and (b) a defined pre-launch baseline plus active post-launch KPI measurement program with scheduled reporting.
 
 ## Key Risks If This Layer Is Weak
 
@@ -35,6 +35,8 @@ High risk if this layer scores below 3.
 - Sensitive data is governed through clear access boundaries and policy controls.
 - Data quality is measured and acted on before high-impact use.
 - The organization retains control of core data assets, metadata, and historical traceability.
+- Data ingestion decisions explicitly prefer assets already present and governed in the Enterprise Data Platform; customer-supplied data is the exception, not the default.
+- Pre-launch baselines are captured, and a scheduled post-launch program measures objective KPIs (performance, drift, business outcomes) with results reported back for ROI validation and future intake decisions.
 
 ## Integration Dependencies Leaders Should Verify
 
@@ -48,3 +50,5 @@ High risk if this layer scores below 3.
 - If auditors ask where a result came from, can the team show the full lineage?
 - What happens if the current data provider or platform is removed or changed?
 - How are data quality failures surfaced, escalated, and blocked from downstream use?
+- Has a formal check been performed to determine whether the required data is already available and governed in the Enterprise Data Platform (EDP), or must new customer-supplied pipelines be created?
+- What objective pre-launch baselines have been captured, and what is the post-launch KPI measurement schedule (including owners, metrics, and reporting to leadership)?

@@ -56,16 +56,20 @@ The catalog helps leadership teams move from abstract AI ambition to disciplined
 
 ## Intake and Scoring Workflow
 
-This workflow should be used as a governance and priority-setting process for executive review boards.
+This workflow should be used as a governance and priority-setting process for executive review boards. It is designed to scale to high volumes (1,000+ requests) while enforcing demand management, cost discipline, and formal architecture governance.
 
 1. Map the proposal to one or more core capabilities in each layer.
 2. Use the [Capability Matrix](capability-matrix.md) to identify the Score 3 minimum-set baseline and the capabilities that raise maturity toward 4 and 5.
-3. Assess current maturity using each layer scoring rubric.
-4. Flag gaps scoring below level 3 and define remediation.
-5. Link delivery work to the [Praxeology workflow](praxeology/tools.md) so live status is tracked in execution systems rather than in the catalog.
-6. Confirm integration dependencies between adjacent layers.
-7. Record ownership metadata and controls in the catalog.
-8. Present a GO, CONDITIONAL, or NO-GO recommendation to governance reviewers.
+3. **Demand Management Check (Deduplication):** Search the MOEPA Catalog and the enterprise Ontology/knowledge graph to confirm that the proposed solution, data model, or infrastructure does not duplicate an existing approved capability elsewhere in the enterprise. Record the search results and any related assets.
+4. Assess current maturity using each layer scoring rubric, with particular attention to Axiology weighting for Business ROI and approved chargeback/showback models.
+5. Flag gaps scoring below level 3 and define remediation.
+6. Link delivery work to the [Praxeology workflow](praxeology/tools.md) so live status is tracked in execution systems rather than in the catalog.
+7. Execute the formal Architecture Review Chain (AAP → EDP Pipelines → EDP Platform → Customer / Business Teams) and obtain documented sign-off at each step.
+8. Confirm integration dependencies between adjacent layers.
+9. Record ownership metadata, controls, ROI quantification, and cost model in the catalog.
+10. For any proposal achieving an overall score of 4 or higher (or requesting production resources), secure formal Executive Approval through the executive gate, confirming weighted ROI, chargeback model, deduplication clearance, and completion of the Architecture Review Chain.
+11. Schedule the mandatory post-launch KPI measurement and baselining review (tied to Metrology controls).
+12. Present a GO, CONDITIONAL, or NO-GO recommendation to governance reviewers.
 
 ## Governance Notes
 

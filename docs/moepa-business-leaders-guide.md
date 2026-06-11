@@ -84,7 +84,15 @@ Recommended evaluation process:
 5. Determine whether the proposal strengthens or weakens organizational position in each layer.
 6. Make a clear GO, CONDITIONAL, or NO-GO recommendation with documented rationale.
 
-This reframes the conversation from "What technology should we buy?" to "Does this investment increase control, reduce risk, and serve mission?"
+**Additional Enterprise Criteria — Demand Management and Cost Attribution:**
+
+Before advancing any proposal, leaders must require two additional controls:
+
+- **Demand Management (Deduplication):** The proposing team must demonstrate, via search of the MOEPA Catalog and the organization's semantic model (Ontology), that the requested capability, data model, or infrastructure does not already exist elsewhere in the enterprise. This prevents duplicate solutions and uncontrolled infrastructure proliferation. A high-scoring Ontology layer directly enables this proof.
+
+- **Cost & Chargeback Model:** A formal cost attribution model (showback reporting or chargeback mechanism) must be defined, reviewed by the relevant platform and finance stakeholders, and accepted by the business owner before approval. This model must clearly attribute platform compute, data, governance, and ongoing operational costs. Proposals without an approved cost model cannot receive an unconditional GO.
+
+This reframes the conversation from "What technology should we buy?" to "Does this investment increase control, reduce risk, serve mission, avoid duplication, and have a sustainable, transparent cost model?"
 
 ## Key Questions Every Leader Should Ask
 

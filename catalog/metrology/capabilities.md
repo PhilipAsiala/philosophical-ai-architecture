@@ -80,6 +80,28 @@ See [ARCHITECTURE.md](../../ARCHITECTURE.md) for the strategic rationale and [Bu
 
 ---
 
+### M6 — Enterprise Data Platform (EDP) Availability Assessment
+**What it does:** Prior to ingestion, determines whether the required source data is already available, governed, and staged within the enterprise data platform (EDP / lakehouse) or whether it must be newly provisioned or supplied by the customer team. This assessment directly informs ingestion timelines, cost, and risk.
+
+**Why it matters for government:** Customer-supplied data pipelines create hidden integration debt, duplicate storage, and delayed delivery. Explicitly checking EDP availability enforces reuse of existing enterprise assets and prevents unnecessary data movement.
+
+**Minimum acceptable standard (Score 3):** Basic statement of data source is provided.
+
+**Good practice (Score 4–5):** Formal EDP availability check is completed and documented before project intake proceeds; data already present in the governed platform is used by default; customer-supplied data is accepted only with explicit justification and timeline impact assessment.
+
+---
+
+### M7 — Post-Launch KPI Measurement and Objective Baselining
+**What it does:** Establishes objective pre-launch performance and data quality baselines and implements a scheduled post-launch measurement program for model effectiveness, data drift, outcome KPIs (accuracy, equity, cost-per-transaction, throughput, compliance rates), and business impact.
+
+**Why it matters for government:** Without post-launch baselining and measurement, leadership cannot determine whether an investment delivered the promised ROI or created unintended consequences. This capability closes the governance loop.
+
+**Minimum acceptable standard (Score 3):** High-level commitment to measure outcomes after launch.
+
+**Good practice (Score 4–5):** Pre-launch baselines are captured and recorded in the catalog; a documented post-launch KPI measurement schedule (with owners and reporting cadence) is in place; results feed back into Axiology ROI validation and future intake decisions.
+
+---
+
 ## Capability Matrix
 
 The matrix below binds the minimum set of Metrology capabilities to **Score 3 — Defined & Contained — Minimum Acceptable Standard** in the existing [Metrology scoring guide](scoring.md). Capabilities that contribute to Scores 4 and 5 lift the layer beyond that baseline. Live delivery status should be tracked through the [Praxeology workflow](../praxeology/tools.md); the JIRA epic column below is illustrative only.
@@ -91,6 +113,8 @@ The matrix below binds the minimum set of Metrology capabilities to **Score 3 �
 | Data catalog operations for centralized metadata and discovery | No | 4 — strengthens discoverability, reuse, and governance at scale | Data governance owner | Illustrative: JIRA epic for catalog and metadata operations |
 | Schema enforcement, data quality checks, and validation gates | Yes | 3 — provides the defined quality controls expected at the minimum acceptable standard | Data quality owner | Illustrative: JIRA epic for schema and quality controls |
 | Access control, lineage, provenance, and time-travel inspection | Yes | 3 / 4 / 5 — baseline lineage and access control support Score 3, while deeper provenance and inspection lift audit readiness | Data governance owner | Illustrative: JIRA epic for access, lineage, and provenance controls |
+| Enterprise Data Platform (EDP) availability assessment prior to ingestion | No | 4 — prevents duplicate pipelines and accelerates delivery by preferring existing governed assets | Data platform owner | Illustrative: JIRA epic for EDP data discovery and availability gating |
+| Post-launch KPI measurement, objective baselining, and drift reporting | No | 4 / 5 — closes the governance loop by proving whether promised business outcomes and ROI were achieved | Data platform + Business owner | Illustrative: JIRA epic for KPI baseline capture and scheduled measurement program |
 
 ## Questions Leaders Should Ask Before Funding
 

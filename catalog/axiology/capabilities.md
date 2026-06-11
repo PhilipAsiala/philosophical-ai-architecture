@@ -92,6 +92,28 @@ See [ARCHITECTURE.md](../../ARCHITECTURE.md) for the strategic rationale and [Bu
 
 ---
 
+### A7 — Weighted Business ROI Quantification
+**What it does:** Requires every proposal to document and quantify expected business and mission ROI (e.g., cost avoidance, risk reduction, throughput gains, equity or compliance improvements) with traceable assumptions, baselines, and sensitivity analysis. ROI becomes a primary weighted input to the Axiology score in high-volume intake environments.
+
+**Why it matters for government:** In enterprise-scale intake (1,000+ requests), decisions must be driven by objective business value rather than technical feasibility or development capacity alone. Without quantified ROI, leadership cannot rationally prioritize or defend investments to oversight bodies.
+
+**Minimum acceptable standard (Score 3):** High-level ROI narrative or qualitative benefits statement is provided.
+
+**Good practice (Score 4–5):** Detailed, auditable ROI model with quantified benefits, cost assumptions, risk adjustments, and linkage to mission outcomes; model is reviewed and accepted by business owners and finance.
+
+---
+
+### A8 — Chargeback and Showback Modeling
+**What it does:** Defines and documents how the full costs of the AI system — including platform compute, data storage, governance overhead, maintenance, and support — will be attributed to business owners through showback reports (visibility) or formal chargeback mechanisms (actual billing).
+
+**Why it matters for government:** Sustainable platforms require clear accountability for consumption and cost. Absent a chargeback or showback model, demand is unbounded and true total cost of ownership remains hidden from decision-makers.
+
+**Minimum acceptable standard (Score 3):** High-level cost attribution approach is described.
+
+**Good practice (Score 4–5):** Formal, approved chargeback/showback model in place with defined rates or allocation rules, integration with enterprise financial systems, and acceptance by the accountable business owner prior to scaling.
+
+---
+
 ## Capability Matrix
 
 The matrix below binds the minimum set of Axiology capabilities to **Score 3 — Defined & Contained — Minimum Acceptable Standard** in the existing [Axiology scoring guide](scoring.md). Capabilities that contribute to Scores 4 and 5 lift the layer beyond that baseline. Live delivery status should be tracked through the [Praxeology workflow](../praxeology/tools.md); the JIRA epic column below is illustrative only.
@@ -104,6 +126,8 @@ The matrix below binds the minimum set of Axiology capabilities to **Score 3 —
 | Privacy controls for customer and sensitive enterprise data | Yes | 3 — provides mandatory data protection and compliance boundaries | Privacy owner | Illustrative: JIRA epic for privacy controls |
 | Transparency and explainability requirements for accountable decisions | Yes | 3 / 4 — supports accountable decisions at the baseline and stronger oversight at higher maturity | Accountability owner | Illustrative: JIRA epic for transparency and explainability |
 | Compliance frameworks and value-based prioritization criteria | No | 5 — institutionalizes durable review and portfolio governance | Compliance portfolio owner | Illustrative: JIRA epic for compliance framework and prioritization |
+| Weighted Business ROI quantification and sensitivity analysis | No | 4 — enables objective, value-driven prioritization at enterprise scale (1,000+ requests) | Business owner + Finance | Illustrative: JIRA epic for ROI modeling and validation |
+| Chargeback and showback cost attribution modeling | No | 4 — ensures sustainable platform economics and clear accountability for consumption | Platform owner + Business owner | Illustrative: JIRA epic for chargeback model definition and approval |
 
 ## Questions Leaders Should Ask Before Funding
 

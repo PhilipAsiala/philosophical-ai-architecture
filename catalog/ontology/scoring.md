@@ -20,7 +20,7 @@ High risk if this layer scores below 3.
 
 - Score 1-2: NO-GO for broad deployment where shared understanding, cross-system reasoning, or entity integrity matters.
 - Score 3: CONDITIONAL GO when the semantic model is sufficient for the target decision space.
-- Score 4-5: GO for broader use, reuse, and institutional standardization.
+- Score 4-5: GO for broader use, reuse, and institutional standardization. Score 4–5 requires that the Ontology layer (via the MOEPA Catalog) has been actively used for demand management: proposers must have produced auditable proof that the proposed solution does not duplicate existing enterprise capabilities. Without this deduplication evidence, the proposal cannot advance beyond CONDITIONAL.
 
 ## Key Risks If This Layer Is Weak
 
@@ -35,6 +35,7 @@ High risk if this layer scores below 3.
 - Semantic changes are reviewed, versioned, and aligned to institutional policy.
 - Cross-program initiatives can rely on shared definitions instead of duplicating them.
 - The organization owns its core semantic model and can move it without losing meaning.
+- The Ontology layer, in combination with the MOEPA Catalog, functions as the authoritative mechanism for AI Demand Management: any proposed solution can be rigorously searched to prove it does not duplicate an existing approved capability, data model, or infrastructure component. High Ontology scores are a direct indicator that the organization can prevent solution proliferation at intake.
 
 ## Integration Dependencies Leaders Should Verify
 
@@ -48,3 +49,4 @@ High risk if this layer scores below 3.
 - Who owns those definitions, and how are changes governed?
 - If two systems disagree about a customer, business, or relationship, how is that resolved?
 - Is the semantic model reusable beyond this one project or vendor?
+- Has a documented search of the MOEPA Catalog and enterprise knowledge graph been performed to prove this use case or infrastructure does not already exist? What similar assets were found?

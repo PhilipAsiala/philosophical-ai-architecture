@@ -22,6 +22,7 @@ See [ARCHITECTURE.md](../../ARCHITECTURE.md) for the strategic rationale and [Bu
 | **Semantic consistency** | Ensuring the same terms mean the same things across all systems |
 | **Knowledge graph management** | Building and maintaining a queryable graph of domain knowledge |
 | **Schema versioning** | Tracking how definitions evolve over time |
+| **AI Demand Management & Deduplication** | Using the semantic model and MOEPA Catalog to search for and prove the non-existence of duplicate solutions or infrastructure before new investments are approved |
 
 ## Core Capabilities
 
@@ -80,6 +81,17 @@ See [ARCHITECTURE.md](../../ARCHITECTURE.md) for the strategic rationale and [Bu
 
 ---
 
+### O6 — AI Demand Management and Deduplication (Catalog Search)
+**What it does:** Leverages the governed semantic model (entities, relationships, taxonomies) together with the MOEPA Catalog to enable definitive searches proving that a proposed use case, data model, workflow, or infrastructure component does not already exist elsewhere in the enterprise.
+
+**Why it matters for government:** In large organizations, the single greatest source of waste and risk is funding duplicate AI solutions and redundant data platforms. A mature Ontology layer, combined with disciplined catalog use, is the primary mechanism for proactive demand management and prevention of infrastructure proliferation.
+
+**Minimum acceptable standard (Score 3):** Basic ability to search existing assets by keyword or simple taxonomy.
+
+**Good practice (Score 4–5):** Semantic search against the full knowledge graph and catalog is a mandatory gate in every intake; proposers must produce documented proof of non-duplication (with references to similar or related assets); the organization maintains a living "approved solutions inventory" that is consulted before any new investment is scored.
+
+---
+
 ## Capability Matrix
 
 The matrix below binds the minimum set of Ontology capabilities to **Score 3 — Defined & Contained — Minimum Acceptable Standard** in the existing [Ontology scoring guide](scoring.md). Capabilities that contribute to Scores 4 and 5 lift the layer beyond that baseline. Live delivery status should be tracked through the [Praxeology workflow](../praxeology/tools.md); the JIRA epic column below is illustrative only.
@@ -92,6 +104,7 @@ The matrix below binds the minimum set of Ontology capabilities to **Score 3 —
 | Semantic linking to connect meaning across heterogeneous datasets | Yes | 3 / 4 — provides shared meaning across governed sources and improves reuse across programs | Domain integration owner | Illustrative: JIRA epic for semantic linking across datasets |
 | Advanced graph querying with dynamic relationship updates | No | 5 — supports enterprise-scale reasoning and continuously evolving semantic operations | Knowledge graph owner | Illustrative: JIRA epic for advanced graph query services |
 | Controlled integration with Metrology outputs | Yes | 3 — keeps semantic assets grounded in governed source data | Data and ontology steward | Illustrative: JIRA epic for ontology-to-metrology integration |
+| AI Demand Management and Deduplication via catalog and semantic search | No | 4 / 5 — primary enterprise mechanism for preventing duplicate solutions and infrastructure before intake scoring proceeds | Domain ontology owner + Catalog steward | Illustrative: JIRA epic for catalog search integration and deduplication gate enforcement |
 
 ## Questions Leaders Should Ask Before Funding
 

@@ -195,11 +195,29 @@ Risk: Prompt injection vulnerabilities, alignment drift, and client-side manipul
 
 Audit Question: How are the ethical boundaries, compliance mandates, and organizational value guardrails permanently locked down against intentional or accidental modification?
 
+**Enterprise-Scale Weighting (for 1,000+ use-case intake environments):** In high-volume federal and enterprise intake processes, Axiology scores are weighted heavily by two factors: (1) documented **Business ROI** (quantified mission impact, risk reduction, cost avoidance, equity improvements, or throughput gains with traceable assumptions and sensitivity analysis) and (2) the presence of a formal, auditable **Chargeback/Showback model** that attributes platform, compute, data, and governance costs back to business owners. Proposals lacking credible ROI quantification or a viable cost attribution model cannot achieve a score of 4 or higher regardless of other governance controls.
+
 Scoring Guidance:
 
 - Score 1: Soft constraints only; guidelines are embedded within the system prompt and easily bypassed by sophisticated prompt injections.
 - Score 3: Compliance rules are centralized, but security configuration settings are modifiable by local client environments or developers at the edge.
-- Score 5: Core organizational values, preferred/forbidden verb lists, and security policies are hardcoded into a "Golden Master" configuration file locked via OS-level write constraints (Windows ACLs/icacls or immutable infrastructure policies). Policy code is cryptographically protected and cataloged.
+- Score 5: Core organizational values, preferred/forbidden verb lists, and security policies are hardcoded into a "Golden Master" configuration file locked via OS-level write constraints (Windows ACLs/icacls or immutable infrastructure policies). Policy code is cryptographically protected and cataloged. In addition, a quantified Business ROI model and approved chargeback/showback mechanism are in place and reviewed at the executive level.
+
+### 4.4 Executive Governance & Architecture Review Chain
+
+To support enterprise-scale intake (1,000+ requests) while maintaining sovereignty and preventing uncontrolled proliferation, MOEPA mandates a formal executive governance gate and a strict Architecture Review Chain for all proposals.
+
+**Executive Approval Gate:** Any use case that receives an overall MOEPA score of 4 or higher (or any proposal requesting production funding or enterprise platform resources) must pass an explicit executive-level approval gate before scaling. This gate is separate from technical scoring and is triggered by the weighted Axiology score (incorporating Business ROI and chargeback justification). The executive gate reviews mission alignment, quantified ROI, cost attribution model, demand management clearance (no duplication), and residual risk.
+
+**Mandatory Architecture Review Chain:** Before executive sign-off, every proposal must traverse the following strict, sequential review chain. Each step must provide documented sign-off; no step may be bypassed:
+
+1. **AAP (Architecture Approval Process / AI Architecture Panel)** — Initial technical architecture review for alignment with enterprise standards, security patterns, and MOEPA layer controls.
+2. **EDP Pipelines** — Enterprise Data Platform pipeline team validates data ingestion approach, lineage, and quality controls (see Metrology data availability requirements).
+3. **EDP Platform** — Enterprise Data Platform platform owners confirm capacity, cost model integration, and platform-level governance.
+4. **Customer / Business Teams** — Owning business unit confirms operational readiness, ROI assumptions, and acceptance of chargeback/showback obligations.
+5. **Executive Sign-off** — Formal approval by designated executive authority (or governance board) confirming the weighted ROI case, approved cost model, demand management clearance via the MOEPA Catalog, and completion of the preceding chain.
+
+This chain ensures that technical feasibility, data reality, platform economics, business ownership, and executive accountability are all explicitly addressed. The MOEPA Catalog serves as the authoritative record of prior decisions to support deduplication at step 1 and throughout the chain.
 
 ## 5. MOEPA Catalog Architecture (Cross-Cutting Section)
 The MOEPA Catalog is the practical mechanism for owning the brain. It provides discoverability, versioning, governance, and access control across all five layers.
