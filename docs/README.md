@@ -23,7 +23,7 @@ This repository is the canonical reference for the **Philosophical AI Architectu
 - The Philosophical AI Architecture and its term hierarchy
 - Cognition, Affect, Conation mapped to MOEPA layers
 - The MOEPA 5-Layer Framework (engineering blueprint and intake scoring)
-- The agency-owned Data Substrate
+- The agency-owned Data Substrate — [end state vs. evolution path](Data-Substrate-Concept.md#end-state-vs-evolution-path)
 - The MOEPA Catalog (routing, deduplication, governance)
 - The MOEPA Cognitive Architecture implementation approach
 - Federal and business leader handouts

@@ -202,6 +202,8 @@ The Taxpayer Bill of Rights is architecturally enforced. The right to explanatio
 
 Federal agencies do not need to rebuild their entire AI estate to begin capturing MOEPA benefits. A staged approach—start narrow, prove the model, expand—reduces risk and builds internal capability before enterprise commitment.
 
+**End state is not negotiable; the path is.** Every agency substrate must eventually converge on owned SPO/quad records with full layer metadata envelopes on a federated hypergraph + lakehouse. Pilots and interim lakehouse deployments are valid **only** when they are agency-owned, open-format, provenance-complete, and explicitly staged toward that end state.
+
 **Recommended pilot: Cognitive intake assistant built on agency-owned intake process**
 
 A conversational AI intake assistant that guides taxpayers or staff through a structured intake process is an ideal first deployment. It is visible, high-interaction, and immediately demonstrable—but the stakes of any individual transaction are lower than enforcement or determination. More importantly, the agency's own intake workflow *is* the knowledge model, so owning the ontology and workflow from day one is natural rather than aspirational.
@@ -228,8 +230,8 @@ Pilot objectives:
 - Design deterministic workflow state machines (Praxeology layer) for the pilot
 - Formalize the axiological rule set and enforce architecturally (Axiology layer)
 
-**Full owned brain (12–24 months)**
-- Enterprise-wide substrate (SPO graph + Iceberg) deployed and governed
+**Full owned brain (12–24 months) — Substrate End State**
+- Enterprise-wide substrate at end state: SPO/quad hypergraph + Iceberg lakehouse, federated and governed
 - All five layers owned across priority use cases
 - MOEPA scoring used as the standard gate for all new AI procurement
 - Vendor relationships scoped to rented compute only; no vendor owns a scored layer

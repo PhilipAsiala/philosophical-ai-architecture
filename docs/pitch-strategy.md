@@ -65,6 +65,8 @@ Introduce the **MOEPA 5-Layer Framework** as their engineering blueprint — not
 
 **The own-vs-rent strategy:** The government permanently owns the **Data Substrate** — the truth, the values, the rules. The government rents commercial LLMs and compute. Zero vendor lock-in. Total data sovereignty. Immunity to model churn.
 
+**End state vs. evolution:** SPO/quad representation on a federated hypergraph + lakehouse is the **imperative end state** for the substrate. Agencies evolve toward it incrementally — lakehouse and pilot triple stores first, enterprise federation last. Interim storage is valid only with a documented migration path.
+
 ---
 
 ## 5. Golden Rules of Tone and Execution

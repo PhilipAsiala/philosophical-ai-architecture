@@ -27,11 +27,19 @@ The three human cognitive functions the Philosophical AI Architecture maps into 
 
 ## Data Substrate (Set-Theoretic Backbone)
 
-The agency-owned knowledge library — the cross-cutting representation medium where truth, values, rules, and lineage live in open, portable formats. Technically: an SPO/quad backbone plus lakehouse storage that all five MOEPA layers read from and write to. The substrate holds each base fact once; every layer attaches its own metadata envelope without duplicating the base triple. Explicitly **not** a sixth scored layer.
+The agency-owned knowledge library — the cross-cutting representation medium where truth, values, rules, and lineage live in open, portable formats. At end state: an SPO/quad backbone plus federated lakehouse storage that all five MOEPA layers read from and write to. The substrate holds each base fact once; every layer attaches its own metadata envelope without duplicating the base triple. Explicitly **not** a sixth scored layer. Agencies evolve toward end state incrementally; see [Substrate Evolution Path](#substrate-evolution-path).
+
+## Substrate End State
+
+The imperative logical target for a mature Data Substrate: owned SPO/quad representation, one base fact per triple, layer metadata envelopes, SPO-centric hypergraph + lakehouse federation, and cross-layer queryability. Not optional once the substrate is considered enterprise-ready.
+
+## Substrate Evolution Path
+
+The allowed incremental journey from current agency storage to Substrate End State — typically lakehouse (SPO-compatible schemas) → pilot triple store → enterprise graph → federation layer. Interim implementations are valid when agency-owned, open-format, provenance-complete, and backed by a documented migration roadmap.
 
 ## SPO Triple / Quad
 
-A Subject-Predicate-Object triple (or quad, when a context/graph identifier is added as a fourth element) used as the universal structural unit of the Data Substrate. Example: `(IncomeVerification:TX12345, hasAmount, 85000)`.
+At end state, the universal structural unit of the Data Substrate: a Subject-Predicate-Object triple (or quad, when a context/graph identifier is added as a fourth element). Example: `(IncomeVerification:TX12345, hasAmount, 85000)`. Earlier evolution stages must maintain SPO-compatible mapping so records can converge to this form without semantic loss.
 
 ## MOEPA
 

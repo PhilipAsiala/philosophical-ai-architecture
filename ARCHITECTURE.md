@@ -250,6 +250,8 @@ The substrate provides a single SPO/quad backbone (Subject-Predicate-Object, qua
 
 A federation layer (for example, LangGraph routing or Trino) supports cross-layer queries such as: "find all high-confidence income facts that satisfy axiological fairness and support praxeological auto-approval."
 
+**End state vs. evolution.** The SPO/quad hypergraph + lakehouse described here is the **imperative end state** — every agency substrate must converge on owned triples with layer metadata envelopes and federated cross-layer query. Agencies **evolve** toward that target incrementally (e.g. Iceberg/Parquet with SPO-compatible schemas first, pilot triple store, then enterprise graph + federation). Interim storage is valid when ownership, open formats, provenance, and a documented migration path to SPO/quad end state are in place. See [Data Substrate Concept — End State vs. Evolution Path](docs/Data-Substrate-Concept.md#end-state-vs-evolution-path).
+
 This substrate scales from lightweight edge deployments (JSON triples + SQLite) to enterprise deployments (full graph + Iceberg). It is sovereignty-aligned with the Owned-Brain strategy: self-hosted graph control, open formats, PROV-O lineage compatibility, and one owned base triple that remains queryable as a single auditable whole.
 
 Decisive trust-vs-form test: "Does the property describe how trustworthy/observed a value is (→ Metrology), or what formal shape and storage it has (→ Set Theory)?"

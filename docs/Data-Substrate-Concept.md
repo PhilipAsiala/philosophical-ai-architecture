@@ -52,9 +52,50 @@ An immutable log of what the system did and why:
 
 ---
 
-## The SPO/Quad Data Model
+## End State vs. Evolution Path
 
-The Data Substrate uses a **Subject–Predicate–Object (SPO)** model, extended to a **quad** (four-part) model with a named context:
+The repository draws a deliberate line between **what the substrate must become** and **how an agency gets there**.
+
+### End state (imperative)
+
+At maturity, every agency-owned Data Substrate **must** converge on this logical architecture:
+
+- **SPO/quad as the universal representation** — every base fact stored once as a Subject–Predicate–Object triple (with context as a quad)
+- **Layer metadata envelopes** — Metrology, Ontology, Epistemology, Praxeology, and Axiology attach their own metadata to the same base fact without duplication
+- **SPO-centric hypergraph + lakehouse** — graph semantics and tabular storage federated as one queryable, auditable whole
+- **Cross-layer queries** — e.g. high-confidence facts that satisfy axiological fairness and support praxeological auto-approval
+- **Agency ownership throughout** — open formats, full provenance, point-in-time reconstruction
+
+This is not optional at end state. A substrate that cannot represent facts as owned SPO/quad records with cross-layer envelopes does not meet the architectural target.
+
+### Evolution path (allowed)
+
+Agencies **evolve** toward that end state incrementally. Interim physical implementations are valid when they are **explicitly staged** and **SPO-compatible** (mappable to triples without loss of meaning):
+
+| Stage | Typical implementation | End-state alignment |
+|---|---|---|
+| **1 — Foundation** | Inventory sources; define core entity model; establish provenance standards | Ownership and audit requirements locked in from day one |
+| **2 — Lakehouse** | Iceberg/Parquet for validated tabular facts | Records use SPO-compatible schemas; triple mapping documented |
+| **3 — Pilot graph** | Owned SPO triple store (or JSON triples + SQLite) for one domain | First domain converges to end-state logical model |
+| **4 — Enterprise graph** | Property graph or RDF store integrated with lakehouse | Semantic layer matches SPO/quad backbone |
+| **5 — Federation** | Trino, LangGraph router, or equivalent cross-plane query layer | Full hypergraph + lakehouse end state operational |
+
+> **Rule of thumb:** Start where you are. Document the migration path. Every new dataset and AI project must move the institution closer to owned SPO/quad representation — not create another vendor silo.
+
+### What is imperative from day one
+
+Even before the full SPO hypergraph exists, these are non-negotiable:
+
+- **Agency ownership** of the knowledge library (not a vendor platform)
+- **Open, portable formats** with a documented export path
+- **Provenance standards** for every record entering the substrate
+- **A published roadmap** showing how current storage evolves to SPO/quad end state
+
+---
+
+## The SPO/Quad Data Model (End-State Logical Standard)
+
+At end state, the Data Substrate uses a **Subject–Predicate–Object (SPO)** model, extended to a **quad** (four-part) model with a named context:
 
 ```
 Subject       Predicate              Object              Context/Provenance
@@ -137,13 +178,14 @@ This enables **point-in-time reconstruction**: the ability to reproduce exactly 
 
 ## Getting Started
 
-A Data Substrate can be built incrementally. A practical starting sequence:
+A Data Substrate evolves toward the SPO/quad end state — it is not a single cutover event. A practical starting sequence:
 
 1. **Inventory existing data sources** — what does your agency hold, where, in what format?
 2. **Define your core entity model** — what are the 10–20 most important entities in your domain?
 3. **Establish provenance standards** — what must be recorded for each incoming data record?
-4. **Select open-format storage** — start with Iceberg/Parquet for tabular data; add a graph store when ready
-5. **Integrate the MOEPA layers** — connect each layer to read from and write to the shared substrate
+4. **Publish the evolution roadmap** — document how current storage maps to SPO/quad end state and by when
+5. **Select open-format storage** — start with Iceberg/Parquet using SPO-compatible schemas; add a graph store as the pilot domain matures
+6. **Integrate the MOEPA layers** — connect each layer to read from and write to the shared substrate, enriching records toward full metadata envelopes
 
 ---
 

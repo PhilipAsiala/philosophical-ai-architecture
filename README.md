@@ -83,7 +83,7 @@ graph TB
 | **Praxeology** | Digitized SOPs, workflows, agentic playbooks | Do we control how the system acts? | Autonomous actions without checkpoints |
 | **Axiology** | Guardrails, access controls, NIST-aligned compliance | Does this system enforce our values? | Mission drift, untestable guardrails |
 
-**The Data Substrate** is the agency-owned knowledge library all five layers read from and write to. **The MOEPA Catalog** is the routing and governance catalog that proves what the institution already owns — and what new projects must enrich.
+**The Data Substrate** is the agency-owned knowledge library all five layers read from and write to. At **end state**, every fact must be represented as an owned **SPO/quad** record with layer metadata envelopes on a federated hypergraph + lakehouse — that logical model is imperative. Agencies **evolve** toward it incrementally (lakehouse first, pilot graph, then enterprise federation). See [End State vs. Evolution Path](docs/Data-Substrate-Concept.md#end-state-vs-evolution-path). **The MOEPA Catalog** is the routing and governance catalog that proves what the institution already owns — and what new projects must enrich.
 
 ---
 
