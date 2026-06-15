@@ -6,14 +6,14 @@
 
 Organizations are investing heavily in AI, yet many are allowing technology vendors and technical teams to define strategy. This approach creates long-term dependency, hidden costs, compliance risks, and weak accountability.
 
-MOEPA is a simple and practical framework that puts business and mission leadership back in charge of AI decisions. It uses five clear layers, grounded in philosophy but translated into business terms, to help leaders:
+The **MOEPA Architecture** is a simple and practical model that puts business and mission leadership back in charge of AI decisions. The **MOEPA Framework** provides the scoring and governance layer on top. Together they use five clear layers, grounded in philosophy but translated into business terms, to help leaders:
 
 - Decide what the organization must own versus what it can safely rent
 - Evaluate AI proposals and use cases from a rational business perspective
 - Establish clear governance and accountability
 - Protect sovereignty, auditability, and long-term stakeholder value
 
-This is not a technical manual. It is a strategic decision framework for leaders who set direction, approve investments, and manage risk.
+This is not a technical manual. It is a strategic guide to the MOEPA Framework for leaders who set direction, approve investments, and manage risk.
 
 ## Why the Five Layers Matter in Real Life
 

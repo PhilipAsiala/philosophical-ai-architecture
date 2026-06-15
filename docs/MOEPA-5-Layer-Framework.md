@@ -1,6 +1,6 @@
 # The MOEPA 5-Layer Framework for Leaders
 
-> A practical, non-technical guide to the five layers of AI governance — with one key question per layer that every leader should be able to answer.
+> A practical, non-technical guide to the five layers of the MOEPA Architecture — with one key question per layer that every leader should be able to answer. This document is part of the **MOEPA Framework** (governance layer). See the [Glossary](glossary.md) for naming definitions.
 
 ---
 

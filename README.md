@@ -1,10 +1,26 @@
-# MOEPA: A Philosophical AI Architecture for Government Leaders
+# MOEPA Architecture
+
+*A philosophical AI architecture for government and enterprise leaders*
 
 > **Own your AI knowledge and decision-making — instead of renting black-box solutions from vendors.**
 
-A strategic AI governance framework for government and enterprise leaders, built around five cognitive layers — **Metrology, Ontology, Epistemology, Praxeology, and Axiology** — and a unified **Data Substrate** that ties them together.
+The **MOEPA Architecture** is a draft strategic reference model for government and enterprise leaders, built around five cognitive layers — **Metrology, Ontology, Epistemology, Praxeology, and Axiology** — a unified **Data Substrate**, and the **MOEPA Catalog**.
 
 This repository is a theory-first reference for leaders who set direction, approve investments, and govern AI — not a technical implementation guide.
+
+---
+
+## Naming
+
+This repository uses a consistent hierarchy of terms:
+
+| Term | What it means | Where to find it |
+|---|---|---|
+| **MOEPA Architecture** | The full model: five layers, Data Substrate, Catalog, and information flow | This README, [glossary](docs/glossary.md), [layer diagrams](diagrams/) |
+| **MOEPA Framework** | The governance layer: scoring rubric, intake checklists, GO / CONDITIONAL GO / NO-GO decisions, own-vs-rent guidance | [Evaluation Checklist](docs/5-Layer-Evaluation-Checklist.md), [Own vs. Rent Strategy](docs/Owned-vs-Rented-AI-Strategy.md) |
+| **MOEPA Cognitive Architecture** | The technical stack design: storage mapping, catalog integration, recommended tools, implementation playbook | [ARCHITECTURE.md](ARCHITECTURE.md) |
+
+All three are part of one proposal. **MOEPA Architecture** is the canonical name for the whole; **MOEPA Framework** and **MOEPA Cognitive Architecture** name the governance and technical views within it.
 
 ---
 
@@ -19,7 +35,7 @@ Government agencies are under pressure to adopt AI quickly. Vendors offer compel
 
 The alternative is an **owned-brain strategy**: rent commodity compute (servers, GPUs), but own the intellectual layer — your data definitions, your verification standards, your decision logic, your values.
 
-MOEPA is the framework for doing that.
+The MOEPA Architecture is the model for doing that.
 
 ---
 
@@ -33,13 +49,13 @@ This repository is designed for:
 - **IRS, Treasury, and similar agencies** where data integrity and auditability are mission-critical
 - **Technical architects** who need a governance framework to anchor their designs
 
-You do not need a technical background to use this repository. The framework is expressed in leadership and governance terms first.
+You do not need a technical background to use this repository. The MOEPA Architecture is expressed in leadership and governance terms first.
 
 ---
 
-## The MOEPA Framework at a Glance
+## The MOEPA Architecture at a Glance
 
-MOEPA organizes AI capability into five interdependent layers, each corresponding to a distinct question a leader should be able to answer about any AI system they oversee.
+The MOEPA Architecture organizes AI capability into five interdependent layers, each corresponding to a distinct question a leader should be able to answer about any AI system they oversee.
 
 ```mermaid
 graph TB
@@ -87,7 +103,7 @@ graph TB
 
 ## Practical Government Use Cases
 
-This framework applies directly to high-stakes government workflows:
+The MOEPA Architecture applies directly to high-stakes government workflows:
 
 - **Third-party income verification** (IRS / tax compliance) — Can your system explain a confidence score of 98% to a taxpayer or auditor? Does an independent verification layer catch model errors before action is taken?
 - **AI project intake scoring** — How do you consistently evaluate and prioritize incoming AI proposals across programs?
@@ -169,20 +185,21 @@ ARCHITECTURE.md                    ← Full technical specification
 | [Business Leader Guide](docs/moepa-business-leaders-guide.md) | Executives | Full executive handout |
 | [Federal Leader Guide](docs/moepa-federal-leaders-guide.md) | Government leaders | Agency-specific guidance |
 | [Catalog](catalog/README.md) | Leaders + technical teams | Capabilities, tools, patterns, scoring, and cross-layer governance reference |
-| [Full Architecture Spec](ARCHITECTURE.md) | Architects / CTO | Complete technical specification |
+| [Glossary](docs/glossary.md) | All readers | MOEPA Architecture, Framework, and Cognitive Architecture definitions |
+| [MOEPA Cognitive Architecture Spec](ARCHITECTURE.md) | Architects / CTO | Technical stack design and implementation playbook |
 
 ---
 
 ## Feedback and Contributions
 
-This is an open-source reference framework. Feedback, corrections, and contributions are welcome.
+This is an open-source reference for the MOEPA Architecture. Feedback, corrections, and contributions are welcome.
 
 - **To suggest improvements:** open an issue or pull request
-- **To adapt this for your agency:** the framework is MIT-licensed — use and modify freely
+- **To adapt this for your agency:** the MOEPA Architecture is MIT-licensed — use and modify freely
 - **To discuss the strategy:** see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines
 
 > This repository is strictly theory and documentation. It does not include production code or working agents.
 
 ---
 
-*Framework version 2.3 · Last updated June 2026 · MIT License*
+*MOEPA Architecture version 2.3 · Last updated June 2026 · MIT License*

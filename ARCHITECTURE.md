@@ -1,14 +1,16 @@
-# Strategic Architecture & Governance
-## The MOEPA Cognitive Architecture Framework
+# MOEPA Architecture — Technical Specification
+## The MOEPA Cognitive Architecture
 Version: 2.3 — Full Ownership & Catalog Focus
 
 Author: Philip Asiala
 
-Last Updated: June 4, 2026
+Last Updated: June 15, 2026
 
 Status: Draft for Review — Feedback Welcome
 
-Related Repositories: philosophical-ai-architecture (GitHub)
+Repository: [philosophical-ai-architecture](https://github.com/PhilipAsiala/philosophical-ai-architecture) (GitHub) — canonical home of the MOEPA Architecture
+
+> **Naming.** This document specifies the **MOEPA Cognitive Architecture** — the technical stack design within the broader **MOEPA Architecture** (five layers, Data Substrate, Catalog). For governance and scoring, see the **MOEPA Framework** documents in [docs/](docs/). Term definitions: [glossary](docs/glossary.md).
 
 ## Executive Summary: The Owned-Brain Strategy
 Modern enterprise AI strategies frequently fail by treating artificial intelligence as a black-box commodity dropped into existing infrastructure. This approach yields brittle systems, probabilistic hallucination, security vulnerabilities, and vendor lock-in.
@@ -18,7 +20,7 @@ The MOEPA Cognitive Architecture (Metrology, Ontology, Epistemology, Praxeology,
 - Rent the Muscles (Compute): Raw hardware execution (VPC, compute clusters, GPUs) is treated as a highly interchangeable, variable-cost commodity.
 - Own the Brain (Intellectual Property): The organizational intelligence—semantic knowledge graphs, cryptographic validation models, ethical guardrails, and mission alignment—is 100% proprietary, portable, and locked down as core intellectual property.
 
-Key Principle: MOEPA is a new cognitive architecture designed for enterprise environments that demand sovereignty, explainability, and measurable governance over AI systems.
+Key Principle: The MOEPA Cognitive Architecture is the technical design within the MOEPA Architecture — built for enterprise environments that demand sovereignty, explainability, and measurable governance over AI systems.
 
 ## 1. The Owned-Brain Strategy — Core Principles
 ### 1.1 Why This Matters Now

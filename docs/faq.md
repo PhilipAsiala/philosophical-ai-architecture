@@ -6,7 +6,15 @@ No. The Data Substrate (Set-Theoretic Backbone) is the shared representation and
 
 ## Is this a finished architecture?
 
-No. This repository describes a proposed strategic governance framework and architecture model for discussion, refinement, and review.
+No. This repository describes a draft **MOEPA Architecture** for discussion, refinement, and review. The **MOEPA Framework** (scoring and governance) and **MOEPA Cognitive Architecture** (technical specification in [ARCHITECTURE.md](../ARCHITECTURE.md)) are views within that model — all are proposals, not deployed systems. See the [Glossary](glossary.md) for term definitions.
+
+## What is the difference between MOEPA Architecture, MOEPA Framework, and MOEPA Cognitive Architecture?
+
+- **MOEPA Architecture** — the full model: five layers, Data Substrate, Catalog, and information flow.
+- **MOEPA Framework** — the governance layer: scoring rubric, intake checklists, GO / CONDITIONAL GO / NO-GO decisions.
+- **MOEPA Cognitive Architecture** — the technical stack design in [ARCHITECTURE.md](../ARCHITECTURE.md): storage mapping, catalog integration, recommended tools.
+
+See the [Naming section in the README](../README.md#naming) and the [Glossary](glossary.md) for details.
 
 ## What is the main idea?
 

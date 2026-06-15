@@ -1,6 +1,6 @@
 # MOEPA Catalog
 
-The MOEPA Catalog is the single authoritative reference and decision-support layer for the Owned-Brain Strategy. It helps leaders set priorities, evaluate AI proposals, manage risk, ensure sovereignty, and make GO, CONDITIONAL, or NO-GO investment and governance decisions across the full MOEPA framework.
+The MOEPA Catalog is the single authoritative reference and decision-support layer for the Owned-Brain Strategy. It helps leaders set priorities, evaluate AI proposals, manage risk, ensure sovereignty, and make GO, CONDITIONAL, or NO-GO investment and governance decisions across the full MOEPA Architecture using the MOEPA Framework scoring model.
 
 It also serves technical architects, program managers, and designers by providing detailed capability descriptions, recommended self-hosted and open tools, proven patterns, and cross-layer compositions — all organized by the five MOEPA layers plus the Data Substrate foundation.
 

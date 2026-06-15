@@ -1,6 +1,6 @@
 # MOEPA Architecture Diagrams
 
-This folder contains Mermaid diagrams illustrating the MOEPA framework from multiple perspectives.
+This folder contains Mermaid diagrams illustrating the MOEPA Architecture from multiple perspectives. The [moepa-stack.md](moepa-stack.md) diagram shows the **MOEPA Cognitive Architecture** layer stack.
 
 | File | Purpose |
 |---|---|
