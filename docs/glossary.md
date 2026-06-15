@@ -1,47 +1,64 @@
 # Glossary
 
-## MOEPA Architecture
+## Philosophical AI Architecture
 
-The complete draft model for organizing and governing AI capability: the five scored layers (Metrology, Ontology, Epistemology, Praxeology, Axiology), the Data Substrate, the MOEPA Catalog, and the information flows that connect them. In this repository, the MOEPA Architecture is conceptual and under review — not a deployed implementation. **MOEPA Architecture** is the canonical name for the whole proposal.
+The overarching enterprise ecosystem for governing machine intelligence: the **Data Substrate**, **MOEPA Catalog**, security guardrails, own-vs-rent strategy, and cognitive control plane. It decodes Intelligence — not just Artificial infrastructure — by mapping human cognitive functions (Cognition, Affect, Conation) into strict, governable software. **Philosophical AI Architecture** is the canonical name for the whole system. This repository is its reference specification.
 
-## MOEPA Framework
+## MOEPA 5-Layer Framework
 
-The governance layer within the MOEPA Architecture: per-layer scoring (1–5), GO / CONDITIONAL GO / NO-GO decision bands, intake checklists, own-vs-rent guidance, and executive review processes. Use this term when the subject is evaluation, approval, or investment decisions — not the structural layer model itself.
+The operational engineering blueprint and governance engine *inside* the Philosophical AI Architecture. It classifies institutional knowledge across five layers and provides the intake scoring rubric (1–5 per layer, GO / CONDITIONAL GO / NO-GO). Use this term for project evaluation, engineering translation, and layer-by-layer accountability — never as a synonym for the full ecosystem.
 
 ## MOEPA Cognitive Architecture
 
-The technical stack design within the MOEPA Architecture, as specified in [ARCHITECTURE.md](../ARCHITECTURE.md): layer implementations, Data Substrate storage mapping, catalog integration, recommended technology stack, and implementation playbook. Use this term when the subject is how the model is built and operated, not how proposals are scored.
+The technical stack design within the Philosophical AI Architecture, as specified in [ARCHITECTURE.md](../ARCHITECTURE.md): layer implementations, Data Substrate storage mapping, catalog integration, recommended technology stack, and implementation playbook.
+
+## Cognition, Affect, Conation
+
+The three human cognitive functions the Philosophical AI Architecture maps into software:
+
+- **Cognition** (knowing) — how the system defines and verifies reality → Metrology, Ontology, Epistemology
+- **Affect** (valuing) — how the system encodes what matters and what is forbidden → Axiology
+- **Conation** (acting) — how the system executes decisions under oversight → Praxeology
+
+## Philosophy vs. Psychology (in the stack)
+
+- **Philosophy** — the operating system of cognition: strict logical rules for defining reality and truth (Metrology, Ontology, Epistemology).
+- **Psychology** — the mechanics of behavior: how values and execution drives steer the engine (Axiology, Praxeology).
 
 ## Data Substrate (Set-Theoretic Backbone)
 
-The cross-cutting representation medium — an SPO/quad backbone (Subject-Predicate-Object, quads with context) plus lakehouse storage — that all five MOEPA layers store into. The substrate holds each base fact once; every layer attaches its own metadata envelope (epistemic, praxeological, axiological, etc.) without duplicating the base triple. It is the shared storage and representation infrastructure beneath the five scored disciplines and is explicitly **not** a sixth scored layer.
+The agency-owned knowledge library — the cross-cutting representation medium where truth, values, rules, and lineage live in open, portable formats. Technically: an SPO/quad backbone plus lakehouse storage that all five MOEPA layers read from and write to. The substrate holds each base fact once; every layer attaches its own metadata envelope without duplicating the base triple. Explicitly **not** a sixth scored layer.
 
 ## SPO Triple / Quad
 
-A Subject-Predicate-Object triple (or quad, when a context/graph identifier is added as a fourth element) used as the universal structural unit of the MOEPA Data Substrate. Example: `(IncomeVerification:TX12345, hasAmount, 85000)`. All layer-specific metadata envelopes attach to this base triple rather than replacing it.
+A Subject-Predicate-Object triple (or quad, when a context/graph identifier is added as a fourth element) used as the universal structural unit of the Data Substrate. Example: `(IncomeVerification:TX12345, hasAmount, 85000)`.
 
 ## MOEPA
 
-The acronym for the five-layer model at the heart of the MOEPA Architecture:
+The acronym for the five layers at the heart of the MOEPA 5-Layer Framework:
 
-- Metrology: measurement and data foundation
+- Metrology: measurement, telemetry, and data foundation
 - Ontology: structured reality and knowledge representation
 - Epistemology: truth, verification, and justification
 - Praxeology: purposeful action and workflow governance
 - Axiology: value, ethics, and policy alignment
 
+## MOEPA Catalog
+
+The routing and governance catalog inside the Philosophical AI Architecture — for discovering, versioning, deduplicating, and auditing assets across all five layers. Federal intake requires leaders to prove how a project enriches this catalog.
+
 ## Owned Brain
 
-The idea that the organization should own its semantic models, validation rules, policy controls, and knowledge assets rather than outsourcing them to a vendor.
+The organization owns its Data Substrate, semantic models, validation rules, policy controls, and catalog — rather than outsourcing them to a vendor.
 
 ## Rented Compute
 
-Commodity infrastructure such as GPUs, clusters, or cloud capacity that can be swapped or scaled independently from the MOEPA Cognitive Architecture.
-
-## MOEPA Catalog
-
-A proposed internal catalog for discovering, versioning, governing, and auditing the assets used across the MOEPA Architecture.
+Commodity infrastructure (GPUs, clusters, cloud capacity, commercial LLM APIs) that the organization rents while retaining sovereignty over the cognitive layers and Data Substrate.
 
 ## Golden Master
 
 A locked configuration baseline used in the axiological layer to preserve policy and prevent easy modification.
+
+## Cognitive Control Plane
+
+The combined governance surface — MOEPA 5-Layer Framework intake scoring, MOEPA Catalog deduplication, and Data Substrate ownership — that lets leadership govern an AI mind without relying on standard IT infrastructure metrics alone.

@@ -1,6 +1,6 @@
 # MOEPA: A Federal Leader's Guide to Owning AI Strategy
 
-## Evaluating Use Cases Through First-Principles Cognitive Architecture
+## The Philosophical AI Architecture — A Cognitive Control Plane for Federal AI
 
 *A strategic handout for senior federal executives, agency CIOs, and mission leaders*
 
@@ -12,7 +12,7 @@ Federal agencies face a defining inflection point. The market is flooded with AI
 
 The Taxpayer Bill of Rights demands accuracy and fairness. Congressional oversight demands transparency and accountability. Mission integrity demands that the agency—not a vendor—owns the rules, the data, and the decision logic.
 
-The **MOEPA Architecture** provides a five-layer model plus a unified, agency-owned knowledge substrate to make that ownership practical and defensible. The **MOEPA Framework** supplies the scoring and governance layer. Applied systematically, they give federal leadership the tools to:
+The **Philosophical AI Architecture** provides a cognitive control plane — a unified, agency-owned **Data Substrate** plus the **MOEPA Catalog** — to make ownership practical and defensible. The **MOEPA 5-Layer Framework** is the go/no-go intake rubric inside that architecture. Applied systematically, they give federal leadership the tools to:
 
 - Evaluate any AI use case against clear, auditable criteria before approving investment
 - Distinguish between capability the agency must own and commodity compute it can safely rent
@@ -27,7 +27,7 @@ The **MOEPA Architecture** provides a five-layer model plus a unified, agency-ow
 
 ### What MOEPA Is
 
-The MOEPA Architecture is built on five classical disciplines of human reasoning, translated into five leadership responsibilities for AI governance. The acronym stands for **Metrology, Ontology, Epistemology, Praxeology, and Axiology**—in that order, from the data foundation up through value governance. The MOEPA Framework turns these layers into auditable scoring and intake criteria.
+The MOEPA 5-Layer Framework is built on five classical disciplines of human reasoning, translated into five leadership responsibilities for AI governance. The acronym stands for **Metrology, Ontology, Epistemology, Praxeology, and Axiology**—in that order, from the data foundation up through value governance. Area leaders must prove how their project enriches the MOEPA Catalog across all five layers. Black-box vendor solutions that cannot map to the framework fail intake by design.
 
 Each layer answers a distinct question federal leadership must be able to answer about any AI system the agency operates or procures.
 

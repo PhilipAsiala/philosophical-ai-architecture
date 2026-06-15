@@ -1,6 +1,6 @@
 # The MOEPA 5-Layer Framework for Leaders
 
-> A practical, non-technical guide to the five layers of the MOEPA Architecture — with one key question per layer that every leader should be able to answer. This document is part of the **MOEPA Framework** (governance layer). See the [Glossary](glossary.md) for naming definitions.
+> The engineering blueprint inside the Philosophical AI Architecture — one key question per layer that every leader and engineer must be able to answer. This document defines the **MOEPA 5-Layer Framework**. See the [Glossary](glossary.md) and [Pitch Strategy](pitch-strategy.md).
 
 ---
 

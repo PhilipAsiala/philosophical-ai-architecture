@@ -1,32 +1,33 @@
 # Documentation
 
-This repository is the canonical reference for the **MOEPA Architecture** — a draft strategic model for leadership decision-making, not a finished product or deployed system. For term definitions (Architecture vs. Framework vs. Cognitive Architecture), see the [Glossary](glossary.md).
+This repository is the canonical reference for the **Philosophical AI Architecture** — a draft ecosystem for governing machine intelligence, not a finished product or deployed system.
 
 ## Start Here
 
-- [Leader Guide](moepa-business-leaders-guide.md) for executive decision support
-- [Federal Leader Guide](moepa-federal-leaders-guide.md) for government/IRS-facing evaluation and ownership strategy (federal companion to the Leader Guide)
-- [Catalog](../catalog/README.md) — the single source for capabilities, tools, patterns, scoring, and GO/NO-GO governance by layer
+- [Pitch Strategy](pitch-strategy.md) — canonical narrative, audience hooks, terminology rules
+- [Federal Leader Guide](moepa-federal-leaders-guide.md) — cognitive control plane for government executives
+- [Leader Guide](moepa-business-leaders-guide.md) — executive decision support (industry-neutral)
+- [MOEPA 5-Layer Framework for Leaders](MOEPA-5-Layer-Framework.md) — engineering blueprint
+- [Catalog](../catalog/README.md) — MOEPA Catalog: capabilities, tools, scoring, GO/NO-GO governance
 - [Quick Start](quick-start.md) for a short reading path
-- [Glossary](glossary.md) for the core MOEPA terms
+- [Glossary](glossary.md) for term definitions
 - [Layer Diagram](layer-diagram.md) for a visual overview
 - [FAQ](faq.md) for common questions
-- [Business Value](business-value.md) for use case and investment framing
-- [Architecture Specification](../ARCHITECTURE.md) for the full proposal
-- [How to Contribute](../CONTRIBUTING.md) for feedback, questions, and proposals
-- [Slide Decks](decks/README.md) for Marp-generated PPTX/PDF presentations derived from the guides
+- [Business Value](business-value.md) for investment framing
+- [MOEPA Cognitive Architecture Spec](../ARCHITECTURE.md) for the technical stack
+- [How to Contribute](../CONTRIBUTING.md) for feedback and proposals
+- [Slide Decks](decks/README.md) for Marp-generated presentations
 
 ## What This Docs Set Covers
 
-- The MOEPA Architecture and its naming hierarchy
-- The five MOEPA layers
-- The scoring and governance model
+- The Philosophical AI Architecture and its term hierarchy
+- Cognition, Affect, Conation mapped to MOEPA layers
+- The MOEPA 5-Layer Framework (engineering blueprint and intake scoring)
+- The agency-owned Data Substrate
+- The MOEPA Catalog (routing, deduplication, governance)
 - The MOEPA Cognitive Architecture implementation approach
-- A visual layer map
-- A short FAQ for new readers
-- A business-value lens for use cases and investment decisions
-- A PDF-friendly leadership handout for priority and governance decisions
-- A concrete catalog of capabilities, tools, patterns, and scoring by layer
+- Federal and business leader handouts
+- Government scenario walkthroughs in [examples/](../examples/)
 
 ## What Is Not Covered Yet
 

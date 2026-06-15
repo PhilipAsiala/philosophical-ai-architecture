@@ -2,40 +2,52 @@
 
 ## Is the Data Substrate a sixth layer?
 
-No. The Data Substrate (Set-Theoretic Backbone) is the shared representation and storage backbone beneath all five layers — an SPO/quad triple store plus lakehouse — that every layer stores into. It is **not** a scored layer. The five scored disciplines (Metrology, Ontology, Epistemology, Praxeology, Axiology) and the 1–5 per-layer scoring model remain unchanged. See §5.1 of [ARCHITECTURE.md](../ARCHITECTURE.md) for the full substrate specification.
+No. The Data Substrate is the agency-owned knowledge library beneath all five layers — an SPO/quad triple store plus lakehouse — that every layer stores into. It holds truth, values, rules, and lineage in open formats the organization owns permanently. It is **not** a scored layer. See §5.1 of [ARCHITECTURE.md](../ARCHITECTURE.md) for the full substrate specification.
 
 ## Is this a finished architecture?
 
-No. This repository describes a draft **MOEPA Architecture** for discussion, refinement, and review. The **MOEPA Framework** (scoring and governance) and **MOEPA Cognitive Architecture** (technical specification in [ARCHITECTURE.md](../ARCHITECTURE.md)) are views within that model — all are proposals, not deployed systems. See the [Glossary](glossary.md) for term definitions.
+No. This repository describes a draft **Philosophical AI Architecture** for discussion, refinement, and review. The **MOEPA 5-Layer Framework** (engineering blueprint and intake scoring) and **MOEPA Cognitive Architecture** (technical specification in [ARCHITECTURE.md](../ARCHITECTURE.md)) are components within that ecosystem — all are proposals, not deployed systems.
 
-## What is the difference between MOEPA Architecture, MOEPA Framework, and MOEPA Cognitive Architecture?
+## What is the difference between Philosophical AI Architecture, MOEPA 5-Layer Framework, and MOEPA Cognitive Architecture?
 
-- **MOEPA Architecture** — the full model: five layers, Data Substrate, Catalog, and information flow.
-- **MOEPA Framework** — the governance layer: scoring rubric, intake checklists, GO / CONDITIONAL GO / NO-GO decisions.
+- **Philosophical AI Architecture** — the full ecosystem: Data Substrate, MOEPA Catalog, guardrails, own-vs-rent strategy, cognitive control plane.
+- **MOEPA 5-Layer Framework** — the engineering blueprint and governance engine inside the architecture: five layers, intake scoring, GO / CONDITIONAL GO / NO-GO decisions.
 - **MOEPA Cognitive Architecture** — the technical stack design in [ARCHITECTURE.md](../ARCHITECTURE.md): storage mapping, catalog integration, recommended tools.
 
-See the [Naming section in the README](../README.md#naming) and the [Glossary](glossary.md) for details.
+See the [Naming section in the README](../README.md#naming), [Pitch Strategy](pitch-strategy.md), and [Glossary](glossary.md).
+
+## What are Cognition, Affect, and Conation?
+
+The three human cognitive functions the Philosophical AI Architecture maps into software:
+
+- **Cognition** (knowing) → Metrology, Ontology, Epistemology
+- **Affect** (valuing) → Axiology
+- **Conation** (acting) → Praxeology
+
+Philosophy (Metrology, Ontology, Epistemology) is the operating system for reality and truth. Psychology (Axiology, Praxeology) is the mechanics of values and execution.
 
 ## What is the main idea?
 
-The main idea is to separate rented compute from owned cognitive assets so the organization controls its data, semantics, verification, workflow, and policy layers.
+Decode Intelligence — not just Artificial infrastructure. Separate rented compute and commercial LLMs from owned cognitive assets: the Data Substrate, semantic models, verification rules, workflows, and policy guardrails.
 
 ## Why five layers?
 
-The five layers provide a clean way to separate concerns:
+The MOEPA 5-Layer Framework provides a clean engineering blueprint:
 
-- Metrology for measurement and data quality
-- Ontology for domain structure
-- Epistemology for verification and truth
-- Praxeology for agentic action
-- Axiology for governance and values
+- Metrology — telemetry, measurement, data quality
+- Ontology — knowledge graphs, approved vocabularies
+- Epistemology — RAG validation, evidence mapping
+- Praxeology — workflows, SOPs, agentic playbooks
+- Axiology — guardrails, compliance, values
 
 ## Where should I start?
 
-If you are a leader, start with the [Leader Guide](moepa-business-leaders-guide.md), then read [Business Value](business-value.md), then use the [Catalog](../catalog/README.md).
+**Federal leadership:** [Federal Leader Guide](moepa-federal-leaders-guide.md) → [Evaluation Checklist](5-Layer-Evaluation-Checklist.md) → [Pitch Strategy](pitch-strategy.md)
 
-If you need the full reference model, continue with [Quick Start](quick-start.md), [Glossary](glossary.md), and [ARCHITECTURE.md](../ARCHITECTURE.md).
+**Technical architects:** [MOEPA 5-Layer Framework](MOEPA-5-Layer-Framework.md) → [Data Substrate Concept](Data-Substrate-Concept.md) → [ARCHITECTURE.md](../ARCHITECTURE.md)
+
+**All readers:** [Glossary](glossary.md) → [Catalog](../catalog/README.md)
 
 ## Does this include an implementation?
 
-Not yet. The repository currently focuses on the proposal, the governance model, and the intended operating principles.
+Not yet. The repository focuses on the proposal, the MOEPA 5-Layer Framework governance model, and the intended operating principles for a governed Data Substrate.

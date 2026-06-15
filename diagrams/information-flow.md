@@ -1,6 +1,6 @@
 # Information Flow Across MOEPA Layers
 
-How data, knowledge, verification, and decisions flow through the MOEPA architecture — from raw source data to a governed, auditable decision.
+How data, knowledge, verification, and decisions flow through the Philosophical AI Architecture — from raw source data to a governed, auditable decision on the agency-owned Data Substrate.
 
 ---
 

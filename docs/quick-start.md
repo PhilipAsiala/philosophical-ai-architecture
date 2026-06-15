@@ -2,39 +2,30 @@
 
 ## What This Is
 
-The **MOEPA Architecture** is a draft five-layer AI model designed around ownership, accountability, and separation of concerns. The **MOEPA Framework** provides the governance and scoring layer on top of it. See the [Glossary](glossary.md) for term definitions.
+The **Philosophical AI Architecture** decodes Intelligence into governable software — mapping Cognition, Affect, and Conation into the **MOEPA 5-Layer Framework** (Metrology, Ontology, Epistemology, Praxeology, Axiology), anchored by an agency-owned **Data Substrate** and **MOEPA Catalog**.
 
-The layers are:
-
-1. Metrology
-1. Ontology
-1. Epistemology
-1. Praxeology
-1. Axiology
+See the [Glossary](glossary.md) and [Pitch Strategy](pitch-strategy.md) for term definitions.
 
 ## How To Read The Proposal
 
-Leadership path:
+**Federal leadership path:**
 
-1. Start with the [Leader Guide](moepa-business-leaders-guide.md).
-2. Review [Business Value](business-value.md) for the investment lens.
-3. Use the [Catalog](../catalog/README.md) for layer-by-layer capabilities, tools, patterns, scoring, and cross-layer guidance.
+1. [Pitch Strategy](pitch-strategy.md) — narrative and hooks
+2. [Federal Leader Guide](moepa-federal-leaders-guide.md) — cognitive control plane
+3. [Evaluation Checklist](5-Layer-Evaluation-Checklist.md) — intake scoring
 
-Reference path:
+**Technical architect path:**
 
-1. Start with the [main README](../README.md) for the repository-level framing.
-2. Read the [architecture specification](../ARCHITECTURE.md) for the full proposal.
-3. Use the [glossary](glossary.md) to decode the layer terminology.
-4. Review the [Catalog](../catalog/README.md) for layer-specific capabilities, tools, patterns, and scoring.
+1. [MOEPA 5-Layer Framework for Leaders](MOEPA-5-Layer-Framework.md) — engineering blueprint
+2. [Data Substrate Concept](Data-Substrate-Concept.md) — knowledge library design
+3. [ARCHITECTURE.md](../ARCHITECTURE.md) — MOEPA Cognitive Architecture technical spec
 
-## What To Look For
+**Executive path:**
 
-- The distinction between rented compute and owned cognitive assets
-- The scoring rubric for deciding whether a project is ready
-- The catalog concept used to make assets discoverable and governed
-- The layer-by-layer catalog content used for intake and maturity scoring
-- The implementation playbook for turning the proposal into a system design
+1. [Leader Guide](moepa-business-leaders-guide.md)
+2. [Business Value](business-value.md)
+3. [Catalog](../catalog/README.md)
 
-## Current Status
+## What This Repository Is Not
 
-This repository describes a draft MOEPA Architecture for evaluating AI priorities and governance decisions. It is intended for discussion, refinement, and review rather than as a production implementation guide.
+This repository describes a draft Philosophical AI Architecture for evaluating AI priorities and governance decisions. It is intended for discussion, refinement, and review — not as a production implementation guide.

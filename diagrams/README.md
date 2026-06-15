@@ -1,6 +1,6 @@
-# MOEPA Architecture Diagrams
+# Philosophical AI Architecture Diagrams
 
-This folder contains Mermaid diagrams illustrating the MOEPA Architecture from multiple perspectives. The [moepa-stack.md](moepa-stack.md) diagram shows the **MOEPA Cognitive Architecture** layer stack.
+This folder contains Mermaid diagrams illustrating the Philosophical AI Architecture from multiple perspectives. The [moepa-stack.md](moepa-stack.md) diagram shows the **MOEPA Cognitive Architecture** layer stack within the **MOEPA 5-Layer Framework**.
 
 | File | Purpose |
 |---|---|

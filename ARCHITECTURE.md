@@ -1,4 +1,4 @@
-# MOEPA Architecture — Technical Specification
+# Philosophical AI Architecture — Technical Specification
 ## The MOEPA Cognitive Architecture
 Version: 2.3 — Full Ownership & Catalog Focus
 
@@ -8,19 +8,19 @@ Last Updated: June 15, 2026
 
 Status: Draft for Review — Feedback Welcome
 
-Repository: [philosophical-ai-architecture](https://github.com/PhilipAsiala/philosophical-ai-architecture) (GitHub) — canonical home of the MOEPA Architecture
+Repository: [philosophical-ai-architecture](https://github.com/PhilipAsiala/philosophical-ai-architecture) (GitHub) — canonical home of the Philosophical AI Architecture
 
-> **Naming.** This document specifies the **MOEPA Cognitive Architecture** — the technical stack design within the broader **MOEPA Architecture** (five layers, Data Substrate, Catalog). For governance and scoring, see the **MOEPA Framework** documents in [docs/](docs/). Term definitions: [glossary](docs/glossary.md).
+> **Naming.** This document specifies the **MOEPA Cognitive Architecture** — the technical stack design within the **Philosophical AI Architecture**. For the engineering blueprint and intake scoring, see the **MOEPA 5-Layer Framework** in [docs/](docs/). For pitching and narrative alignment, see [pitch strategy](docs/pitch-strategy.md). Term definitions: [glossary](docs/glossary.md).
 
 ## Executive Summary: The Owned-Brain Strategy
-Modern enterprise AI strategies frequently fail by treating artificial intelligence as a black-box commodity dropped into existing infrastructure. This approach yields brittle systems, probabilistic hallucination, security vulnerabilities, and vendor lock-in.
+The industry obsesses over the Artificial — compute, LLMs, infrastructure — and treats Intelligence as a black box. The Philosophical AI Architecture opens that box by mapping human cognitive functions (Cognition, Affect, Conation) into strict, governable software.
 
-The MOEPA Cognitive Architecture (Metrology, Ontology, Epistemology, Praxeology, and Axiology) treats machine cognition with rigorous engineering and philosophical symmetry. By decoupling the architecture, organizations can achieve an Asset-Light, Owned-Brain Strategy:
+The MOEPA Cognitive Architecture (Metrology, Ontology, Epistemology, Praxeology, and Axiology) implements this with rigorous engineering and philosophical symmetry. Organizations achieve an Asset-Light, Owned-Brain Strategy:
 
 - Rent the Muscles (Compute): Raw hardware execution (VPC, compute clusters, GPUs) is treated as a highly interchangeable, variable-cost commodity.
 - Own the Brain (Intellectual Property): The organizational intelligence—semantic knowledge graphs, cryptographic validation models, ethical guardrails, and mission alignment—is 100% proprietary, portable, and locked down as core intellectual property.
 
-Key Principle: The MOEPA Cognitive Architecture is the technical design within the MOEPA Architecture — built for enterprise environments that demand sovereignty, explainability, and measurable governance over AI systems.
+Key Principle: The MOEPA Cognitive Architecture is the technical implementation layer of the Philosophical AI Architecture — built for enterprise environments that demand sovereignty, explainability, and measurable governance over AI systems.
 
 ## 1. The Owned-Brain Strategy — Core Principles
 ### 1.1 Why This Matters Now
@@ -329,8 +329,8 @@ MOEPA is designed to be complementary to major AI governance frameworks:
 - OWASP LLM Top 10
 - Executive Order 14110 (Safe AI)
 
-## 9. Governance of the MOEPA Framework Itself
-The practices below describe how an organization adopting MOEPA should govern its own instance of the framework. To propose changes to this repository itself, see [CONTRIBUTING.md](CONTRIBUTING.md).
+## 9. Governance of the Philosophical AI Architecture
+The practices below describe how an organization adopting the Philosophical AI Architecture and MOEPA 5-Layer Framework should govern its own instance. To propose changes to this repository itself, see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 - Semantic versioning (MAJOR.MINOR.PATCH).
 - Quarterly review by Architecture Review Board.
