@@ -1,10 +1,10 @@
 # Business Value
 
-This proposed architecture is valuable because it helps an organization build an owned AI layer instead of relying on fragmented vendor tools or ad hoc agent setups.
+The MOEPA Architecture is valuable because it helps an organization build an owned AI layer instead of relying on fragmented vendor tools or ad hoc agent setups.
 
 ## Primary Value Proposition
 
-The architecture gives teams a structured way to:
+The MOEPA Architecture gives teams a structured way to:
 
 - Own the data, semantic, verification, workflow, and policy layers
 - Separate commodity compute from durable intellectual property
@@ -22,11 +22,11 @@ The MOEPA scoring model can be used as an intake filter for new ideas. A use cas
 - Needs deterministic workflow boundaries
 - Aligns with policy, compliance, and governance requirements
 
-Use cases that score poorly in the framework are usually better treated as experiments, not core investments.
+Use cases that score poorly in the MOEPA Framework are usually better treated as experiments, not core investments.
 
 ## How It Helps Evaluate Investment
 
-The architecture can act as an investment lens by separating short-term tool adoption from long-term capability building.
+The MOEPA Architecture can act as an investment lens by separating short-term tool adoption from long-term capability building.
 
 It helps answer questions such as:
 

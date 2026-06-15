@@ -16,7 +16,7 @@ AI-assisted verification could process millions of returns automatically — but
 3. Guarantee that errors are caught before they affect citizens
 4. Produce a complete audit trail for any challenged case
 
-Without the MOEPA framework, agencies often end up with a vendor-provided "match score" that nobody can explain.
+Without the MOEPA Architecture, agencies often end up with a vendor-provided "match score" that nobody can explain.
 
 ---
 

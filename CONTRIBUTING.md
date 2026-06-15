@@ -1,9 +1,12 @@
 # Contributing
 
-This repository is a draft strategic AI governance framework (MOEPA) shared for
-discussion, refinement, and review. Feedback is welcome — including disagreement.
-This is a proposal, not a deployed system: contributions are documentation and
-design feedback, not code to build or run.
+This repository is the canonical reference for the draft **MOEPA Architecture**
+shared for discussion, refinement, and review. Feedback is welcome — including
+disagreement. This is a proposal, not a deployed system: contributions are
+documentation and design feedback, not code to build or run.
+
+For term definitions (MOEPA Architecture vs. MOEPA Framework vs. MOEPA Cognitive
+Architecture), see [docs/glossary.md](docs/glossary.md).
 
 ## Ways to Participate
 

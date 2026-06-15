@@ -2,7 +2,7 @@
 
 ## What This Is
 
-MOEPA is a proposed five-layer AI strategy and governance framework designed around ownership, accountability, and separation of concerns.
+The **MOEPA Architecture** is a draft five-layer AI model designed around ownership, accountability, and separation of concerns. The **MOEPA Framework** provides the governance and scoring layer on top of it. See the [Glossary](glossary.md) for term definitions.
 
 The layers are:
 
@@ -37,4 +37,4 @@ Reference path:
 
 ## Current Status
 
-This repository describes a draft leadership framework for evaluating AI priorities and governance decisions. It is intended for discussion, refinement, and review rather than as a production implementation guide.
+This repository describes a draft MOEPA Architecture for evaluating AI priorities and governance decisions. It is intended for discussion, refinement, and review rather than as a production implementation guide.

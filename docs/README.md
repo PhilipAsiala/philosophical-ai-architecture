@@ -1,6 +1,6 @@
 # Documentation
 
-This repository is a strategic AI governance framework for leadership decision-making, not a finished product or deployed system.
+This repository is the canonical reference for the **MOEPA Architecture** — a draft strategic model for leadership decision-making, not a finished product or deployed system. For term definitions (Architecture vs. Framework vs. Cognitive Architecture), see the [Glossary](glossary.md).
 
 ## Start Here
 
@@ -18,10 +18,10 @@ This repository is a strategic AI governance framework for leadership decision-m
 
 ## What This Docs Set Covers
 
-- The idea behind the architecture
+- The MOEPA Architecture and its naming hierarchy
 - The five MOEPA layers
 - The scoring and governance model
-- The proposed implementation approach
+- The MOEPA Cognitive Architecture implementation approach
 - A visual layer map
 - A short FAQ for new readers
 - A business-value lens for use cases and investment decisions

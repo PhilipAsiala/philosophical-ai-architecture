@@ -12,7 +12,7 @@ Federal agencies face a defining inflection point. The market is flooded with AI
 
 The Taxpayer Bill of Rights demands accuracy and fairness. Congressional oversight demands transparency and accountability. Mission integrity demands that the agency—not a vendor—owns the rules, the data, and the decision logic.
 
-MOEPA provides a five-layer cognitive architecture model plus a unified, agency-owned knowledge substrate to make that ownership practical and defensible. Applied systematically, it gives federal leadership the tools to:
+The **MOEPA Architecture** provides a five-layer model plus a unified, agency-owned knowledge substrate to make that ownership practical and defensible. The **MOEPA Framework** supplies the scoring and governance layer. Applied systematically, they give federal leadership the tools to:
 
 - Evaluate any AI use case against clear, auditable criteria before approving investment
 - Distinguish between capability the agency must own and commodity compute it can safely rent
@@ -27,7 +27,7 @@ MOEPA provides a five-layer cognitive architecture model plus a unified, agency-
 
 ### What MOEPA Is
 
-MOEPA is a framework built on five classical disciplines of human reasoning, translated into five leadership responsibilities for AI governance. The acronym stands for **Metrology, Ontology, Epistemology, Praxeology, and Axiology**—in that order, from the data foundation up through value governance.
+The MOEPA Architecture is built on five classical disciplines of human reasoning, translated into five leadership responsibilities for AI governance. The acronym stands for **Metrology, Ontology, Epistemology, Praxeology, and Axiology**—in that order, from the data foundation up through value governance. The MOEPA Framework turns these layers into auditable scoring and intake criteria.
 
 Each layer answers a distinct question federal leadership must be able to answer about any AI system the agency operates or procures.
 
