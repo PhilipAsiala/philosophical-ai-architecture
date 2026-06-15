@@ -166,7 +166,8 @@ A government agency that follows this rule will have AI systems it can audit, ex
 
 ## Related Documents
 
-- [5-Layer Evaluation Checklist](5-Layer-Evaluation-Checklist.md) — score any AI proposal against MOEPA
+- [5-Layer Evaluation Checklist](5-Layer-Evaluation-Checklist.md) — score any AI proposal against the MOEPA 5-Layer Framework
+- [Pitch Strategy](pitch-strategy.md) — canonical narrative and federal ownership pitch
 - [MOEPA 5-Layer Framework](MOEPA-5-Layer-Framework.md) — detailed per-layer leadership guide
 - [Business Leader Guide](moepa-business-leaders-guide.md) — full executive handout
 - [Federal Leader Guide](moepa-federal-leaders-guide.md) — government-specific guidance

@@ -1,12 +1,13 @@
 # Contributing
 
-This repository is the canonical reference for the draft **MOEPA Architecture**
-shared for discussion, refinement, and review. Feedback is welcome — including
-disagreement. This is a proposal, not a deployed system: contributions are
-documentation and design feedback, not code to build or run.
+This repository is the canonical reference for the draft **Philosophical AI
+Architecture** shared for discussion, refinement, and review. Feedback is
+welcome — including disagreement. This is a proposal, not a deployed system:
+contributions are documentation and design feedback, not code to build or run.
 
-For term definitions (MOEPA Architecture vs. MOEPA Framework vs. MOEPA Cognitive
-Architecture), see [docs/glossary.md](docs/glossary.md).
+All contributions must align with the narrative in
+[docs/pitch-strategy.md](docs/pitch-strategy.md). For term definitions, see
+[docs/glossary.md](docs/glossary.md).
 
 ## Ways to Participate
 
@@ -21,6 +22,7 @@ Architecture), see [docs/glossary.md](docs/glossary.md).
 - Unclear, ambiguous, or unsupported claims
 - Gaps in the five-layer model, the scoring rubric, or the catalog
 - Real-world examples, references, or counterexamples
+- Drift from the pitch strategy terminology or tone
 
 ## Proposal / RFC Process
 
@@ -33,6 +35,8 @@ For changes that affect the layer model, scoring semantics, or governance approa
 
 ## Style Notes
 
-- Keep the audience-neutral, enterprise-leadership voice used across the docs.
+- Punchy, authoritative, direct — engineer-to-engineer, executive-to-executive.
+- Ground abstract concepts in physical metaphors (Data Substrate, Control Plane, Catalog).
+- Never conflate the **Philosophical AI Architecture** (ecosystem) with the **MOEPA 5-Layer Framework** (engineering blueprint and intake rubric).
 - Preserve the five-layer structure (Metrology, Ontology, Epistemology, Praxeology, Axiology).
 - Keep the GO / CONDITIONAL / NO-GO scoring model consistent across `ARCHITECTURE.md` and `catalog/`.

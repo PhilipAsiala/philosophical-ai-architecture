@@ -1,6 +1,6 @@
 # Layered Architecture Diagram
 
-This diagram shows the MOEPA Architecture stack as a layered flow from measurable signals and domain structure up through knowledge validation, operational action, and value governance. The **Data Substrate** (Set-Theoretic Backbone) is the shared SPO/quad + lakehouse storage medium that all five layers write to and read from; it is not a scored layer.
+This diagram shows the Philosophical AI Architecture stack as a layered flow from measurable signals and domain structure up through knowledge validation, operational action, and value governance. The **Data Substrate** (Set-Theoretic Backbone) is the shared SPO/quad + lakehouse storage medium that all five layers write to and read from; it is not a scored layer.
 
 ```mermaid
 graph TD

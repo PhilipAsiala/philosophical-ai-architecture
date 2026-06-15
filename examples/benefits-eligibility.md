@@ -16,7 +16,7 @@ The pressure to automate is real. But automation without governance creates new 
 - Appeals that cannot be supported because the decision trail is incomplete
 - Legal liability when AI-assisted denials are challenged in court
 
-The MOEPA Architecture enables automation *with* accountability.
+The Philosophical AI Architecture enables automation *with* accountability.
 
 ---
 

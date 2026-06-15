@@ -1,6 +1,6 @@
 # MOEPA Catalog
 
-The MOEPA Catalog is the single authoritative reference and decision-support layer for the Owned-Brain Strategy. It helps leaders set priorities, evaluate AI proposals, manage risk, ensure sovereignty, and make GO, CONDITIONAL, or NO-GO investment and governance decisions across the full MOEPA Architecture using the MOEPA Framework scoring model.
+The MOEPA Catalog is the routing and governance catalog inside the Philosophical AI Architecture. It helps leaders set priorities, evaluate AI proposals, manage risk, ensure sovereignty, and make GO, CONDITIONAL, or NO-GO investment decisions using the MOEPA 5-Layer Framework scoring model. Federal intake requires leaders to prove catalog enrichment — black-box vendor solutions that cannot map to the catalog fail by design.
 
 It also serves technical architects, program managers, and designers by providing detailed capability descriptions, recommended self-hosted and open tools, proven patterns, and cross-layer compositions — all organized by the five MOEPA layers plus the Data Substrate foundation.
 

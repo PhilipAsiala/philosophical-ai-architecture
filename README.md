@@ -1,65 +1,65 @@
-# MOEPA Architecture
+# Philosophical AI Architecture
 
-*A philosophical AI architecture for government and enterprise leaders*
+*Decode Intelligence into governable software — for government and enterprise leaders*
 
-> **Own your AI knowledge and decision-making — instead of renting black-box solutions from vendors.**
+> **Own the brain. Rent the muscles.** The industry obsesses over the Artificial (compute, LLMs, infrastructure) and treats Intelligence as a black box. We open the black box.
 
-The **MOEPA Architecture** is a draft strategic reference model for government and enterprise leaders, built around five cognitive layers — **Metrology, Ontology, Epistemology, Praxeology, and Axiology** — a unified **Data Substrate**, and the **MOEPA Catalog**.
+The **Philosophical AI Architecture** is a draft reference ecosystem for building auditable, institutional brains — not vendor black boxes. It maps human cognitive functions into strict, governable software, anchored by a unified **Data Substrate**, a **MOEPA Catalog**, and the **MOEPA 5-Layer Framework** as the engineering blueprint and intake control plane.
 
-This repository is a theory-first reference for leaders who set direction, approve investments, and govern AI — not a technical implementation guide.
+This repository is theory-first documentation for leaders who set direction, approve investments, and govern AI — not a production implementation.
 
 ---
 
 ## Naming
 
-This repository uses a consistent hierarchy of terms:
+Never conflate the overarching system with the operational tool.
 
-| Term | What it means | Where to find it |
+| Term | What it is | Where to find it |
 |---|---|---|
-| **MOEPA Architecture** | The full model: five layers, Data Substrate, Catalog, and information flow | This README, [glossary](docs/glossary.md), [layer diagrams](diagrams/) |
-| **MOEPA Framework** | The governance layer: scoring rubric, intake checklists, GO / CONDITIONAL GO / NO-GO decisions, own-vs-rent guidance | [Evaluation Checklist](docs/5-Layer-Evaluation-Checklist.md), [Own vs. Rent Strategy](docs/Owned-vs-Rented-AI-Strategy.md) |
-| **MOEPA Cognitive Architecture** | The technical stack design: storage mapping, catalog integration, recommended tools, implementation playbook | [ARCHITECTURE.md](ARCHITECTURE.md) |
+| **Philosophical AI Architecture** | The full ecosystem: Data Substrate, Catalog, guardrails, own-vs-rent strategy, cognitive control plane | This README, [pitch strategy](docs/pitch-strategy.md), [glossary](docs/glossary.md) |
+| **MOEPA 5-Layer Framework** | The engineering blueprint and governance engine inside the architecture: five layers, intake scoring, GO / CONDITIONAL GO / NO-GO | [5-Layer Framework for Leaders](docs/MOEPA-5-Layer-Framework.md), [Evaluation Checklist](docs/5-Layer-Evaluation-Checklist.md) |
+| **MOEPA Cognitive Architecture** | The technical stack specification: storage mapping, tools, implementation playbook | [ARCHITECTURE.md](ARCHITECTURE.md) |
 
-All three are part of one proposal. **MOEPA Architecture** is the canonical name for the whole; **MOEPA Framework** and **MOEPA Cognitive Architecture** name the governance and technical views within it.
+See [docs/pitch-strategy.md](docs/pitch-strategy.md) for audience-specific pitching guidance (technical teams vs. federal leadership).
 
 ---
 
-## The Core Problem
+## The Core Mindset
 
-Government agencies are under pressure to adopt AI quickly. Vendors offer compelling demos, and technical teams often drive procurement. But this creates a dangerous pattern:
+**The blind spot:** Vendors sell compelling demos. Technical teams drive procurement. Intelligence stays locked inside platforms nobody can audit.
 
-- **Institutional knowledge stays inside vendor platforms** — when the contract ends, so does your capability.
-- **Decisions become unexplainable** — black-box outputs cannot be audited or defended to oversight bodies.
-- **Values drift silently** — systems optimized for vendor metrics may not align to your agency's mission.
-- **Costs compound** — each new vendor adds another dependency, another integration, another renewal negotiation.
+**Our move:** Decode Intelligence by mapping three cognitive functions into software:
 
-The alternative is an **owned-brain strategy**: rent commodity compute (servers, GPUs), but own the intellectual layer — your data definitions, your verification standards, your decision logic, your values.
+| Function | Role | MOEPA layers |
+|---|---|---|
+| **Cognition** (knowing) | Define and verify reality | Metrology, Ontology, Epistemology |
+| **Affect** (valuing) | Encode what matters and what is forbidden | Axiology |
+| **Conation** (acting) | Execute decisions under human oversight | Praxeology |
 
-The MOEPA Architecture is the model for doing that.
+- **Philosophy** is the operating system — strict rules for reality and truth (Metrology, Ontology, Epistemology).
+- **Psychology** is the mechanics of behavior — values and execution drives (Axiology, Praxeology).
+
+**The mission:** Build auditable, institutional brains. Rent commodity compute. Own the truth, the values, and the rules.
 
 ---
 
 ## Who This Is For
 
-This repository is designed for:
-
-- **Agency leaders and CXOs** evaluating AI investment proposals
-- **Government program managers** overseeing AI projects and procurement
-- **Policy and compliance officers** assessing risk and accountability
-- **IRS, Treasury, and similar agencies** where data integrity and auditability are mission-critical
-- **Technical architects** who need a governance framework to anchor their designs
-
-You do not need a technical background to use this repository. The MOEPA Architecture is expressed in leadership and governance terms first.
+- **Federal executives and acquisition officers** — cognitive control plane, not IT metrics alone
+- **Agency leaders and CXOs** — evaluating AI investment proposals
+- **Technical architects and engineers** — engineering blueprint for the Intelligence layer
+- **Policy and compliance officers** — accountability, auditability, data sovereignty
+- **IRS, Treasury, and similar agencies** — where data integrity is mission-critical
 
 ---
 
-## The MOEPA Architecture at a Glance
+## The MOEPA 5-Layer Framework at a Glance
 
-The MOEPA Architecture organizes AI capability into five interdependent layers, each corresponding to a distinct question a leader should be able to answer about any AI system they oversee.
+The five layers are the engineering blueprint inside the Philosophical AI Architecture. Each layer answers a distinct question a leader must be able to defend.
 
 ```mermaid
 graph TB
-    SUB[["DATA SUBSTRATE\n───────────────────\nUnified Knowledge Library\nSPO/Quad + Open-Format Lakehouse\nProvenance · Versioning · Lineage\n(shared foundation — not a scored layer)"]]
+    SUB[["DATA SUBSTRATE\n───────────────────\nAgency-Owned Knowledge Library\nTruth · Values · Rules · Lineage\nSPO/Quad + Open-Format Lakehouse\n(not a scored layer)"]]
 
     E5["LAYER 5 — AXIOLOGY\nValues, Policy & Mission Alignment\n❓ Does this system enforce our values?"]
     E4["LAYER 4 — PRAXEOLOGY\nDecision Workflows & Human Oversight\n❓ Do we control how the system acts?"]
@@ -75,60 +75,60 @@ graph TB
     E5 -. reads/writes .-> SUB
 ```
 
-| Layer | What It Governs | Core Leadership Question | Red Flag |
+| Layer | Engineering translation | Core leadership question | Red flag |
 |---|---|---|---|
-| **Metrology** | Data quality, measurement, provenance | Do we control and trust the data this system uses? | Vendor-owned data pipelines, hidden lineage |
-| **Ontology** | Structured knowledge, entities, relationships | Do we own the meaning and definitions in our data? | Inconsistent terms, vendor-controlled semantics |
-| **Epistemology** | Truth verification, fact vs. inference | Can we verify outputs and trace decisions to sources? | Black-box answers, unauditable recommendations |
-| **Praxeology** | Decision workflows, human oversight | Do we control how the system acts and who approves? | Autonomous actions without human checkpoints |
-| **Axiology** | Values, ethics, compliance, mission alignment | Does this system enforce our values and can we prove it? | Mission drift, policy bypass, untestable guardrails |
+| **Metrology** | Telemetry, audit trails, performance scoring | Do we control and trust the data? | Vendor-owned pipelines, hidden lineage |
+| **Ontology** | Knowledge graphs, approved vocabularies, data models | Do we own the definitions and relationships? | Vendor-controlled semantics |
+| **Epistemology** | RAG validation, evidence mapping, source indexing | Can we verify outputs and trace decisions? | Black-box answers |
+| **Praxeology** | Digitized SOPs, workflows, agentic playbooks | Do we control how the system acts? | Autonomous actions without checkpoints |
+| **Axiology** | Guardrails, access controls, NIST-aligned compliance | Does this system enforce our values? | Mission drift, untestable guardrails |
 
-**The Data Substrate** (not a scored layer) is the shared knowledge library that all five layers read from and write to. It holds your organization's facts, relationships, decisions, and provenance records in open, portable formats you own.
+**The Data Substrate** is the agency-owned knowledge library all five layers read from and write to. **The MOEPA Catalog** is the routing and governance catalog that proves what the institution already owns — and what new projects must enrich.
 
 ---
 
 ## Own vs. Rent: The Strategic Choice
 
-| What to **Own** | What to **Rent** |
+| What to **Own** (permanently) | What to **Rent** (commodity) |
 |---|---|
-| Data quality rules and lineage (Metrology) | Raw compute and GPU capacity |
-| Knowledge graph and entity definitions (Ontology) | Pre-trained language model weights |
+| Data Substrate — truth, values, rules, lineage | Raw compute and GPU capacity |
+| Knowledge graphs and entity definitions (Ontology) | Commercial LLM API access |
 | Verification standards and audit trails (Epistemology) | Cloud storage infrastructure |
-| Decision workflow logic and human oversight gates (Praxeology) | SaaS tooling without lock-in risk |
-| Values, guardrails, and compliance policies (Axiology) | Commodity APIs with clear exit paths |
+| Decision workflows and oversight gates (Praxeology) | SaaS tooling with clear exit paths |
+| Guardrails and compliance policies (Axiology) | Pre-trained model weights |
 
-> **Leader takeaway:** If a vendor owns your data definitions, your truth standards, or your decision logic, you are not buying AI capability — you are renting it indefinitely, with increasing switching costs.
+> **Federal takeaway:** Own the Data Substrate. Rent the LLMs. Black-box vendor solutions that cannot map to all five layers fail intake by design.
 
 ---
 
 ## Practical Government Use Cases
 
-The MOEPA Architecture applies directly to high-stakes government workflows:
+The Philosophical AI Architecture applies directly to high-stakes government workflows:
 
-- **Third-party income verification** (IRS / tax compliance) — Can your system explain a confidence score of 98% to a taxpayer or auditor? Does an independent verification layer catch model errors before action is taken?
-- **AI project intake scoring** — How do you consistently evaluate and prioritize incoming AI proposals across programs?
-- **Benefits eligibility determination** — When the AI recommends denial, can a caseworker audit exactly why, tracing back to source data?
-- **Procurement fraud detection** — Are the vendor-supplied risk scores based on your data and definitions, or theirs?
+- **Third-party income verification** (IRS / tax compliance) — Can your system explain a confidence score of 98% to a taxpayer or auditor?
+- **AI project intake scoring** — Does every proposal prove catalog enrichment across all five layers?
+- **Benefits eligibility determination** — Can a caseworker audit exactly why the AI recommended denial?
+- **Procurement fraud detection** — Are risk scores based on your data and definitions, or the vendor's?
 
-Detailed scenario walkthroughs are in the [examples/](examples/) folder.
+Detailed walkthroughs: [examples/](examples/)
 
 ---
 
 ## How to Use This Repository
 
-**If you are a leader evaluating an AI proposal:**
-1. Read [The 5-Layer Framework for Leaders](docs/MOEPA-5-Layer-Framework.md) — one practical question per layer
-2. Use the [5-Layer Evaluation Checklist](docs/5-Layer-Evaluation-Checklist.md) to score the proposal
-3. Review [Owned vs. Rented AI Strategy](docs/Owned-vs-Rented-AI-Strategy.md) for the strategic framing
+**Federal leadership / acquisition:**
+1. [Federal Leader Guide](docs/moepa-federal-leaders-guide.md) — cognitive control plane and intake lever
+2. [5-Layer Evaluation Checklist](docs/5-Layer-Evaluation-Checklist.md) — GO / CONDITIONAL GO / NO-GO scoring
+3. [Own vs. Rented AI Strategy](docs/Owned-vs-Rented-AI-Strategy.md) — own substrate, rent compute
 
-**If you are a program manager or technical lead:**
-1. Start with the [Quick Start Guide](docs/quick-start.md)
-2. Review the [Catalog](catalog/README.md) for layer-by-layer capabilities, tools, patterns, and governance scoring
-3. Reference the [Data Substrate Concept](docs/Data-Substrate-Concept.md) for the knowledge library design
+**Technical architects / engineers:**
+1. [MOEPA 5-Layer Framework for Leaders](docs/MOEPA-5-Layer-Framework.md) — engineering blueprint
+2. [Data Substrate Concept](docs/Data-Substrate-Concept.md) — knowledge library design
+3. [ARCHITECTURE.md](ARCHITECTURE.md) — MOEPA Cognitive Architecture technical spec
+4. [Catalog](catalog/README.md) — capabilities, tools, patterns, scoring by layer
 
-**If you want the full technical specification:**
-- [ARCHITECTURE.md](ARCHITECTURE.md) — the complete draft specification (v2.3)
-- [Catalog](catalog/README.md) — governance scoring by layer
+**Presenting the architecture:**
+- [Pitch Strategy](docs/pitch-strategy.md) — audience hooks, terminology, tone rules
 
 ---
 
@@ -136,40 +136,24 @@ Detailed scenario walkthroughs are in the [examples/](examples/) folder.
 
 ```
 README.md                          ← Start here
-ARCHITECTURE.md                    ← Full technical specification
+ARCHITECTURE.md                    ← MOEPA Cognitive Architecture (technical spec)
 │
 ├── docs/
-│   ├── MOEPA-5-Layer-Framework.md         ← Framework overview for leaders
-│   ├── Data-Substrate-Concept.md          ← Unified knowledge library explained
-│   ├── Owned-vs-Rented-AI-Strategy.md     ← Side-by-side strategy comparison
-│   ├── 5-Layer-Evaluation-Checklist.md    ← Scoring rubric for AI proposals
+│   ├── pitch-strategy.md                  ← Canonical pitch directive
+│   ├── MOEPA-5-Layer-Framework.md         ← Engineering blueprint for leaders
+│   ├── Data-Substrate-Concept.md          ← Agency-owned knowledge library
+│   ├── Owned-vs-Rented-AI-Strategy.md     ← Own substrate, rent compute
+│   ├── 5-Layer-Evaluation-Checklist.md    ← Intake scoring rubric
 │   ├── moepa-business-leaders-guide.md    ← Executive handout
-│   ├── moepa-federal-leaders-guide.md     ← Government-focused leader guide
-│   ├── business-value.md                  ← Investment and value case
-│   ├── faq.md                             ← Common questions answered
+│   ├── moepa-federal-leaders-guide.md     ← Federal cognitive control plane
+│   ├── business-value.md                  ← Investment case
+│   ├── faq.md                             ← Common questions
 │   ├── glossary.md                        ← Term definitions
-│   └── layer-diagram.md                   ← Detailed architecture diagram
+│   └── layer-diagram.md                   ← Stack diagram
 │
-├── catalog/                               ← The single MOEPA Catalog (capabilities, tools, patterns, scoring, cross-layer compositions)
-│   ├── README.md
-│   ├── capability-matrix.md
-│   ├── cross-layer-compositions.md
-│   └── [layer folders with capabilities, scoring, tools, patterns]
-│
-├── diagrams/
-│   ├── moepa-stack.md                     ← Full stack diagram with Data Substrate
-│   ├── information-flow.md                ← How information moves across layers
-│   └── owned-vs-rented.md                 ← Own vs. rent visual comparison
-│
-├── examples/
-│   ├── income-verification.md             ← Third-party income verification scenario
-│   ├── project-intake-scoring.md          ← AI project evaluation scenario
-│   └── benefits-eligibility.md            ← Benefits determination scenario
-│
-└── catalog/                               ← Governance scoring catalog (detailed)
-    ├── README.md
-    ├── capability-matrix.md
-    └── [layer folders with scoring rubrics]
+├── catalog/                               ← MOEPA Catalog (capabilities, tools, scoring)
+├── diagrams/                              ← Architecture diagrams
+└── examples/                              ← Government scenario walkthroughs
 ```
 
 ---
@@ -178,28 +162,28 @@ ARCHITECTURE.md                    ← Full technical specification
 
 | Document | Audience | Purpose |
 |---|---|---|
-| [5-Layer Framework for Leaders](docs/MOEPA-5-Layer-Framework.md) | Agency leaders | Practical per-layer questions |
-| [Evaluation Checklist](docs/5-Layer-Evaluation-Checklist.md) | Program managers | Score AI proposals GO / CONDITIONAL / NO-GO |
-| [Own vs. Rent Strategy](docs/Owned-vs-Rented-AI-Strategy.md) | CXOs, procurement | Strategic investment framing |
-| [Data Substrate Concept](docs/Data-Substrate-Concept.md) | Technical architects | Knowledge library design |
-| [Business Leader Guide](docs/moepa-business-leaders-guide.md) | Executives | Full executive handout |
-| [Federal Leader Guide](docs/moepa-federal-leaders-guide.md) | Government leaders | Agency-specific guidance |
-| [Catalog](catalog/README.md) | Leaders + technical teams | Capabilities, tools, patterns, scoring, and cross-layer governance reference |
-| [Glossary](docs/glossary.md) | All readers | MOEPA Architecture, Framework, and Cognitive Architecture definitions |
-| [MOEPA Cognitive Architecture Spec](ARCHITECTURE.md) | Architects / CTO | Technical stack design and implementation playbook |
+| [Pitch Strategy](docs/pitch-strategy.md) | All communicators | Canonical narrative, hooks, terminology |
+| [5-Layer Framework for Leaders](docs/MOEPA-5-Layer-Framework.md) | Leaders + engineers | Engineering blueprint, per-layer questions |
+| [Evaluation Checklist](docs/5-Layer-Evaluation-Checklist.md) | Program managers | Intake scoring GO / CONDITIONAL / NO-GO |
+| [Federal Leader Guide](docs/moepa-federal-leaders-guide.md) | Government executives | Cognitive control plane, catalog enrichment |
+| [Own vs. Rent Strategy](docs/Owned-vs-Rented-AI-Strategy.md) | CXOs, procurement | Own substrate, rent LLMs and compute |
+| [Data Substrate Concept](docs/Data-Substrate-Concept.md) | Architects | Agency-owned knowledge library |
+| [Catalog](catalog/README.md) | Leaders + technical teams | MOEPA Catalog — capabilities, deduplication, scoring |
+| [Glossary](docs/glossary.md) | All readers | Philosophical AI Architecture term hierarchy |
+| [MOEPA Cognitive Architecture Spec](ARCHITECTURE.md) | Architects / CTO | Technical stack and implementation playbook |
 
 ---
 
 ## Feedback and Contributions
 
-This is an open-source reference for the MOEPA Architecture. Feedback, corrections, and contributions are welcome.
+Open-source reference for the Philosophical AI Architecture. Feedback welcome.
 
-- **To suggest improvements:** open an issue or pull request
-- **To adapt this for your agency:** the MOEPA Architecture is MIT-licensed — use and modify freely
-- **To discuss the strategy:** see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines
+- **Suggest improvements:** open an issue or pull request
+- **Adapt for your agency:** MIT-licensed — use and modify freely
+- **Contribution guidelines:** [CONTRIBUTING.md](CONTRIBUTING.md)
 
-> This repository is strictly theory and documentation. It does not include production code or working agents.
+> Theory and documentation only. No production code or working agents.
 
 ---
 
-*MOEPA Architecture version 2.3 · Last updated June 2026 · MIT License*
+*Philosophical AI Architecture · MOEPA 5-Layer Framework v2.3 · June 2026 · MIT License*
