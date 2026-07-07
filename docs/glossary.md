@@ -31,7 +31,7 @@ The three human cognitive functions the Philosophical AI Architecture maps into 
 
 ## Data Substrate (Set-Theoretic Backbone)
 
-The agency-owned knowledge library — the cross-cutting representation medium where truth, values, rules, and lineage live in open, portable formats. At end state: an SPO/quad backbone plus federated lakehouse storage that all five MOEPA layers read from and write to. The substrate holds each base fact once; every layer attaches its own metadata envelope without duplicating the base triple. Explicitly **not** a sixth scored layer. Agencies evolve toward end state incrementally; see [Substrate Evolution Path](#substrate-evolution-path).
+The organization-owned knowledge library — the cross-cutting representation medium where truth, values, rules, and lineage live in open, portable formats. At end state: an SPO/quad backbone plus federated lakehouse storage that all five MOEPA layers read from and write to. The substrate holds each base fact once; every layer attaches its own metadata envelope without duplicating the base triple. Explicitly **not** a sixth scored layer. Organizations evolve toward end state incrementally; see [Substrate Evolution Path](#substrate-evolution-path).
 
 ## Substrate End State
 
@@ -39,7 +39,7 @@ The imperative logical target for a mature Data Substrate: owned SPO/quad repres
 
 ## Substrate Evolution Path
 
-The allowed incremental journey from current agency storage to Substrate End State — typically lakehouse (SPO-compatible schemas) → pilot triple store → enterprise graph → federation layer. Interim implementations are valid when agency-owned, open-format, provenance-complete, and backed by a documented migration roadmap.
+The allowed incremental journey from current organizational storage to Substrate End State — typically lakehouse (SPO-compatible schemas) → pilot triple store → enterprise graph → federation layer. Interim implementations are valid when organization-owned, open-format, provenance-complete, and backed by a documented migration roadmap.
 
 ## SPO Triple / Quad
 
@@ -58,6 +58,8 @@ The acronym for the five layers at the heart of the MOEPA 5-Layer Framework:
 ## MOEPA Catalog
 
 The routing and governance catalog inside the Philosophical AI Architecture — for discovering, versioning, deduplicating, and auditing assets across all five layers. Enterprise and public sector intake requires leaders to prove how a project enriches this catalog.
+
+**Catalog vs. Data Substrate:** These are complementary but distinct. The **Data Substrate** stores owned facts, relationships, evidence, workflows, and policy records — the institutional knowledge base. The **MOEPA Catalog** indexes, routes, scores, and governs those assets and capabilities so leaders and architects can find, reuse, evaluate, and audit them. The Substrate is where knowledge lives; the Catalog is how that knowledge is governed and discovered.
 
 ## Owned Brain
 

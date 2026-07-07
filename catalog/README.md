@@ -2,6 +2,8 @@
 
 The MOEPA Catalog is the routing and governance catalog inside the Philosophical AI Architecture. It helps leaders set priorities, evaluate AI proposals, manage risk, ensure sovereignty, and make GO, CONDITIONAL, or NO-GO investment decisions using the MOEPA 5-Layer Framework scoring model. Enterprise and public sector intake requires leaders to prove catalog enrichment — black-box vendor solutions that cannot map to the catalog fail by design.
 
+**Catalog vs. Data Substrate:** These are complementary but distinct. The **Data Substrate** stores owned facts, relationships, evidence, workflows, and policy records — the institutional knowledge base. The **MOEPA Catalog** indexes, routes, scores, and governs those assets and capabilities so leaders and architects can find, reuse, evaluate, and audit them. The Substrate is where knowledge lives; the Catalog is how that knowledge is governed and discovered.
+
 It also serves technical architects, program managers, and designers by providing detailed capability descriptions, recommended self-hosted and open tools, proven patterns, and cross-layer compositions — all organized by the five MOEPA layers plus the Data Substrate foundation.
 
 Rather than treating AI as a collection of disconnected tools, the catalog provides a structured way to decide which capabilities should be funded, governed, scaled, deferred, or rejected. Its purpose is to support mission alignment, risk reduction, compliance, auditability, business value, and long-term ownership of cognitive assets.
@@ -44,7 +46,7 @@ The catalog helps leadership teams move from abstract AI ambition to disciplined
 2. Use **capabilities** to determine whether a proposal addresses a real institutional need and what "good" looks like.
 3. Use **scoring** to assign maturity, identify gaps, and determine remediation requirements.
 4. Use **examples** (per layer and the scenario walkthroughs in ../examples/) to understand what concrete governed assets or controls may be required.
-5. Use **cross-layer compositions** for multi-layer patterns that emerge in real government use cases.
+5. Use **cross-layer compositions** for multi-layer patterns that emerge in real-world use cases (public-sector scenarios are the primary worked examples; the patterns apply broadly).
 6. *(Architects)* Use **tools** to assess sovereignty, portability, and vendor dependency trade-offs.
 7. *(Architects)* Use **patterns** to recognize durable implementation approaches and anti-patterns.
 
@@ -68,7 +70,7 @@ This workflow should be used as a governance and priority-setting process for ex
 4. Assess current maturity using each layer scoring rubric, with particular attention to Axiology weighting for Business ROI and approved chargeback/showback models.
 5. Flag gaps scoring below level 3 and define remediation.
 6. Link delivery work to the [Praxeology workflow](praxeology/tools.md) so live status is tracked in execution systems rather than in the catalog.
-7. Execute the formal Architecture Review Chain (Enterprise Architecture Review → Agency Data Platform ingestion review → Agency Data Platform capacity review → Mission program office) and obtain documented sign-off at each step.
+7. Execute the formal Architecture Review Chain (Enterprise Architecture Review → Data Platform ingestion review → Data Platform capacity review → Mission program office) and obtain documented sign-off at each step.
 8. Confirm integration dependencies between adjacent layers.
 9. Record ownership metadata, controls, ROI quantification, and cost model in the catalog.
 10. For any proposal achieving an overall score of 4 or higher (or requesting production resources), secure formal Executive Approval through the executive gate, confirming weighted ROI, chargeback model, deduplication clearance, and completion of the Architecture Review Chain.

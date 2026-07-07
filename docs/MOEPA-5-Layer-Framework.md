@@ -1,12 +1,14 @@
 # The MOEPA 5-Layer Framework for Leaders
 
-> The engineering blueprint inside the Philosophical AI Architecture — one key question per layer that every leader and engineer must be able to answer. This document defines the **MOEPA 5-Layer Framework**. See the [Glossary](glossary.md) and [Pitch Strategy](pitch-strategy.md).
+> **Audience:** Leader-facing — no technical prerequisites required. This document defines the MOEPA 5-Layer Framework using business outcomes, not implementation detail. For engineering translation, see [ARCHITECTURE.md](../ARCHITECTURE.md) and the [Catalog](../catalog/README.md).
+
+> The engineering blueprint inside the Philosophical AI Architecture — one key question per layer that every leader and engineer must be able to answer. See the [Glossary](glossary.md) and [Pitch Strategy](pitch-strategy.md).
 
 ---
 
 ## Why Five Layers?
 
-When government agencies adopt AI systems, decisions about data, meaning, facts, workflows, and values are all being made somewhere — often inside vendor platforms, by technical teams, or by default. MOEPA makes those decisions visible and puts leadership in charge of them.
+When organizations adopt AI systems, decisions about data, meaning, facts, workflows, and values are all being made somewhere — often inside vendor platforms, by technical teams, or by default. MOEPA makes those decisions visible and puts leadership in charge of them.
 
 Each of the five layers represents a distinct domain of organizational control over an AI system. Weakness in any single layer undermines the entire system.
 
@@ -35,10 +37,10 @@ The layers are numbered from foundation to governance:
 
 **Plain English:** Metrology is the science of measurement. In AI terms, it is about whether the data your system uses is accurate, traceable, and controlled by your organization.
 
-**Why it matters to government leaders:** AI systems are only as trustworthy as the data they are trained on or retrieve from. If your data is incomplete, stale, or locked inside a vendor's platform, every decision the system makes is built on an uncertain foundation. For tax compliance, benefits eligibility, or fraud detection, this is not an acceptable risk.
+**Why it matters to leaders:** AI systems are only as trustworthy as the data they are trained on or retrieve from. If your data is incomplete, stale, or locked inside a vendor's platform, every decision the system makes is built on an uncertain foundation. For tax compliance, benefits eligibility, fraud detection, or any high-stakes determination, this is not an acceptable risk.
 
 **What good looks like:**
-- Your agency owns and controls the raw data and can audit its source at any time
+- Your organization owns and controls the raw data and can audit its source at any time
 - Data quality is measured and monitored with defined standards
 - Every data record carries a provenance trail — where it came from, when it was collected, who validated it
 - Data is stored in open, portable formats (not proprietary vendor formats)
@@ -58,10 +60,10 @@ The layers are numbered from foundation to governance:
 
 **Plain English:** Ontology is the study of what exists and how things relate to each other. In AI terms, it is about whether your organization owns the definitions, entities, and relationships that the system uses to understand your domain.
 
-**Why it matters to government leaders:** When an AI system understands the concept of "applicant," "employer," "income source," or "dependent," it is working from a model of those relationships. If that model lives inside a vendor's platform, your agency's understanding of its own domain is being rented. Changing vendors means rebuilding meaning from scratch.
+**Why it matters to leaders:** When an AI system understands the concept of "applicant," "employer," "income source," or "dependent," it is working from a model of those relationships. If that model lives inside a vendor's platform, your organization's understanding of its own domain is being rented. Changing vendors means rebuilding meaning from scratch.
 
 **What good looks like:**
-- Your agency maintains a governed knowledge graph or entity model for core domain concepts
+- Your organization maintains a governed knowledge graph or entity model for core domain concepts
 - Terms like "applicant," "beneficiary," and "third-party reporter" have explicit, version-controlled definitions
 - Relationships between entities (e.g., employer → employee → wage report) are explicitly modeled and owned
 - The semantic model evolves with policy changes, not just vendor updates
@@ -69,7 +71,7 @@ The layers are numbered from foundation to governance:
 **What poor looks like:**
 - Entity definitions are embedded in a vendor's proprietary system and not exportable
 - Different teams or systems use the same terms with different meanings
-- There is no canonical authority for domain definitions within the agency
+- There is no canonical authority for domain definitions within the organization
 - Vendor-provided "AI understanding" of your domain cannot be inspected or audited
 
 > **Leader question for Layer 2:**
@@ -81,7 +83,7 @@ The layers are numbered from foundation to governance:
 
 **Plain English:** Epistemology is the study of how we know what we know. In AI terms, it is about whether the system's outputs can be verified, traced to sources, and distinguished from guesses.
 
-**Why it matters to government leaders:** AI systems produce probabilistic outputs — they are making educated guesses, not looking up facts in a database. When an AI system recommends denying a benefit, flagging a case for review, or scoring a project proposal, that recommendation needs to be traceable to evidence, not just to model weights. Oversight bodies, courts, and constituents will ask "why."
+**Why it matters to leaders:** AI systems produce probabilistic outputs — they are making educated guesses, not looking up facts in a database. When an AI system recommends denying a benefit, flagging a case for review, or scoring a project proposal, that recommendation needs to be traceable to evidence, not just to model weights. Oversight bodies, courts, audit committees, and affected parties will ask "why."
 
 **What good looks like:**
 - Every AI output is tagged with its sources and a confidence level
@@ -93,10 +95,12 @@ The layers are numbered from foundation to governance:
 - The system produces a score or recommendation with no explanation
 - Outputs cannot be traced to specific data records
 - There is no process for distinguishing a verified fact from a model prediction
-- Errors or hallucinations would not be caught before affecting a citizen
+- Errors or hallucinations would not be caught before affecting a person
 
 > **Leader question for Layer 3:**
-> *"When this system makes a recommendation that affects a citizen, can we trace that recommendation back to specific, verifiable evidence — and explain it in plain terms to a Congressional oversight hearing?"*
+> *"When this system makes a recommendation that affects a person, can we trace that recommendation back to specific, verifiable evidence — and explain it in plain terms to an oversight body, audit committee, or court of appeal?"*
+
+> *Public sector example: Can we explain a confidence score to a Congressional oversight hearing without needing the vendor to produce the underlying data?*
 
 ---
 
@@ -104,7 +108,7 @@ The layers are numbered from foundation to governance:
 
 **Plain English:** Praxeology is the study of human action and intentional decision-making. In AI terms, it is about whether the system's actions are governed by defined workflows with clear human oversight checkpoints.
 
-**Why it matters to government leaders:** Agentic AI systems — systems that can take actions, send communications, update records, or trigger processes — are becoming common. Without explicit workflow governance, these systems can take consequential actions with no human review. For government agencies, this creates legal, compliance, and public trust risks.
+**Why it matters to leaders:** Agentic AI systems — systems that can take actions, send communications, update records, or trigger processes — are becoming common. Without explicit workflow governance, these systems can take consequential actions with no human review. For any organization with compliance, accountability, or public trust responsibilities, this creates legal and reputational risk.
 
 **What good looks like:**
 - Every consequential AI action requires a defined approval step before execution
@@ -126,25 +130,25 @@ The layers are numbered from foundation to governance:
 
 ## Layer 5 — Axiology: Values, Ethics, and Mission Alignment
 
-**Plain English:** Axiology is the study of value — what matters, what should be preserved, and what is unacceptable. In AI terms, it is about whether your agency's values, compliance requirements, and ethical constraints are hard-coded into the system and cannot be bypassed.
+**Plain English:** Axiology is the study of value — what matters, what should be preserved, and what is unacceptable. In AI terms, it is about whether your organization's values, compliance requirements, and ethical constraints are hard-coded into the system and cannot be bypassed.
 
-**Why it matters to government leaders:** AI systems optimize for the objectives they are given. If those objectives are set by a vendor, or if guardrails are only soft guidelines embedded in prompts, they can drift or be bypassed. Government agencies have statutory obligations, constitutional constraints, and public trust responsibilities that must be non-negotiable — not best-effort.
+**Why it matters to leaders:** AI systems optimize for the objectives they are given. If those objectives are set by a vendor, or if guardrails are only soft guidelines embedded in prompts, they can drift or be bypassed. Organizations have statutory obligations, regulatory constraints, and stakeholder trust responsibilities that must be non-negotiable — not best-effort.
 
 **What good looks like:**
 - Prohibited actions (e.g., sharing PII, bypassing appeal rights) are enforced at the infrastructure level, not just in prompts
 - The system's value constraints are documented, version-controlled, and auditable
-- Compliance requirements (e.g., Privacy Act, ADA, FOIA) are explicitly encoded
-- The system cannot be "jailbroken" by a sophisticated user to bypass agency policy
+- Compliance requirements are explicitly encoded
+- The system cannot be "jailbroken" by a sophisticated user to bypass organizational policy
 - Values are tested and verified regularly, not assumed
 
 **What poor looks like:**
 - Guardrails are implemented as prompt instructions that a skilled user could work around
 - There is no mechanism to verify that the system is still aligned with policy over time
-- Values and compliance rules are defined by the vendor, not by the agency
+- Values and compliance rules are defined by the vendor, not by the organization
 - There is no formal process for testing whether the system behaves appropriately at its boundaries
 
 > **Leader question for Layer 5:**
-> *"If a determined employee or external actor tried to use this system in a way that violates agency policy or law, would the system prevent it — and can we prove that to an auditor?"*
+> *"If a determined employee or external actor tried to use this system in a way that violates organizational policy or law, would the system prevent it — and can we prove that to an auditor?"*
 
 ---
 
@@ -158,7 +162,7 @@ Use these five questions as a rapid evaluation tool in any AI briefing:
 | Ontology | Do we own the meaning and entity model for our domain? | Y / Partially / N |
 | Epistemology | Can we trace every recommendation to verifiable evidence? | Y / Partially / N |
 | Praxeology | Are all consequential actions governed with human oversight? | Y / Partially / N |
-| Axiology | Are agency values and compliance constraints hard-enforced? | Y / Partially / N |
+| Axiology | Are organizational values and compliance constraints hard-enforced? | Y / Partially / N |
 
 **A "Partially" or "N" on any layer is a governance gap that must be resolved before approval or scale-up.**
 
@@ -166,7 +170,7 @@ Use these five questions as a rapid evaluation tool in any AI briefing:
 
 ## Next Steps
 
-- Use the [5-Layer Evaluation Checklist](5-Layer-Evaluation-Checklist.md) to formally score a proposal
+- Use the [5-Layer Evaluation Checklist](5-Layer-Evaluation-Checklist.md) to formally score a proposal — this is the canonical scoring source for GO / CONDITIONAL GO / NO-GO decisions
 - Review the [Own vs. Rent Strategy](Owned-vs-Rented-AI-Strategy.md) to understand which layers must be owned
 - Explore the [Catalog](../catalog/README.md) for capabilities, tools, patterns, scoring, and cross-layer compositions
 - Read [Business Value](business-value.md) for the investment case

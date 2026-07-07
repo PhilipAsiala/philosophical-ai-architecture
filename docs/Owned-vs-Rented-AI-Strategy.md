@@ -1,6 +1,8 @@
 # Owned vs. Rented AI Strategy
 
-> The most consequential AI decision your agency will make is not which model to use — it is which capabilities you own versus which you rent.
+> **Audience:** Leader-facing — no technical prerequisites required. This document frames the own-vs-rent decision for executives and procurement leaders. For scoring implementation implications, use the [5-Layer Evaluation Checklist](5-Layer-Evaluation-Checklist.md) — the canonical scoring source.
+
+> The most consequential AI decision your organization will make is not which model to use — it is which capabilities you own versus which you rent.
 
 ---
 
@@ -60,7 +62,9 @@ COMPUTE & MODELS          ░░░░░░░░░░  SAFE TO RENT
 
 ---
 
-## Side-by-Side Comparison: Government Use Cases
+## Side-by-Side Comparison: Public Sector Use Cases
+
+> These worked examples use public-sector framing because government programs make accountability and audit requirements concrete. The ownership principles apply equally to any organization — enterprise, regulated industry, nonprofit, or public institution — that must defend AI decisions to stakeholders or auditors.
 
 ### Use Case 1: Third-Party Income Verification
 
@@ -138,9 +142,9 @@ For each layer the product touches, ask:
 - If this vendor disappeared, how long would it take to restore capability?
 
 ### Step 3: Classify each layer
-- **Own:** Agency retains full control, portability, and audit access
+- **Own:** Organization retains full control, portability, and audit access
 - **Transitional Rent:** Acceptable short-term with an explicit migration plan
-- **Avoid:** Vendor owns a layer that should belong to the agency
+- **Avoid:** Vendor owns a layer that should belong to the organization
 
 ### Step 4: Score against the MOEPA rubric
 Use the [5-Layer Evaluation Checklist](5-Layer-Evaluation-Checklist.md) to assign scores before approving funding.
@@ -166,7 +170,7 @@ Compute and model APIs are rentable — but the **rules that connect data, truth
 - **Brain** = Data quality rules, entity definitions, verification standards, decision workflows, values/compliance, and the governed interfaces between them — these are your institutional knowledge. They must be owned.
 - **Muscles** = Compute, GPU capacity, pre-trained model weights, cloud storage infrastructure — these are commodity inputs. Rent freely with clean exit clauses.
 
-A government agency that follows this rule will have AI systems it can audit, explain, defend, and migrate. An agency that inverts it will have fast, impressive tools today — and an expensive, ungovernable dependency problem in three years.
+An organization that follows this rule will have AI systems it can audit, explain, defend, and migrate. An organization that inverts it will have fast, impressive tools today — and an expensive, ungovernable dependency problem in three years.
 
 ---
 

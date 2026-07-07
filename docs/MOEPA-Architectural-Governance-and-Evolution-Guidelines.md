@@ -46,7 +46,9 @@ Every maintainer pull request must score its impact across the five layers:
 - If a legacy API is required for throughput, it must be wrapped in an MCP facade
   to ensure visibility to AI orchestrators.
 
-## Pull Request Gate (Required)
+## Maintainer Pull Request Gate (Required)
+
+> This gate applies to **maintainer-authored pull requests** that implement accepted issues or RFCs. External contributors should open issues or Proposal / RFC issues — not pull requests. See [CONTRIBUTING.md](../CONTRIBUTING.md).
 
 All substantive maintainer pull requests should include a short section in the PR
 description documenting:

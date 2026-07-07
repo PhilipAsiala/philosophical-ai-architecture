@@ -29,7 +29,7 @@ See [ARCHITECTURE.md](../../ARCHITECTURE.md) for the strategic rationale and [Bu
 ### O1 — Canonical Entity Registry
 **What it does:** Maintains a single authoritative definition for each core entity in your domain — with versioning, ownership, and cross-system identifiers.
 
-**Why it matters for government:** In a benefits or eligibility context, "applicant," "beneficiary," "legal entity," and "authorized representative" must have precise, consistent definitions that are the same across every system. When they are not, matching and verification become unreliable.
+**Why this matters:** In a benefits or eligibility context, "applicant," "beneficiary," "legal entity," and "authorized representative" must have precise, consistent definitions that are the same across every system. When they are not, matching and verification become unreliable.
 
 **Minimum acceptable standard (Score 3):** Core entities documented in a data dictionary with agreed definitions.
 
@@ -40,7 +40,7 @@ See [ARCHITECTURE.md](../../ARCHITECTURE.md) for the strategic rationale and [Bu
 ### O2 — Knowledge Graph
 **What it does:** Represents entities and their relationships in a queryable graph structure — enabling complex queries like "show me all income sources connected to this applicant and their verification status."
 
-**Why it matters for government:** Flat databases answer simple questions. Complex compliance and investigation questions require traversing relationships: who owns what entity, which employer issued income to which individuals, which agent acted on behalf of which filer. A knowledge graph makes these queries fast and auditable.
+**Why this matters:** Flat databases answer simple questions. Complex compliance and investigation questions require traversing relationships: who owns what entity, which employer issued income to which individuals, which agent acted on behalf of which filer. A knowledge graph makes these queries fast and auditable.
 
 **Minimum acceptable standard (Score 3):** Key entity relationships documented; basic graph or relational model available for core queries.
 
@@ -51,7 +51,7 @@ See [ARCHITECTURE.md](../../ARCHITECTURE.md) for the strategic rationale and [Bu
 ### O3 — Embedding and Vector Index (Owned)
 **What it does:** Converts organizational knowledge (documents, rules, case records) into vector representations for similarity search — owned and self-hosted by the agency.
 
-**Why it matters for government:** RAG (Retrieval-Augmented Generation) systems use vector search to find relevant context for AI responses. If the vector index is hosted by a vendor, the agency's documents and knowledge are processed in an environment it does not control.
+**Why this matters:** RAG (Retrieval-Augmented Generation) systems use vector search to find relevant context for AI responses. If the vector index is hosted by a vendor, the agency's documents and knowledge are processed in an environment it does not control.
 
 **Minimum acceptable standard (Score 3):** Vector index exists for key document collections; hosted within agency-controlled infrastructure.
 
@@ -62,7 +62,7 @@ See [ARCHITECTURE.md](../../ARCHITECTURE.md) for the strategic rationale and [Bu
 ### O4 — Taxonomy and Controlled Vocabulary
 **What it does:** Maintains official taxonomies, code sets, and controlled vocabularies for classification — e.g., income type codes, entity type classifications, NAICS industry codes.
 
-**Why it matters for government:** Inconsistent classification creates comparison and aggregation errors. When "self-employment income" is coded differently by different systems, analysis across systems produces incorrect totals.
+**Why this matters:** Inconsistent classification creates comparison and aggregation errors. When "self-employment income" is coded differently by different systems, analysis across systems produces incorrect totals.
 
 **Minimum acceptable standard (Score 3):** Core taxonomies documented; consistent coding enforced for primary workflows.
 
@@ -73,7 +73,7 @@ See [ARCHITECTURE.md](../../ARCHITECTURE.md) for the strategic rationale and [Bu
 ### O5 — Ontology Versioning and Change Management
 **What it does:** Tracks changes to entity definitions, relationships, and schemas over time — with effective dates so historical records can be interpreted correctly.
 
-**Why it matters for government:** If the definition of "qualifying dependent" changes with new legislation, historical records need to be interpretable under the rules in effect at the time they were created. Ontology versioning makes this possible.
+**Why this matters:** If the definition of "qualifying dependent" changes with new legislation, historical records need to be interpretable under the rules in effect at the time they were created. Ontology versioning makes this possible.
 
 **Minimum acceptable standard (Score 3):** Major schema changes documented with effective dates.
 
@@ -84,7 +84,7 @@ See [ARCHITECTURE.md](../../ARCHITECTURE.md) for the strategic rationale and [Bu
 ### O6 — AI Demand Management and Deduplication (Catalog Search)
 **What it does:** Leverages the governed semantic model (entities, relationships, taxonomies) together with the MOEPA Catalog to enable definitive searches proving that a proposed use case, data model, workflow, or infrastructure component does not already exist elsewhere in the enterprise.
 
-**Why it matters for government:** In large organizations, the single greatest source of waste and risk is funding duplicate AI solutions and redundant data platforms. A mature Ontology layer, combined with disciplined catalog use, is the primary mechanism for proactive demand management and prevention of infrastructure proliferation.
+**Why this matters:** In large organizations, the single greatest source of waste and risk is funding duplicate AI solutions and redundant data platforms. A mature Ontology layer, combined with disciplined catalog use, is the primary mechanism for proactive demand management and prevention of infrastructure proliferation.
 
 **Minimum acceptable standard (Score 3):** Basic ability to search existing assets by keyword or simple taxonomy.
 

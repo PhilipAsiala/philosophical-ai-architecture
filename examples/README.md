@@ -1,6 +1,6 @@
 # Examples: MOEPA in Practice
 
-High-level scenario walkthroughs showing how the MOEPA layers and Data Substrate work together for real government AI use cases.
+High-level scenario walkthroughs showing how the MOEPA layers and Data Substrate work together. Public-sector scenarios are used as the primary worked examples because they make accountability and audit requirements concrete — the governance principles apply equally to enterprise, regulated-industry, nonprofit, and other organizational contexts.
 
 | Scenario | File | Layers |
 |---|---|---|

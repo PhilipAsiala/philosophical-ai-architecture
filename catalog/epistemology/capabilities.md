@@ -29,7 +29,7 @@ See [ARCHITECTURE.md](../../ARCHITECTURE.md) for the strategic rationale and [Bu
 ### E1 — Source-Grounded Retrieval (Owned RAG)
 **What it does:** Before generating a response, retrieves relevant documents, records, and facts from the agency's owned knowledge store and uses them as the primary context for the response — with citations.
 
-**Why it matters for government:** A model that answers questions from its training data alone is essentially citing "things I've heard." A model grounded in your agency's owned, up-to-date records is citing "our official data, record ID X, validated on date Y." The difference is auditable accountability.
+**Why this matters:** A model that answers questions from its training data alone is essentially citing "things I've heard." A model grounded in your agency's owned, up-to-date records is citing "our official data, record ID X, validated on date Y." The difference is auditable accountability.
 
 **Minimum acceptable standard (Score 3):** RAG pipeline retrieves from agency-controlled document store; source citations included in responses.
 
@@ -40,7 +40,7 @@ See [ARCHITECTURE.md](../../ARCHITECTURE.md) for the strategic rationale and [Bu
 ### E2 — Fact Verification Gate
 **What it does:** For high-stakes decisions, compares the AI system's output against independently verified ground truth before that output is acted upon.
 
-**Why it matters for government:** When an AI system says "applicant's income is $87,400 from three sources," a verification gate checks that claim against the agency's own authoritative data before any action is taken. This is the difference between using AI as a decision support tool and using it as an unquestioned oracle.
+**Why this matters:** When an AI system says "applicant's income is $87,400 from three sources," a verification gate checks that claim against the agency's own authoritative data before any action is taken. This is the difference between using AI as a decision support tool and using it as an unquestioned oracle.
 
 **Minimum acceptable standard (Score 3):** Key outputs verified against a primary source before consequential actions; mismatches logged.
 
@@ -51,7 +51,7 @@ See [ARCHITECTURE.md](../../ARCHITECTURE.md) for the strategic rationale and [Bu
 ### E3 — Confidence Scoring and Uncertainty Communication
 **What it does:** Every significant output carries a confidence score with an explanation of its components — and that score is communicated meaningfully to the decision-maker.
 
-**Why it matters for government:** A confidence score of "94%" means nothing without knowing what contributes to it. Is that 94% based on one source or five? Is the remaining 6% uncertainty due to a missing record or a conflicting one? Decision-makers need to understand uncertainty, not just receive a number.
+**Why this matters:** A confidence score of "94%" means nothing without knowing what contributes to it. Is that 94% based on one source or five? Is the remaining 6% uncertainty due to a missing record or a conflicting one? Decision-makers need to understand uncertainty, not just receive a number.
 
 **Minimum acceptable standard (Score 3):** Confidence scores reported; methodology documented.
 
@@ -62,7 +62,7 @@ See [ARCHITECTURE.md](../../ARCHITECTURE.md) for the strategic rationale and [Bu
 ### E4 — Immutable Decision Audit Log
 **What it does:** Creates a tamper-evident record of every significant AI-assisted decision: what question was asked, what sources were retrieved, what the output was, what the confidence was, who reviewed it, and what action was taken.
 
-**Why it matters for government:** The audit log is the evidentiary foundation for every investigation, appeal, oversight inquiry, and compliance review. Without it, an agency cannot demonstrate what happened — only assert it.
+**Why this matters:** The audit log is the evidentiary foundation for every investigation, appeal, oversight inquiry, and compliance review. Without it, an agency cannot demonstrate what happened — only assert it.
 
 **Minimum acceptable standard (Score 3):** Decision log maintained; includes inputs, outputs, and reviewer; retained per policy.
 
@@ -73,7 +73,7 @@ See [ARCHITECTURE.md](../../ARCHITECTURE.md) for the strategic rationale and [Bu
 ### E5 — Hallucination Detection
 **What it does:** Detects when a model's output makes claims that are not supported by the retrieved sources or the owned knowledge base — and flags or blocks those outputs before they reach decision-makers.
 
-**Why it matters for government:** Language models sometimes state things confidently that are simply wrong. In a benefits or eligibility context, an undetected hallucination could affect thousands of citizens before the error is discovered.
+**Why this matters:** Language models sometimes state things confidently that are simply wrong. In a benefits or eligibility context, an undetected hallucination could affect thousands of citizens before the error is discovered.
 
 **Minimum acceptable standard (Score 3):** Response-level hallucination checking for high-stakes workflows; flagged outputs reviewed before use.
 
@@ -84,7 +84,7 @@ See [ARCHITECTURE.md](../../ARCHITECTURE.md) for the strategic rationale and [Bu
 ### E6 — Cryptographic Pipeline Integrity
 **What it does:** Uses cryptographic hashes (SHA-256 or equivalent) to verify that the data, model configuration, and pipeline components used for a given decision are exactly what they are supposed to be — and have not been tampered with.
 
-**Why it matters for government:** Compliance and security frameworks require assurance that the system being run is the system that was approved. Cryptographic integrity checks make it possible to prove this.
+**Why this matters:** Compliance and security frameworks require assurance that the system being run is the system that was approved. Cryptographic integrity checks make it possible to prove this.
 
 **Minimum acceptable standard (Score 3):** Model configuration files hashed and verified at deployment; mismatches block deployment.
 

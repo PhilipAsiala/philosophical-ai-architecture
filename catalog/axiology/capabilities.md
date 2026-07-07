@@ -29,7 +29,7 @@ See [ARCHITECTURE.md](../../ARCHITECTURE.md) for the strategic rationale and [Bu
 ### A1 — Policy-as-Code Enforcement
 **What it does:** Translates agency policy, legal requirements, and compliance mandates into explicit, machine-enforceable rules — not just documentation or prompt instructions.
 
-**Why it matters for government:** A prompt instruction like "do not share PII" can be bypassed by a sophisticated user or an edge-case input. A policy-as-code rule that blocks PII from being included in any outbound response cannot. The difference between soft and hard enforcement is the difference between a policy that applies in all cases and one that applies in most.
+**Why this matters:** A prompt instruction like "do not share PII" can be bypassed by a sophisticated user or an edge-case input. A policy-as-code rule that blocks PII from being included in any outbound response cannot. The difference between soft and hard enforcement is the difference between a policy that applies in all cases and one that applies in most.
 
 **Minimum acceptable standard (Score 3):** Key compliance requirements encoded as enforceable rules; violations blocked.
 
@@ -40,7 +40,7 @@ See [ARCHITECTURE.md](../../ARCHITECTURE.md) for the strategic rationale and [Bu
 ### A2 — Constitutional Guardrails (Inviolable Constraints)
 **What it does:** Defines a set of constraints that the system must never violate regardless of instructions, context, or prompt engineering — and enforces those constraints at a layer the system itself cannot override.
 
-**Why it matters for government:** Constitutional guardrails are the equivalent of statutory limits that no employee, manager, or executive can waive. For AI systems, this means constraints like: never disclose PII without authorization, never process data outside the authorized environment, never take an action that waives a citizen's legal rights.
+**Why this matters:** Constitutional guardrails are the equivalent of statutory limits that no employee, manager, or executive can waive. For AI systems, this means constraints like: never disclose PII without authorization, never process data outside the authorized environment, never take an action that waives a citizen's legal rights.
 
 **Minimum acceptable standard (Score 3):** Inviolable constraints documented; enforced at application level.
 
@@ -51,7 +51,7 @@ See [ARCHITECTURE.md](../../ARCHITECTURE.md) for the strategic rationale and [Bu
 ### A3 — Prompt Injection Defense
 **What it does:** Detects and blocks attempts by users or external data sources to use carefully crafted inputs to override the system's instructions or bypass its constraints.
 
-**Why it matters for government:** Prompt injection is the leading attack vector against AI systems. An attacker who can inject instructions into a document the AI reads, or into data the AI retrieves, may be able to cause the AI to take unauthorized actions or disclose protected information.
+**Why this matters:** Prompt injection is the leading attack vector against AI systems. An attacker who can inject instructions into a document the AI reads, or into data the AI retrieves, may be able to cause the AI to take unauthorized actions or disclose protected information.
 
 **Minimum acceptable standard (Score 3):** Basic input sanitization; known injection patterns blocked; suspicious inputs flagged.
 
@@ -62,7 +62,7 @@ See [ARCHITECTURE.md](../../ARCHITECTURE.md) for the strategic rationale and [Bu
 ### A4 — Mission Alignment Configuration
 **What it does:** Maintains a versioned, approved configuration of the AI system's objectives, priorities, and optimization targets — aligned to agency mission and reviewed regularly.
 
-**Why it matters for government:** AI systems optimize for their defined objectives. If those objectives are set by a vendor ("maximize engagement," "minimize latency"), they may not align to agency mission ("maximize accuracy and equity," "minimize processing errors for vulnerable populations"). Mission alignment configuration makes the optimization target explicit and owned.
+**Why this matters:** AI systems optimize for their defined objectives. If those objectives are set by a vendor ("maximize engagement," "minimize latency"), they may not align to agency mission ("maximize accuracy and equity," "minimize processing errors for vulnerable populations"). Mission alignment configuration makes the optimization target explicit and owned.
 
 **Minimum acceptable standard (Score 3):** System objectives documented and approved; reviewed periodically.
 
@@ -73,7 +73,7 @@ See [ARCHITECTURE.md](../../ARCHITECTURE.md) for the strategic rationale and [Bu
 ### A5 — Bias and Equity Monitoring
 **What it does:** Monitors AI outputs for systematic disparities across demographic, geographic, or population groups — and triggers review when disparities exceed defined thresholds.
 
-**Why it matters for government:** Government agencies are subject to equal protection and anti-discrimination requirements. An AI system that systematically produces different outcomes for different demographic groups — even unintentionally — creates legal and mission risk. Monitoring is the only way to detect this before it causes harm at scale.
+**Why this matters:** Government agencies are subject to equal protection and anti-discrimination requirements. An AI system that systematically produces different outcomes for different demographic groups — even unintentionally — creates legal and mission risk. Monitoring is the only way to detect this before it causes harm at scale.
 
 **Minimum acceptable standard (Score 3):** Periodic bias audits for high-stakes decision workflows; results reviewed.
 
@@ -84,7 +84,7 @@ See [ARCHITECTURE.md](../../ARCHITECTURE.md) for the strategic rationale and [Bu
 ### A6 — Value Alignment Testing
 **What it does:** Regularly tests the system with boundary cases, adversarial inputs, and edge conditions designed to reveal whether guardrails are working as intended.
 
-**Why it matters for government:** Guardrails that have never been tested are wishful thinking. Regular red-team testing — including tests designed by people trying to break the system — is the only way to validate that constraints hold under real-world pressure.
+**Why this matters:** Guardrails that have never been tested are wishful thinking. Regular red-team testing — including tests designed by people trying to break the system — is the only way to validate that constraints hold under real-world pressure.
 
 **Minimum acceptable standard (Score 3):** Periodic testing of key guardrails; results documented and reviewed.
 
@@ -95,7 +95,7 @@ See [ARCHITECTURE.md](../../ARCHITECTURE.md) for the strategic rationale and [Bu
 ### A7 — Weighted Business ROI Quantification
 **What it does:** Requires every proposal to document and quantify expected business and mission ROI (e.g., cost avoidance, risk reduction, throughput gains, equity or compliance improvements) with traceable assumptions, baselines, and sensitivity analysis. ROI becomes a primary weighted input to the Axiology score in high-volume intake environments.
 
-**Why it matters for government:** In enterprise-scale intake (1,000+ requests), decisions must be driven by objective business value rather than technical feasibility or development capacity alone. Without quantified ROI, leadership cannot rationally prioritize or defend investments to oversight bodies.
+**Why this matters:** In enterprise-scale intake (1,000+ requests), decisions must be driven by objective business value rather than technical feasibility or development capacity alone. Without quantified ROI, leadership cannot rationally prioritize or defend investments to oversight bodies.
 
 **Minimum acceptable standard (Score 3):** High-level ROI narrative or qualitative benefits statement is provided.
 
@@ -106,7 +106,7 @@ See [ARCHITECTURE.md](../../ARCHITECTURE.md) for the strategic rationale and [Bu
 ### A8 — Chargeback and Showback Modeling
 **What it does:** Defines and documents how the full costs of the AI system — including platform compute, data storage, governance overhead, maintenance, and support — will be attributed to business owners through showback reports (visibility) or formal chargeback mechanisms (actual billing).
 
-**Why it matters for government:** Sustainable platforms require clear accountability for consumption and cost. Absent a chargeback or showback model, demand is unbounded and true total cost of ownership remains hidden from decision-makers.
+**Why this matters:** Sustainable platforms require clear accountability for consumption and cost. Absent a chargeback or showback model, demand is unbounded and true total cost of ownership remains hidden from decision-makers.
 
 **Minimum acceptable standard (Score 3):** High-level cost attribution approach is described.
 

@@ -1,5 +1,7 @@
 # 5-Layer AI Evaluation Checklist
 
+> **Canonical scoring source.** This document is the authoritative GO / CONDITIONAL GO / NO-GO scoring rubric for the MOEPA 5-Layer Framework. Other documents that summarize scoring outcomes should link here rather than reproduce the full rubric. For the technical architecture gate, see the Supplement at the end of this document and [ARCHITECTURE.md §4](../ARCHITECTURE.md).
+
 > Use this checklist to score any AI proposal against the MOEPA 5-Layer Framework before approving funding, procurement, or scale-up. Proposers must demonstrate catalog enrichment — black-box vendor solutions that cannot map to all five layers fail intake by design. A proposal must score ≥ 3 on every layer to qualify for conditional approval. A score of ≥ 4 on every layer is required for full approval.
 
 ---

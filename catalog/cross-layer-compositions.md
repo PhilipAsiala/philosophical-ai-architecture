@@ -1,6 +1,6 @@
 # Cross-Layer Capability Compositions
 
-> Multi-layer capability patterns — showing how MOEPA layers work together for complex, real-world government AI use cases.
+> Multi-layer capability patterns showing how MOEPA layers work together for complex governance challenges. Public-sector scenarios are used as the primary worked examples; the patterns apply equally to enterprise, regulated-industry, and other organizational contexts.
 
 ---
 
@@ -30,7 +30,7 @@ METROLOGY   Records data provenance, quality status, collection context
 DATA SUBSTRATE — All records written as immutable entries with cross-references
 ```
 
-**Government relevance:** When a constituent or benefits recipient appeals a decision, or when a Congressional oversight body requests documentation, this composition produces a complete, auditable chain from raw source data through final decision.
+**Public-sector example:** When a constituent or benefits recipient appeals a decision, or when a Congressional oversight body requests documentation, this composition produces a complete, auditable chain from raw source data through final decision.
 
 **Key capabilities required:**
 - M2 (Provenance Recording)
@@ -64,7 +64,7 @@ PRAXEOLOGY    → Workflow gate: is the case type within automated processing sc
                   OUT OF SCOPE → human workflow with audit logging
 ```
 
-**Government relevance:** Income verification, routine eligibility determinations, and standard compliance checks can be handled at scale. Unusual cases, conflicting evidence, or data quality issues route automatically to human reviewers — no case falls through a gap.
+**Public-sector example:** Income verification, routine eligibility determinations, and standard compliance checks can be handled at scale. Unusual cases, conflicting evidence, or data quality issues route automatically to human reviewers — no case falls through a gap.
 
 **Key capabilities required:**
 - M1 (Data Quality Rules Engine)
@@ -99,7 +99,7 @@ AXIOLOGY      → Policy filter: does the proposed response comply with all cons
 Response with: citations | confidence score | policy compliance status
 ```
 
-**Government relevance:** AI-assisted research tools for examiners, analysts, or caseworkers — grounded in agency knowledge, not generic training data, and guaranteed to comply with disclosure and use constraints.
+**Public-sector example:** AI-assisted research tools for examiners, analysts, or caseworkers — grounded in agency knowledge, not generic training data, and guaranteed to comply with disclosure and use constraints.
 
 **Key capabilities required:**
 - O2 (Knowledge Graph)
@@ -128,7 +128,7 @@ Response with: citations | confidence score | policy compliance status
 | Axiology | Evaluates proposal alignment with mission priorities and compliance requirements |
 | Data Substrate | Records all scores, evidence, approvals, and decisions as a durable governance record |
 
-**Government relevance:** Consistent, auditable AI project evaluation across an agency — enabling leadership to compare proposals, track historical decisions, and demonstrate governance rigor to oversight bodies.
+**Public-sector example:** Consistent, auditable AI project evaluation across an agency — enabling leadership to compare proposals, track historical decisions, and demonstrate governance rigor to oversight bodies.
 
 **Key capabilities required:**
 - Full 5-Layer scoring per the [Evaluation Checklist](../docs/5-Layer-Evaluation-Checklist.md)
@@ -155,7 +155,7 @@ AXIOLOGY      → Policy compliance monitoring: detect guardrail activation patt
                   Alert if policy violations increase; trigger investigation
 ```
 
-**Government relevance:** AI systems cannot be approved once and forgotten. Continuous compliance monitoring provides ongoing assurance to leadership and oversight bodies that the system remains within approved boundaries — without requiring manual audits on a fixed schedule.
+**Public-sector example:** AI systems cannot be approved once and forgotten. Continuous compliance monitoring provides ongoing assurance to leadership and oversight bodies that the system remains within approved boundaries — without requiring manual audits on a fixed schedule.
 
 **Key capabilities required:**
 - M3 (Statistical Profiling and Drift Detection)
@@ -186,7 +186,7 @@ MCP Integration Layer
 Data Substrate + layer services (never called directly by orchestrator)
 ```
 
-**Government relevance:** Procurement and architecture review can inventory exactly which governed capabilities an AI system can invoke — with audit trails on every tool call, not hidden framework callbacks.
+**Public-sector example:** Procurement and architecture review can inventory exactly which governed capabilities an AI system can invoke — with audit trails on every tool call, not hidden framework callbacks.
 
 **Key capabilities required:**
 - M8 (Semantic Document Ingestion / Proto-SPO)

@@ -1,6 +1,8 @@
 # The Data Substrate: Your Organization's Unified Knowledge Library
 
-> The Data Substrate is the agency-owned knowledge library that all five MOEPA layers read from and write to — truth, values, rules, and lineage in open formats. It is not a scored layer. It is the organizational memory that makes the entire Philosophical AI Architecture coherent and auditable.
+> **Audience:** Builder-facing — architecture and implementation detail. Leaders can read the summary paragraphs in each section; technical storage design (SPO/quad, open formats, federation) is intended for architects and engineers.
+
+> The Data Substrate is the organization-owned knowledge library that all five MOEPA layers read from and write to — truth, values, rules, and lineage in open formats. It is not a scored layer. It is the organizational memory that makes the entire Philosophical AI Architecture coherent and auditable.
 
 ---
 
@@ -54,23 +56,23 @@ An immutable log of what the system did and why:
 
 ## End State vs. Evolution Path
 
-The repository draws a deliberate line between **what the substrate must become** and **how an agency gets there**.
+The repository draws a deliberate line between **what the substrate must become** and **how an organization gets there**.
 
 ### End state (imperative)
 
-At maturity, every agency-owned Data Substrate **must** converge on this logical architecture:
+At maturity, every organization-owned Data Substrate **must** converge on this logical architecture:
 
 - **SPO/quad as the universal representation** — every base fact stored once as a Subject–Predicate–Object triple (with context as a quad)
 - **Layer metadata envelopes** — Metrology, Ontology, Epistemology, Praxeology, and Axiology attach their own metadata to the same base fact without duplication
 - **SPO-centric hypergraph + lakehouse** — graph semantics and tabular storage federated as one queryable, auditable whole
 - **Cross-layer queries** — e.g. high-confidence facts that satisfy axiological fairness and support praxeological auto-approval
-- **Agency ownership throughout** — open formats, full provenance, point-in-time reconstruction
+- **Organizational ownership throughout** — open formats, full provenance, point-in-time reconstruction
 
 This is not optional at end state. A substrate that cannot represent facts as owned SPO/quad records with cross-layer envelopes does not meet the architectural target.
 
 ### Evolution path (allowed)
 
-Agencies **evolve** toward that end state incrementally. Interim physical implementations are valid when they are **explicitly staged** and **SPO-compatible** (mappable to triples without loss of meaning):
+Organizations **evolve** toward that end state incrementally. Interim physical implementations are valid when they are **explicitly staged** and **SPO-compatible** (mappable to triples without loss of meaning):
 
 | Stage | Typical implementation | End-state alignment |
 |---|---|---|
@@ -86,7 +88,7 @@ Agencies **evolve** toward that end state incrementally. Interim physical implem
 
 Even before the full SPO hypergraph exists, these are non-negotiable:
 
-- **Agency ownership** of the knowledge library (not a vendor platform)
+- **Organizational ownership** of the knowledge library (not a vendor platform)
 - **Open, portable formats** with a documented export path
 - **Provenance standards** for every record entering the substrate
 - **A published roadmap** showing how current storage evolves to SPO/quad end state
@@ -174,7 +176,7 @@ The Data Substrate maintains **version history** for:
 - **Fact records** — when a source record is updated or corrected, the history is preserved
 - **Model configurations** — which model version was used for which decisions
 
-This enables **point-in-time reconstruction**: the ability to reproduce exactly what the system knew and how it reasoned at any historical moment. For benefits programs, regulatory enforcement, and high-stakes federal determinations, this is a legal and compliance necessity.
+This enables **point-in-time reconstruction**: the ability to reproduce exactly what the system knew and how it reasoned at any historical moment. For benefits programs, regulatory enforcement, financial audits, and any high-stakes institutional determination, this is a legal and compliance necessity.
 
 ---
 
@@ -204,7 +206,7 @@ This enables **point-in-time reconstruction**: the ability to reproduce exactly 
 
 A Data Substrate evolves toward the SPO/quad end state — it is not a single cutover event. A practical starting sequence:
 
-1. **Inventory existing data sources** — what does your agency hold, where, in what format?
+1. **Inventory existing data sources** — what does your organization hold, where, in what format?
 2. **Define your core entity model** — what are the 10–20 most important entities in your domain?
 3. **Establish provenance standards** — what must be recorded for each incoming data record?
 4. **Publish the evolution roadmap** — document how current storage maps to SPO/quad end state and by when

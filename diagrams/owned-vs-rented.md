@@ -72,11 +72,11 @@ quadrantChart
 | Layer | Rented (Vendor) | Owned (MOEPA) | Migration Risk |
 |---|---|---|---|
 | **Data Substrate** | Vendor platform; export limited by contract | Open-format lakehouse (Iceberg/Parquet); fully portable | HIGH — historical data may not transfer |
-| **Metrology** | Vendor manages quality rules and lineage | Agency-defined quality gates; full provenance records | HIGH — rules and history stay with vendor |
-| **Ontology** | Vendor-defined entity model; schema not exportable | Agency-owned knowledge graph (Neo4j); version-controlled | HIGH — entity relationships may not transfer |
+| **Metrology** | Vendor manages quality rules and lineage | Organization-defined quality gates; full provenance records | HIGH — rules and history stay with vendor |
+| **Ontology** | Vendor-defined entity model; schema not exportable | Organization-owned knowledge graph (Neo4j); version-controlled | HIGH — entity relationships may not transfer |
 | **Epistemology** | Vendor confidence scores; no source access | Owned RAG; source-cited verification; confidence decomposed | MEDIUM — pipeline can be rebuilt with owned data |
 | **Praxeology** | Vendor workflow engine; audit access limited | Owned state machine (LangGraph); immutable audit log | MEDIUM — workflow logic can be re-documented |
-| **Axiology** | Vendor-provided guardrails; not inspectable | Policy-as-code (OPA); agency-defined; tested regularly | LOW — policy code is portable |
+| **Axiology** | Vendor-provided guardrails; not inspectable | Policy-as-code (OPA); organization-defined; tested regularly | LOW — policy code is portable |
 | **Compute / Models** | Rented cloud compute + API-accessed models | Rented cloud compute + open-weight models (Llama, Mistral) | LOW — compute is commodity |
 
 ---
@@ -119,12 +119,12 @@ flowchart TD
 > **The rented architecture is faster to start and slower to own.**  
 > **The owned architecture is slower to start and faster to govern.**
 
-For government agencies with statutory audit obligations, long-term data custody requirements, and changing vendor landscapes — the owned architecture is not just better strategy. It is the only defensible approach.
+For any organization with statutory audit obligations, long-term data custody requirements, and accountability to stakeholders or oversight bodies — the owned architecture is not just better strategy. It is the only defensible approach.
 
 ---
 
 ## Related Documents
 
-- [Owned vs. Rented AI Strategy](../docs/Owned-vs-Rented-AI-Strategy.md) — detailed strategic comparison with government examples
+- [Owned vs. Rented AI Strategy](../docs/Owned-vs-Rented-AI-Strategy.md) — detailed strategic comparison with public-sector worked examples
 - [5-Layer Evaluation Checklist](../docs/5-Layer-Evaluation-Checklist.md) — score any proposal on the own/rent spectrum
 - [MOEPA Stack Diagram](moepa-stack.md) — full architecture diagram

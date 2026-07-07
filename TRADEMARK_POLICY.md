@@ -31,7 +31,7 @@ The MIT License does **not** grant any right to use, and this policy applies to:
 If you fork this repository or distribute a modified version of this software or
 documentation, you **must**:
 
-1. Remove all references to the **MOEPA** name and branding from your version.
+1. Remove **MOEPA** as the project name, primary branding, and apparent source identity of your derivative — including from repository names, documentation titles, logos, and any material that would lead a reader to believe your work is this project or is officially affiliated with it.
 2. Re-brand your derivative under a different name that is not confusingly
    similar to **MOEPA**.
 3. Not imply endorsement by, affiliation with, or origin from the MOEPA project

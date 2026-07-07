@@ -10,6 +10,8 @@ This repository is theory-first documentation for leaders who set direction, app
 
 > **Business first.** MOEPA names what the organization must own. Tool choices come second. See [pitch strategy](docs/pitch-strategy.md) §0.
 
+> **Scope.** The Philosophical AI Architecture is broadly applicable across enterprise, commercial, regulated-industry, nonprofit, and public-sector contexts. Public-sector scenarios are used as the primary worked examples throughout this repository because they make accountability and audit requirements concrete. The ownership and governance principles apply equally to any organization that must defend AI decisions to stakeholders, auditors, or regulators.
+
 ---
 
 ## Naming
@@ -87,7 +89,7 @@ graph TB
 
 *For engineering translation (graphs, workflows, guardrails, storage), see [MOEPA 5-Layer Framework](docs/MOEPA-5-Layer-Framework.md) and [ARCHITECTURE.md](ARCHITECTURE.md).*
 
-**The Data Substrate** is the organization-owned knowledge library — truth, values, rules, and lineage in one place that all five layers read from and write to. **The MOEPA Catalog** is how leadership proves what the institution already owns and what new projects must enrich. See [Data Substrate Concept](docs/Data-Substrate-Concept.md) for the business design; technical end-state detail is in [ARCHITECTURE.md](ARCHITECTURE.md) §5.1.
+**The Data Substrate** is the organization-owned knowledge library — truth, values, rules, and lineage in one place that all five layers read from and write to. **The MOEPA Catalog** indexes, routes, scores, and governs those assets and capabilities so leaders and architects can find, reuse, evaluate, and audit them. These are distinct: the Substrate stores owned facts, relationships, evidence, workflows, and policy records; the Catalog is how leadership proves what the institution already owns and what new projects must enrich. See [Data Substrate Concept](docs/Data-Substrate-Concept.md) for the business design; technical end-state detail is in [ARCHITECTURE.md](ARCHITECTURE.md) §5.1.
 
 ---
 

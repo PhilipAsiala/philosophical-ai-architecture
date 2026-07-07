@@ -29,7 +29,7 @@ See [ARCHITECTURE.md](../../ARCHITECTURE.md) for the strategic rationale and [Bu
 ### P1 — Deterministic Workflow State Machine
 **What it does:** Represents each workflow as an explicit state machine — a defined set of states, transitions, and conditions. The system can only move between defined states in defined ways; no transitions are possible outside the state machine.
 
-**Why it matters for government:** "Agentic" AI that follows instructions step-by-step with no formal state model can get into undefined states — doing things it wasn't intended to do, or skipping steps that were required. A state machine makes workflows provably correct and auditable.
+**Why this matters:** "Agentic" AI that follows instructions step-by-step with no formal state model can get into undefined states — doing things it wasn't intended to do, or skipping steps that were required. A state machine makes workflows provably correct and auditable.
 
 **Minimum acceptable standard (Score 3):** Workflows documented with required steps; execution follows defined sequence.
 
@@ -40,7 +40,7 @@ See [ARCHITECTURE.md](../../ARCHITECTURE.md) for the strategic rationale and [Bu
 ### P2 — Human-in-the-Loop Checkpoints
 **What it does:** Defines mandatory pause points in workflows where a human must review the situation and explicitly approve before the system can proceed. These checkpoints cannot be bypassed by the system or by prompt engineering.
 
-**Why it matters for government:** Automated AI systems making consequential decisions about citizens — issuing notices, updating records, triggering audits — must have defined points where a responsible official reviews and approves. This is not just a governance preference; it is a legal and due process requirement in many government contexts.
+**Why this matters:** Automated AI systems making consequential decisions about citizens — issuing notices, updating records, triggering audits — must have defined points where a responsible official reviews and approves. This is not just a governance preference; it is a legal and due process requirement in many government contexts.
 
 **Minimum acceptable standard (Score 3):** Human review required before any externally visible action; approval logged.
 
@@ -51,7 +51,7 @@ See [ARCHITECTURE.md](../../ARCHITECTURE.md) for the strategic rationale and [Bu
 ### P3 — Agent Scope Enforcement (Tool Boundaries)
 **What it does:** Explicitly defines what actions an AI agent is authorized to take — what tools it can call, what systems it can write to, what data it can access — and prevents any action outside that scope.
 
-**Why it matters for government:** Agentic AI systems are given access to tools (database updates, API calls, document generation, communication systems). Without explicit scope enforcement, a model could take unintended actions based on ambiguous instructions. Scope enforcement is the "blast radius" limiter.
+**Why this matters:** Agentic AI systems are given access to tools (database updates, API calls, document generation, communication systems). Without explicit scope enforcement, a model could take unintended actions based on ambiguous instructions. Scope enforcement is the "blast radius" limiter.
 
 **Minimum acceptable standard (Score 3):** Documented list of authorized agent actions; unauthorized actions blocked.
 
@@ -62,7 +62,7 @@ See [ARCHITECTURE.md](../../ARCHITECTURE.md) for the strategic rationale and [Bu
 ### P4 — Immutable Workflow Audit Log
 **What it does:** Records every workflow event — state transitions, tool calls, human approvals, exceptions — in a tamper-evident log with timestamp and actor identity.
 
-**Why it matters for government:** The workflow audit log is the evidentiary record for investigations, appeals, oversight inquiries, and compliance audits. It must be complete, accurate, and impossible to alter after the fact.
+**Why this matters:** The workflow audit log is the evidentiary record for investigations, appeals, oversight inquiries, and compliance audits. It must be complete, accurate, and impossible to alter after the fact.
 
 **Minimum acceptable standard (Score 3):** Workflow events logged; log retained per policy; accessible for audit review.
 
@@ -73,7 +73,7 @@ See [ARCHITECTURE.md](../../ARCHITECTURE.md) for the strategic rationale and [Bu
 ### P5 — Feedback and Adaptation Controls
 **What it does:** Defines how workflow logic is updated based on outcomes — and controls that process so changes go through review rather than happening automatically.
 
-**Why it matters for government:** Systems that learn and adapt need governance over how they adapt. An AI that autonomously changes its decision logic based on feedback could silently drift from its approved behavior. Adaptation must be a controlled, reviewed process.
+**Why this matters:** Systems that learn and adapt need governance over how they adapt. An AI that autonomously changes its decision logic based on feedback could silently drift from its approved behavior. Adaptation must be a controlled, reviewed process.
 
 **Minimum acceptable standard (Score 3):** Workflow logic changes go through documented review; changes are version-controlled.
 
@@ -84,7 +84,7 @@ See [ARCHITECTURE.md](../../ARCHITECTURE.md) for the strategic rationale and [Bu
 ### P6 — Escalation and Exception Handling
 **What it does:** Defines what happens when a workflow cannot be completed automatically — insufficient evidence, conflicting signals, boundary conditions. Escalation paths are explicit, logged, and governed.
 
-**Why it matters for government:** The edge cases are where errors concentrate. A workflow that handles 95% of cases automatically but has no defined process for the remaining 5% will produce unpredictable outcomes for the citizens in that 5%.
+**Why this matters:** The edge cases are where errors concentrate. A workflow that handles 95% of cases automatically but has no defined process for the remaining 5% will produce unpredictable outcomes for the citizens in that 5%.
 
 **Minimum acceptable standard (Score 3):** Exception conditions documented; escalation path defined; exceptions logged.
 

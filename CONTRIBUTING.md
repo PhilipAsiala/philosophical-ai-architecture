@@ -82,7 +82,8 @@ or NO-GO under the MOEPA intake rubric.
 - Never conflate the **Philosophical AI Architecture** (ecosystem) with the **MOEPA 5-Layer Framework** (engineering blueprint and intake rubric).
 - Treat **SPO/quad on a federated hypergraph + lakehouse** as the imperative **Substrate End State**; allow **Substrate Evolution Path** staging in implementation guidance.
 - Preserve the five-layer structure (Metrology, Ontology, Epistemology, Praxeology, Axiology).
-- Keep the GO / CONDITIONAL / NO-GO scoring model consistent across `ARCHITECTURE.md` and `catalog/`.
+- Keep the GO / CONDITIONAL / NO-GO scoring model consistent across `ARCHITECTURE.md` and `catalog/`; link to [5-Layer-Evaluation-Checklist.md](docs/5-Layer-Evaluation-Checklist.md) as the canonical rubric rather than reproducing it.
+- Use `organization`, `institution`, or `enterprise` as the default term in general-purpose docs; reserve `agency` for the public-sector guide and public-sector examples.
 
 ## Maintainer notes (repository owner)
 

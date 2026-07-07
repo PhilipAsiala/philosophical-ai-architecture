@@ -28,7 +28,7 @@ See [ARCHITECTURE.md](../../ARCHITECTURE.md) for the strategic rationale and [Bu
 ### M1 — Data Quality Rules Engine
 **What it does:** Enforces defined quality rules at ingestion — completeness thresholds, format validation, range checks, referential integrity.
 
-**Why it matters for government:** An income verification program relying on wage data with 15% null fields in the employer identifier column will produce systematically incorrect matches. Quality rules catch this before it propagates.
+**Why this matters:** An income verification program relying on wage data with 15% null fields in the employer identifier column will produce systematically incorrect matches. Quality rules catch this before it propagates.
 
 **Minimum acceptable standard (Score 3):** Basic rules exist for core fields; failures are logged and escalated.
 
@@ -39,7 +39,7 @@ See [ARCHITECTURE.md](../../ARCHITECTURE.md) for the strategic rationale and [Bu
 ### M2 — Data Provenance Recording
 **What it does:** Creates and maintains a record of each data item's origin, collection context, and transformation history.
 
-**Why it matters for government:** When a constituent challenges a decision, the agency must demonstrate that the underlying data was collected lawfully, from an authorized source, and processed correctly. Provenance is the evidence chain.
+**Why this matters:** When a constituent challenges a decision, the agency must demonstrate that the underlying data was collected lawfully, from an authorized source, and processed correctly. Provenance is the evidence chain.
 
 **Minimum acceptable standard (Score 3):** Source system, collection date, and basic transformation steps recorded per record.
 
@@ -50,7 +50,7 @@ See [ARCHITECTURE.md](../../ARCHITECTURE.md) for the strategic rationale and [Bu
 ### M3 — Statistical Profiling and Drift Detection
 **What it does:** Continuously measures the statistical properties of data (distributions, null rates, value ranges) and alerts when those properties change unexpectedly.
 
-**Why it matters for government:** Model behavior can degrade silently when input data distributions shift — for example, when a third-party income reporter changes their reporting format. Drift detection catches this before it causes systematic errors.
+**Why this matters:** Model behavior can degrade silently when input data distributions shift — for example, when a third-party income reporter changes their reporting format. Drift detection catches this before it causes systematic errors.
 
 **Minimum acceptable standard (Score 3):** Periodic profiling with manual review of major anomalies.
 
@@ -61,7 +61,7 @@ See [ARCHITECTURE.md](../../ARCHITECTURE.md) for the strategic rationale and [Bu
 ### M4 — Open-Format Data Storage
 **What it does:** Stores all data in open, non-proprietary formats that can be read and migrated without vendor cooperation.
 
-**Why it matters for government:** Proprietary data formats create hard lock-in. When a contract ends, you need your data — not a vendor's promise to provide an export.
+**Why this matters:** Proprietary data formats create hard lock-in. When a contract ends, you need your data — not a vendor's promise to provide an export.
 
 **Minimum acceptable standard (Score 3):** Core data exportable in a standard format (CSV, JSON, Parquet).
 
@@ -72,7 +72,7 @@ See [ARCHITECTURE.md](../../ARCHITECTURE.md) for the strategic rationale and [Bu
 ### M5 — Data Access Controls and Egress Logging
 **What it does:** Enforces who can access what data, and logs all access events for audit purposes.
 
-**Why it matters for government:** Privacy Act, FOIA, and cybersecurity requirements all depend on knowing who accessed what data and when. Egress logging is the evidentiary foundation.
+**Why this matters:** Privacy Act, FOIA, and cybersecurity requirements all depend on knowing who accessed what data and when. Egress logging is the evidentiary foundation.
 
 **Minimum acceptable standard (Score 3):** Role-based access control enforced; access logs available for audit.
 
@@ -83,7 +83,7 @@ See [ARCHITECTURE.md](../../ARCHITECTURE.md) for the strategic rationale and [Bu
 ### M6 — Agency Data Platform Availability Assessment
 **What it does:** Prior to ingestion, determines whether the required source data is already available, governed, and staged within the agency's data platform (lakehouse or equivalent) or whether it must be newly provisioned or supplied by the mission program. This assessment directly informs ingestion timelines, cost, and risk.
 
-**Why it matters for government:** Program-supplied data pipelines create hidden integration debt, duplicate storage, and delayed delivery. Explicitly checking platform availability enforces reuse of existing governed agency assets and prevents unnecessary data movement.
+**Why this matters:** Program-supplied data pipelines create hidden integration debt, duplicate storage, and delayed delivery. Explicitly checking platform availability enforces reuse of existing governed agency assets and prevents unnecessary data movement.
 
 **Minimum acceptable standard (Score 3):** Basic statement of data source is provided.
 
@@ -94,7 +94,7 @@ See [ARCHITECTURE.md](../../ARCHITECTURE.md) for the strategic rationale and [Bu
 ### M8 — Semantic Document Ingestion (Proto-SPO)
 **What it does:** Parses unstructured documents with document-aware semantic parsers, producing Proto-SPOs that carry provenance, structure, and semantic metadata before substrate write.
 
-**Why it matters for government:** Regulatory documents, policy manuals, and case files lose meaning when split by token count. Semantic ingestion preserves tables, sections, and citations so Epistemology can return exact evidence — not reconstructed fragments.
+**Why this matters:** Regulatory documents, policy manuals, and case files lose meaning when split by token count. Semantic ingestion preserves tables, sections, and citations so Epistemology can return exact evidence — not reconstructed fragments.
 
 **Minimum acceptable standard (Score 3):** Core document types parsed with structure preserved; each segment carries source provenance; no fixed-size-only chunking for governed corpora.
 
@@ -105,7 +105,7 @@ See [ARCHITECTURE.md](../../ARCHITECTURE.md) for the strategic rationale and [Bu
 ### M7 — Post-Launch KPI Measurement and Objective Baselining
 **What it does:** Establishes objective pre-launch performance and data quality baselines and implements a scheduled post-launch measurement program for model effectiveness, data drift, outcome KPIs (accuracy, equity, cost-per-transaction, throughput, compliance rates), and business impact.
 
-**Why it matters for government:** Without post-launch baselining and measurement, leadership cannot determine whether an investment delivered the promised ROI or created unintended consequences. This capability closes the governance loop.
+**Why this matters:** Without post-launch baselining and measurement, leadership cannot determine whether an investment delivered the promised ROI or created unintended consequences. This capability closes the governance loop.
 
 **Minimum acceptable standard (Score 3):** High-level commitment to measure outcomes after launch.
 

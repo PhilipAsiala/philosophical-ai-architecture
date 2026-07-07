@@ -2,11 +2,11 @@
 
 ## Is SPO/quad storage required on day one?
 
-No — but it is **imperative at end state**. The repository requires every agency-owned Data Substrate to **evolve toward** owned SPO/quad representation with layer metadata envelopes on a federated hypergraph + lakehouse. Agencies may start with open-format lakehouse storage (Iceberg/Parquet) using SPO-compatible schemas, then add a pilot triple store, then enterprise graph and federation. Interim storage is acceptable when the data is agency-owned, provenance-complete, open-format, and backed by a documented migration path to end state. See [End State vs. Evolution Path](Data-Substrate-Concept.md#end-state-vs-evolution-path).
+No — but it is **imperative at end state**. The repository requires every organization-owned Data Substrate to **evolve toward** owned SPO/quad representation with layer metadata envelopes on a federated hypergraph + lakehouse. Organizations may start with open-format lakehouse storage (Iceberg/Parquet) using SPO-compatible schemas, then add a pilot triple store, then enterprise graph and federation. Interim storage is acceptable when the data is organization-owned, provenance-complete, open-format, and backed by a documented migration path to end state. See [End State vs. Evolution Path](Data-Substrate-Concept.md#end-state-vs-evolution-path).
 
 ## Is the Data Substrate a sixth layer?
 
-No. The Data Substrate is the agency-owned knowledge library beneath all five layers — an SPO/quad triple store plus lakehouse — that every layer stores into. It holds truth, values, rules, and lineage in open formats the organization owns permanently. It is **not** a scored layer. See §5.1 of [ARCHITECTURE.md](../ARCHITECTURE.md) for the full substrate specification.
+No. The Data Substrate is the organization-owned knowledge library beneath all five layers — an SPO/quad triple store plus lakehouse — that every layer stores into. It holds truth, values, rules, and lineage in open formats the organization owns permanently. It is **not** a scored layer. See §5.1 of [ARCHITECTURE.md](../ARCHITECTURE.md) for the full substrate specification.
 
 ## Is this a finished architecture?
 

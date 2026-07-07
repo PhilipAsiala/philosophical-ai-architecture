@@ -1,6 +1,6 @@
 # MOEPA Stack Diagram
 
-The MOEPA 5-Layer Framework inside the Philosophical AI Architecture, with the agency-owned Data Substrate foundation.
+The MOEPA 5-Layer Framework inside the Philosophical AI Architecture, with the organization-owned Data Substrate foundation.
 
 ---
 
