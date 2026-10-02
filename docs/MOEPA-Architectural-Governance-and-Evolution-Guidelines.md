@@ -33,13 +33,22 @@ Every maintainer pull request must score its impact across the five layers:
 
 - **Metrology**: how is this feature measured?
 - **Ontology**: does this align with our canonical entity definitions?
-- **Epistemology**: where is the evidence and provenance chain? (must return exact
-  citations)
-- **Praxeology**: what deterministic workflow does this feature serve?
-- **Axiology**: does this feature comply with our internal governance and
-  security filters?
+- **Epistemology**: what proposal does this feature emit (Belief, Defeater, or
+  Ignorance), and where is the citation chain?
+- **Praxeology**: which action-space precondition does this feature serve?
+  Confidence must not be the admission rule.
+- **Axiology**: which verdict applies (Commit, Forbid, or Refuse to Act), and
+  which state-changing tool is bound to Commit?
 
-## 4. MCP-First Pattern
+## 4. Probabilistic Proposal, Deterministic Arbiter
+
+- Metrology and Epistemology may measure and propose. Their tools return observations or an epistemic state (Belief, Defeater, Ignorance).
+- Ontology schemas stay categorical. A change that stores confidence on an entity is a NO-GO.
+- Praxeology transitions are preconditions. A confidence cutoff is not an edge.
+- Axiology returns only Commit, Forbid, or Refuse to Act. State-changing tools run only on Commit.
+- Ignorance and unresolved defeaters produce Refuse to Act, not a low probability that is then acted on.
+
+## 5. MCP-First Pattern
 
 - Do not call data or RAG layers directly.
 - Implement all service logic within an MCP-compliant service.
@@ -53,8 +62,8 @@ description documenting:
 
 1. The MCP server or MCP facade introduced or reused.
 2. The ingestion/parsing approach and Proto-SPO metadata fields.
-3. Five-layer MOEPA impact notes (Metrology through Axiology).
-4. Citation and provenance behavior in generated outputs.
+3. Five-layer MOEPA impact notes, including which domain proposes and which verdict authorizes any state change.
+4. Citation and provenance behavior in generated outputs, with Belief, Defeater, and Ignorance kept distinct.
 5. Any exceptions and approved compensating controls.
 
 If a proposal cannot map to these requirements, it should be scored as

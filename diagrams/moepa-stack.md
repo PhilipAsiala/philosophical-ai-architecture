@@ -11,25 +11,26 @@ graph TB
     subgraph STACK["MOEPA Cognitive Architecture"]
         direction TB
 
-        A5["━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n  LAYER 5 — AXIOLOGY\n  Values · Ethics · Mission Alignment\n  Policy enforcement · Guardrails\n  Constitutional constraints\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"]
+        A5["━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n  LAYER 5 — AXIOLOGY · deterministic arbiter\n  Commit · Forbid · Refuse to Act\n  Values · Safety · Compliance\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"]
 
-        A4["━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n  LAYER 4 — PRAXEOLOGY\n  Decision Workflows · Human Oversight\n  State machines · Audit trails\n  Tool scope enforcement\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"]
+        A4["━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n  LAYER 4 — PRAXEOLOGY · deterministic\n  Action space · State transitions\n  Procedural checkpoints\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"]
 
-        A3["━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n  LAYER 3 — EPISTEMOLOGY\n  Truth & Verification · Owned RAG\n  Confidence scoring · Fact-checking\n  Hallucination detection\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"]
+        A3["━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n  LAYER 3 — EPISTEMOLOGY · probabilistic\n  Proposes only\n  Belief · Defeater · Ignorance\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"]
 
-        A2["━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n  LAYER 2 — ONTOLOGY\n  Structured Knowledge · Entity Model\n  Knowledge graph · Embeddings\n  Semantic consistency\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"]
+        A2["━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n  LAYER 2 — ONTOLOGY · deterministic\n  Categorical entities and relations\n  Confidence forbidden on the schema\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"]
 
-        A1["━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n  LAYER 1 — METROLOGY\n  Data Quality · Provenance\n  Measurement · Observability\n  Open-format storage\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"]
+        A1["━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n  LAYER 1 — METROLOGY · probabilistic\n  Calibration · Error bounds\n  Disagreement · Provenance\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"]
 
         SUB[["══════════════════════════════════════\n  DATA SUBSTRATE\n  Unified Knowledge Library\n  SPO/Quad + Open Lakehouse (Iceberg/Parquet)\n  Provenance · Versioning · Lineage\n  (shared foundation — all layers read/write here)\n══════════════════════════════════════"]]
     end
 
-    A5 --> A4 --> A3 --> A2 --> A1 --> SUB
-    A1 -. reads/writes .-> SUB
-    A2 -. reads/writes .-> SUB
-    A3 -. reads/writes .-> SUB
-    A4 -. reads/writes .-> SUB
-    A5 -. reads/writes .-> SUB
+    A1 --> A3
+    A3 -->|"proposal"| A2
+    A2 --> A4
+    A4 --> A5
+    A5 -->|"Commit"| SUB
+    A1 -. observation .-> SUB
+    A3 -. envelope .-> SUB
 
     style SUB fill:#1a3a5c,color:#ffffff,stroke:#4a90d9
     style A1 fill:#2d4a2d,color:#ffffff,stroke:#5a9a5a
@@ -43,26 +44,26 @@ graph TB
 
 ## Layer Definitions at a Glance
 
-| Layer | Philosophical Discipline | AI Governance Role | Core Tool Examples |
+| Layer | Domain | AI Governance Role | Core Tool Examples |
 |---|---|---|---|
-| **5 — Axiology** | Study of value and ethics | What the system must never do; what it must preserve | Open Policy Agent, Guardrails AI, LLM Guard |
-| **4 — Praxeology** | Study of purposeful action | How the system acts; who approves; what is logged | LangGraph, Temporal, Camunda, OPA |
-| **3 — Epistemology** | Study of knowledge and truth | What counts as a verified fact vs. inference | LlamaIndex, Guardrails AI, RAGAS, TruLens |
-| **2 — Ontology** | Study of being and relationships | What entities exist; how they relate; what terms mean | Neo4j, Apache Jena, Chroma, Qdrant |
-| **1 — Metrology** | Study of measurement | What data is trusted; how quality is assured; where it came from | Great Expectations, Apache Iceberg, OpenLineage |
+| **5 — Axiology** | Deterministic arbiter | Commit, Forbid, or Refuse to Act | Open Policy Agent, Gatekeeper |
+| **4 — Praxeology** | Deterministic | Which transitions are in the action space | LangGraph, Temporal, Camunda |
+| **3 — Epistemology** | Probabilistic | Belief, Defeater, or Ignorance — proposal only | Owned RAG, calibrated inference |
+| **2 — Ontology** | Deterministic | Categorical entities; no confidence on the schema | Neo4j, Apache Jena, Iceberg |
+| **1 — Metrology** | Probabilistic | Calibration, error bounds, disagreement | Great Expectations, OpenLineage |
 | **Data Substrate** | *(architectural pattern)* | Shared knowledge library; owned by the organization | Iceberg + Parquet + Neo4j + Atlas |
 
 ---
 
 ## The Governance Property of the Stack
 
-The stack is **cumulative**: each layer builds on the reliability of the layer below it.
+Control runs from probabilistic proposal to deterministic arbiter. A weak layer fails in a specific way:
 
-- If **Metrology** is weak, the entire stack is built on untrustworthy data
-- If **Ontology** is weak, Epistemology cannot verify facts because the entity model is inconsistent
-- If **Epistemology** is weak, Praxeology is taking action based on unverified claims
-- If **Praxeology** is weak, Axiology constraints are applied to an uncontrolled execution environment
-- If **Axiology** is weak, the system may optimize for the wrong objectives even while all other layers function
+- If **Metrology** is weak, proposals rest on uncalibrated observations
+- If **Epistemology** is weak, ignorance is flattened into a probability and handed downstream as if it were a belief
+- If **Ontology** is weak, confidence leaks onto entities and existence becomes a score
+- If **Praxeology** is weak, the action space is "whatever the model called"
+- If **Axiology** is weak, a confidence score or a prompt is treated as permission
 
 This is why the [5-Layer Evaluation Checklist](../docs/5-Layer-Evaluation-Checklist.md) uses the **lowest layer score** as the overall recommendation — not an average.
 

@@ -10,7 +10,7 @@ When government agencies adopt AI systems, decisions about data, meaning, facts,
 
 Each of the five layers represents a distinct domain of organizational control over an AI system. Weakness in any single layer undermines the entire system.
 
-The layers are numbered from foundation to governance:
+The layers are numbered from foundation to governance. Runtime control uses two domains. **Metrology** and **Epistemology** are probabilistic: they measure and propose, and they must be able to say "I don't know." **Ontology**, **Praxeology**, and **Axiology** are deterministic. **Axiology** is the final arbiter and returns only Commit, Forbid, or Refuse to Act. A confidence score never authorizes a commitment.
 
 ```
 ┌─────────────────────────────────────────────────────┐
@@ -79,9 +79,9 @@ The layers are numbered from foundation to governance:
 
 ## Layer 3 — Epistemology: Truth, Verification, and Accountability
 
-**Plain English:** Epistemology is the study of how we know what we know. In AI terms, it is about whether the system's outputs can be verified, traced to sources, and distinguished from guesses.
+**Plain English:** Epistemology is the study of how we know what we know. In this architecture it is the probabilistic inference layer. It proposes a belief, names a defeater, or says "I don't know." It does not decide.
 
-**Why it matters to government leaders:** AI systems produce probabilistic outputs — they are making educated guesses, not looking up facts in a database. When an AI system recommends denying a benefit, flagging a case for review, or scoring a project proposal, that recommendation needs to be traceable to evidence, not just to model weights. Oversight bodies, courts, and constituents will ask "why."
+**Why it matters to government leaders:** A model score is not a determination. When a system recommends denying a benefit, that recommendation is a proposal with evidence attached. Ignorance must stay ignorance — it must not be rewritten as a low probability and then acted on. Oversight bodies, courts, and constituents will ask "why," and the answer has to name the epistemic state, not only a percentage.
 
 **What good looks like:**
 - Every AI output is tagged with its sources and a confidence level
@@ -126,7 +126,7 @@ The layers are numbered from foundation to governance:
 
 ## Layer 5 — Axiology: Values, Ethics, and Mission Alignment
 
-**Plain English:** Axiology is the study of value — what matters, what should be preserved, and what is unacceptable. In AI terms, it is about whether your agency's values, compliance requirements, and ethical constraints are hard-coded into the system and cannot be bypassed.
+**Plain English:** Axiology is the study of value — what matters, what should be preserved, and what is unacceptable. In this architecture it is the final arbiter. It returns Commit, Forbid, or Refuse to Act. It does not return a probability that an action is allowed.
 
 **Why it matters to government leaders:** AI systems optimize for the objectives they are given. If those objectives are set by a vendor, or if guardrails are only soft guidelines embedded in prompts, they can drift or be bypassed. Government agencies have statutory obligations, constitutional constraints, and public trust responsibilities that must be non-negotiable — not best-effort.
 

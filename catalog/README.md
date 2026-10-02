@@ -52,11 +52,11 @@ The catalog helps leadership teams move from abstract AI ambition to disciplined
 
 - [Capability Matrix](capability-matrix.md) — minimum baseline for Score 3 across all layers
 - [Cross-Layer Compositions](cross-layer-compositions.md) — how layers work together
-- [Metrology](metrology/README.md) — data quality, measurement, provenance
-- [Ontology](ontology/README.md) — structured knowledge and meaning
-- [Epistemology](epistemology/README.md) — truth, verification, and accountability
-- [Praxeology](praxeology/README.md) — decision workflows and human oversight
-- [Axiology](axiology/README.md) — values, ethics, and mission alignment
+- [Metrology](metrology/README.md) — probabilistic measurement, calibration, error bounds
+- [Epistemology](epistemology/README.md) — probabilistic proposal: Belief, Defeater, or Ignorance
+- [Ontology](ontology/README.md) — deterministic entities; confidence stays off the schema
+- [Praxeology](praxeology/README.md) — deterministic action space
+- [Axiology](axiology/README.md) — final arbiter: Commit, Forbid, or Refuse to Act
 
 ## Intake and Scoring Workflow
 

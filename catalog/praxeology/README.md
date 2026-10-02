@@ -1,6 +1,6 @@
 # Praxeology Catalog
 
-Praxeology is the action layer. It governs how AI-driven decisions become bounded, auditable, goal-oriented actions.
+Praxeology is the deterministic action layer. It validates whether a proposed transition is in the action space. Admission is boolean. A confidence threshold is not a transition rule. Execution still waits for an axiological Commit.
 
 ## Executive Summary
 
@@ -18,8 +18,8 @@ See the strategic rationale in [ARCHITECTURE.md](../../ARCHITECTURE.md) and the 
 
 ## Integration Points
 
-- Below: [Epistemology](../epistemology/README.md) provides verified and explainable inputs
-- Above: [Axiology](../axiology/README.md) enforces policy and value constraints on action
+- Upstream: [Epistemology](../epistemology/README.md) supplies a proposal; [Ontology](../ontology/README.md) supplies an uncommitted categorical candidate
+- Above: [Axiology](../axiology/README.md) returns Commit, Forbid, or Refuse to Act. Praxeology does not invent that verdict from a score.
 
 ## Leadership Lens
 

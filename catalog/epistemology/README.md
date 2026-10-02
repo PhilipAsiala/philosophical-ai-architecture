@@ -1,6 +1,6 @@
 # Epistemology Catalog
 
-Epistemology is the truth and verification layer. It ensures model outputs are grounded, validated, explainable, and traceable to trusted sources.
+Epistemology is the probabilistic inference layer. It proposes Belief, Defeater, or Ignorance. Confidence lives in the epistemic envelope. This layer does not authorize action.
 
 ## Executive Summary
 
@@ -18,8 +18,8 @@ See the strategic rationale in [ARCHITECTURE.md](../../ARCHITECTURE.md) and the 
 
 ## Integration Points
 
-- Below: [Ontology](../ontology/README.md) supplies semantic context and relationships
-- Above: [Praxeology](../praxeology/README.md) consumes verified outputs for action workflows
+- Beside: [Metrology](../metrology/README.md) supplies calibration and error bounds for the proposal
+- Downstream: [Ontology](../ontology/README.md) may shape a categorical candidate from a Belief. [Praxeology](../praxeology/README.md) admits transitions. [Axiology](../axiology/README.md) is the only layer that returns Commit, Forbid, or Refuse to Act.
 
 ## Leadership Lens
 

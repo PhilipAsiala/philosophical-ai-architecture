@@ -8,21 +8,26 @@ These are examples of workflow control artifacts that help leadership verify whe
 
 This example demonstrates the substrate pattern for the Praxeology layer: the base triple lives once on the shared SPO backbone, and the praxeological metadata envelope attaches goal context, conditions, expected outcomes, and action sequences without duplicating the underlying fact.
 
-**Process policy application — auto-approval trigger**
+**Process policy application — admitted transition**
 
 ```json
 {
-  "triple": {"s": "RefundProcess:TX12345", "p": "appliesPolicy", "o": "AutoApproveHighConfidence"},
+  "triple": {"s": "RefundProcess:TX12345", "p": "appliesPolicy", "o": "RoutineRefund"},
   "praxeological_metadata": {
-    "goal": "EfficientCompliantProcessing",
-    "conditions": ["epistemic_confidence >= 0.98"],
-    "expected_outcome": {"utility": 0.95, "historical_success": 0.97},
-    "action_sequence": ["verify", "approve", "notify"]
+    "from_state": "verified",
+    "verb": "approve",
+    "admitted": true,
+    "conditions": [
+      "epistemic_state == belief",
+      "required_evidence_present",
+      "human_checkpoint_required == false"
+    ],
+    "action_sequence": ["verify", "await_commit", "notify"]
   }
 }
 ```
 
-The base triple `(RefundProcess:TX12345, appliesPolicy, AutoApproveHighConfidence)` is stored once in the shared SPO/quad backbone. The `praxeological_metadata` envelope is the Praxeology layer's contribution: it records *what the system should do* — the governing goal, triggering conditions (which reference the epistemic confidence established by the Epistemology layer), expected utility, and the ordered action sequence. Historical action logs, MDP/policy artifacts, and outcome telemetry are stored as time-series versioned triples or linked policy graphs in the same substrate.
+The base triple is written only after Axiology returns Commit. The praxeological envelope records whether the transition was in the action space. Conditions are discrete. A confidence comparison is not a condition. Notification runs only on Commit.
 
 ## Example Governance Artifacts
 

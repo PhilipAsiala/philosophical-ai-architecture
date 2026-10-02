@@ -51,17 +51,27 @@ DATA SUBSTRATE — All records written as immutable entries with cross-reference
 **How the layers interact:**
 
 ```
-METROLOGY     → Quality gate: is input data sufficient quality to process?
-                  YES → proceed    NO → escalate immediately
+METROLOGY     → Is the observation calibrated and within error bounds?
+                  YES → qualified measurement
+                  NO  → quarantine the observation (no proposal)
 
-EPISTEMOLOGY  → Verification gate: does evidence support a high-confidence answer?
-                  HIGH confidence (≥90%) → automated workflow
-                  MEDIUM confidence (70–89%) → human review required
-                  LOW confidence (<70%) → escalation required
+EPISTEMOLOGY  → Emit one state:
+                  BELIEF     → proposal, confidence in the envelope only
+                  DEFEATER   → named reason; not a lower score
+                  IGNORANCE  → "I don't know"; confidence is null
 
-PRAXEOLOGY    → Workflow gate: is the case type within automated processing scope?
-                  IN SCOPE → automated workflow with audit logging
-                  OUT OF SCOPE → human workflow with audit logging
+ONTOLOGY      → Belief matches a discrete schema?
+                  YES → uncommitted candidate triple
+                  NO  → reject the write (do not store "maybe")
+
+PRAXEOLOGY    → Is the transition in the action space,
+                  including any human checkpoint the procedure requires?
+                  ADMITTED / NOT ADMITTED
+
+AXIOLOGY      → Commit | Forbid | Refuse to Act
+                  Only Commit runs the automated step.
+                  Ignorance, an open defeater, or a failed precondition
+                  yields Refuse to Act.
 ```
 
 **Government relevance:** Income verification, routine eligibility determinations, and standard compliance checks can be handled at scale. Unusual cases, conflicting evidence, or data quality issues route automatically to human reviewers — no case falls through a gap.

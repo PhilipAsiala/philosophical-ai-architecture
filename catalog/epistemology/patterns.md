@@ -6,9 +6,9 @@ Weak validation patterns create public risk. They allow plausible but unsupporte
 
 ## Durable Governance Patterns
 
-- Verify-Then-Act: no downstream action without validation pass
+- Propose-Then-Arbitrate: no downstream commitment without an axiological verdict
 - Source-Cited Response Contracts: require evidence references by default
-- Uncertainty Bands: classify confidence ranges for operational use
+- Distinct epistemic states: Belief, Defeater, and Ignorance are not three bands of one probability
 - Dual-Path Consistency Checks: compare independent reasoning/retrieval paths
 
 ## Named Implementation Patterns
@@ -16,16 +16,17 @@ Weak validation patterns create public risk. They allow plausible but unsupporte
 ### Pattern E-A: Grounded Response with Citation Chain
 Every response includes: the answer, the records retrieved to support it, the confidence score, and a list of source citations with IDs and timestamps. Responses that cannot be grounded in owned sources are returned as "insufficient evidence" rather than as a best-guess.
 
-### Pattern E-B: Two-Layer Verification (Inference + Verification)
-AI inference layer produces a candidate answer. A separate, deterministic verification layer checks that answer against owned ground-truth records. The final output includes both the inference and the verification result — distinguishing "model said X" from "verified against record Y: confirmed / unconfirmed / conflicting."
+### Pattern E-B: Proposal Beside the Record
+The inference layer produces a proposal. Deterministic layers decide what is committed. The stored result keeps both: "model proposed X" in the epistemic envelope, and either a categorical triple (only on Commit) or no triple (Forbid or Refuse to Act).
 
-### Pattern E-C: Confidence Banding
-Outputs are classified into confidence bands that determine required handling:
-- **High (≥ 90%)**: Automated processing with human spot-check
-- **Medium (70–89%)**: Human review before action
-- **Low (< 70%)**: Escalation required; no automated action
+### Pattern E-C: Distinct Epistemic States
+A proposal is one of:
 
-Band thresholds are policy-configurable and version-controlled.
+- **Belief** — claim, citations, and a confidence calibrated against Metrology bounds
+- **Defeater** — a named reason the belief cannot stand
+- **Ignorance** — "I don't know," with confidence left null
+
+These states inform the deterministic domain. They do not select a workflow by crossing 90%, 70%, or any other cutoff. Human review, when required, is a praxeological precondition. Permission is an axiological verdict.
 
 ## Costly Patterns to Avoid
 

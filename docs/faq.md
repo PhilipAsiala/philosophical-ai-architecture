@@ -22,13 +22,20 @@ See the [Naming section in the README](../README.md#naming), [Pitch Strategy](pi
 
 ## What are Cognition, Affect, and Conation?
 
-The three human cognitive functions the Philosophical AI Architecture maps into software:
+The three human cognitive functions the Philosophical AI Architecture maps into software. They describe the kind of question each layer answers. They are not the runtime permission model.
 
-- **Cognition** (knowing) → Metrology, Ontology, Epistemology
+- **Cognition** (knowing) → Metrology and Epistemology propose; Ontology holds the categorical model
 - **Affect** (valuing) → Axiology
 - **Conation** (acting) → Praxeology
 
-Philosophy (Metrology, Ontology, Epistemology) is the operating system for reality and truth. Psychology (Axiology, Praxeology) is the mechanics of values and execution.
+## Which layers may commit a fact or an action?
+
+Only the deterministic domain, and only after Axiology returns **Commit**.
+
+- **Probabilistic:** Metrology (measurement, calibration, error bounds) and Epistemology (Belief, Defeater, or Ignorance).
+- **Deterministic:** Ontology (categorical entities; confidence stays off the schema), Praxeology (action space), and Axiology (Commit, Forbid, or Refuse to Act).
+
+A confidence score, a RAG rank, or a token probability is a property of a proposal. It is not a permission. See [ARCHITECTURE.md](../ARCHITECTURE.md) §1.3–§1.4.
 
 ## What is the main idea?
 
@@ -40,9 +47,9 @@ The MOEPA 5-Layer Framework provides a clean engineering blueprint:
 
 - Metrology — telemetry, measurement, data quality
 - Ontology — knowledge graphs, approved vocabularies
-- Epistemology — RAG validation, evidence mapping
-- Praxeology — workflows, SOPs, agentic playbooks
-- Axiology — guardrails, compliance, values
+- Epistemology — probabilistic proposals: Belief, Defeater, or Ignorance
+- Praxeology — action space and procedural checkpoints
+- Axiology — final arbiter: Commit, Forbid, or Refuse to Act
 
 ## Where should I start?
 

@@ -83,28 +83,32 @@ Verification record: VER-2025-447183
 ### Layer 4 — Praxeology: Route to the Right Workflow
 
 **What happens:**  
-The workflow engine receives the 98.3% confidence score and applies routing logic.
+Epistemology has proposed a Belief (confidence 0.983, no defeaters). That proposal does not accept the case. Praxeology tests discrete preconditions, and Axiology returns the verdict.
 
-**Routing decision:**
-- Score ≥ 95% AND no unresolved discrepancies → automated acceptance, logged
-- Score 80–94% OR minor discrepancies within threshold → human spot-check sample
-- Score < 80% OR discrepancy exceeds threshold → examiner review required
+**Admission (Praxeology):**
+- Required evidence items are CONFIRMED
+- The $4 bank-interest discrepancy is inside the coded rounding tolerance
+- Epistemic state is Belief, not Ignorance or Defeater
+- No human checkpoint is required for this action class
 
-**For this case:** 98.3% score with a $4 discrepancy within the auto-resolve threshold → automated acceptance.
+**Verdict (Axiology):** Commit.
 
 **Audit log entry:**
 ```
 Workflow: INCOME_VERIFICATION
 Case: CASE2025-447183
-State transition: VERIFICATION_COMPLETE → ACCEPTED_AUTO
-Confidence: 98.3%
-Discrepancy: $4.00 (bank interest rounding — within auto-resolve threshold per policy v2.4)
+State transition: VERIFICATION_COMPLETE → ACCEPTED
+Epistemic state: belief
+Confidence (envelope only): 0.983
+Discrepancy: $4.00 (inside rounding tolerance, policy v2.4)
+Verdict: commit
+Rule: routine_income_record_v3
 Timestamp: 2025-03-15T14:32:07Z
 Policy version: v2.4 (effective 2025-01-01)
 Workflow ID: WF-2025-447183
 ```
 
-**Outcome:** The case is processed automatically. The workflow state machine ensures no case can skip the confidence check or reach acceptance without passing through the verification gate.
+**Outcome:** The case is accepted because the verdict is Commit. A higher or lower confidence would not, by itself, have changed the permission. If the epistemic state had been Ignorance, or the discrepancy had fallen outside the coded tolerance, the verdict would have been Refuse to Act and no acceptance triple would have been written.
 
 ---
 

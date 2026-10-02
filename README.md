@@ -20,7 +20,7 @@ Never conflate the overarching system with the operational tool.
 |---|---|---|
 | **Philosophical AI Architecture** | The full ecosystem: Data Substrate, Catalog, guardrails, own-vs-rent strategy, cognitive control plane | This README, [pitch strategy](docs/pitch-strategy.md), [glossary](docs/glossary.md) |
 | **MOEPA 5-Layer Framework** | The engineering blueprint and governance engine inside the architecture: five layers, intake scoring, GO / CONDITIONAL GO / NO-GO | [5-Layer Framework for Leaders](docs/MOEPA-5-Layer-Framework.md), [Evaluation Checklist](docs/5-Layer-Evaluation-Checklist.md) |
-| **MOEPA Cognitive Architecture** | The technical stack specification: storage mapping, tools, implementation playbook | [ARCHITECTURE.md](ARCHITECTURE.md) |
+| **MOEPA Cognitive Architecture** | The technical stack specification: dual-domain control, storage mapping, tools, implementation playbook | [ARCHITECTURE.md](ARCHITECTURE.md) |
 
 See [docs/pitch-strategy.md](docs/pitch-strategy.md) for audience-specific pitching guidance (enterprise leaders, public sector executives, and technical teams).
 
@@ -38,8 +38,14 @@ See [docs/pitch-strategy.md](docs/pitch-strategy.md) for audience-specific pitch
 | **Affect** (valuing) | Encode what matters and what is forbidden | Axiology |
 | **Conation** (acting) | Execute decisions under human oversight | Praxeology |
 
-- **Philosophy** is the operating system — strict rules for reality and truth (Metrology, Ontology, Epistemology).
-- **Psychology** is the mechanics of behavior — values and execution drives (Axiology, Praxeology).
+Runtime control uses a second cut, the **dual-domain partition**:
+
+| Domain | Layers | Role |
+|---|---|---|
+| **Probabilistic** | Metrology, Epistemology | Measure and propose. Belief, Defeater, and Ignorance are distinct. |
+| **Deterministic** | Ontology, Praxeology, Axiology | Commit structure, admit actions, and arbitrate. |
+
+**Axiology is the final arbiter.** It returns Commit, Forbid, or Refuse to Act. A confidence score is not a permission.
 
 **The mission:** Build auditable, institutional brains. Rent commodity compute. Own the truth, the values, and the rules.
 
@@ -61,29 +67,34 @@ The five layers are the engineering blueprint inside the Philosophical AI Archit
 
 ```mermaid
 graph TB
-    SUB[["DATA SUBSTRATE\n───────────────────\nOrganization-Owned Knowledge Library\nTruth · Values · Rules · Lineage\n(not a scored layer)"]]
+    SUB[["DATA SUBSTRATE\n───────────────────\nOrganization-Owned Knowledge Library\nCommitted triples · Envelopes · Lineage\n(not a scored layer)"]]
 
-    E5["LAYER 5 — AXIOLOGY\nValues, Policy & Mission Alignment\n❓ Does this system enforce our values?"]
-    E4["LAYER 4 — PRAXEOLOGY\nDecision Workflows & Human Oversight\n❓ Do we control how the system acts?"]
-    E3["LAYER 3 — EPISTEMOLOGY\nTruth, Verification & Accountability\n❓ Can we verify and explain outputs?"]
-    E2["LAYER 2 — ONTOLOGY\nStructured Knowledge & Meaning\n❓ Do we own the definitions and relationships?"]
-    E1["LAYER 1 — METROLOGY\nData Quality, Measurement & Provenance\n❓ Do we trust and control our data?"]
+    subgraph DET["DETERMINISTIC DOMAIN — discrete governance"]
+        E5["LAYER 5 — AXIOLOGY\nFinal arbiter\nCommit · Forbid · Refuse to Act"]
+        E4["LAYER 4 — PRAXEOLOGY\nAction space\nViable transition or not"]
+        E2["LAYER 2 — ONTOLOGY\nCategorical entities\nNo confidence on the schema"]
+    end
 
-    E5 --> E4 --> E3 --> E2 --> E1 --> SUB
-    E1 -. reads/writes .-> SUB
-    E2 -. reads/writes .-> SUB
-    E3 -. reads/writes .-> SUB
-    E4 -. reads/writes .-> SUB
-    E5 -. reads/writes .-> SUB
+    subgraph PROB["PROBABILISTIC DOMAIN — statistical inference"]
+        E3["LAYER 3 — EPISTEMOLOGY\nPropose only\nBelief · Defeater · Ignorance"]
+        E1["LAYER 1 — METROLOGY\nMeasure only\nCalibration · Error bounds · Disagreement"]
+    end
+
+    E1 --> E3
+    E3 -->|"proposal"| E2
+    E2 --> E4 --> E5
+    E5 -->|"Commit writes"| SUB
+    E1 -. observation .-> SUB
+    E3 -. epistemic envelope .-> SUB
 ```
 
-| Layer | Philosophical discipline | Business outcome leaders must own | Core leadership question |
+| Layer | Domain | Business outcome leaders must own | Core leadership question |
 |---|---|---|---|
-| **Metrology** | Measurement | Trusted, auditable data foundation | Do we control and trust the data? |
-| **Ontology** | Structure of reality | Shared definitions and relationships | Do we own the meaning of our domain? |
-| **Epistemology** | Knowledge and truth | Verifiable conclusions with evidence | Can we explain and defend every output? |
-| **Praxeology** | Purposeful action | Governed workflows with human oversight | Do we control how the system acts? |
-| **Axiology** | Values and ethics | Mission alignment and enforced constraints | Does this system enforce our values? |
+| **Metrology** | Probabilistic | Calibrated observations with error bounds | Do we know how good this measurement is? |
+| **Epistemology** | Probabilistic | A proposal that can say "I don't know" | Is this a belief, a defeater, or ignorance? |
+| **Ontology** | Deterministic | Shared definitions that either exist or do not | Is uncertainty kept off the entity? |
+| **Praxeology** | Deterministic | An action space with procedural checkpoints | Is this transition viable, regardless of a score? |
+| **Axiology** | Deterministic (arbiter) | A recorded Commit, Forbid, or Refuse to Act | What authorized this commitment? |
 
 *For engineering translation (graphs, workflows, guardrails, storage), see [MOEPA 5-Layer Framework](docs/MOEPA-5-Layer-Framework.md) and [ARCHITECTURE.md](ARCHITECTURE.md).*
 
@@ -203,4 +214,4 @@ Open-source reference for the Philosophical AI Architecture. Feedback welcome vi
 
 ---
 
-*Philosophical AI Architecture · MOEPA 5-Layer Framework v2.3 · June 2026 · MIT License*
+*Philosophical AI Architecture · MOEPA 5-Layer Framework v2.4 · October 2026 · MIT License*

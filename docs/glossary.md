@@ -18,16 +18,42 @@ The technical stack design within the Philosophical AI Architecture, as specifie
 
 ## Cognition, Affect, Conation
 
-The three human cognitive functions the Philosophical AI Architecture maps into software:
+The three human cognitive functions the Philosophical AI Architecture maps into software. This map describes *what kind of question* a layer answers. Runtime authorization uses the [dual-domain partition](#dual-domain-partition) below.
 
-- **Cognition** (knowing) — how the system defines and verifies reality → Metrology, Ontology, Epistemology
-- **Affect** (valuing) — how the system encodes what matters and what is forbidden → Axiology
-- **Conation** (acting) — how the system executes decisions under oversight → Praxeology
+- **Cognition** (knowing) — Metrology and Epistemology propose; Ontology holds the categorical model those proposals are about
+- **Affect** (valuing) — Axiology, the final arbiter
+- **Conation** (acting) — Praxeology, the action space
 
-## Philosophy vs. Psychology (in the stack)
+## Dual-Domain Partition
 
-- **Philosophy** — the operating system of cognition: strict logical rules for defining reality and truth (Metrology, Ontology, Epistemology).
-- **Psychology** — the mechanics of behavior: how values and execution drives steer the engine (Axiology, Praxeology).
+The runtime cut inside the MOEPA Cognitive Architecture. Specified in [ARCHITECTURE.md](../ARCHITECTURE.md) §1.3.
+
+- **Probabilistic domain** — Metrology and Epistemology. They measure and propose. They do not commit entities or authorize action.
+- **Deterministic domain** — Ontology, Praxeology, and Axiology. They commit categorical state, admit transitions, and issue verdicts.
+
+## Epistemic State
+
+The three outputs Epistemology is required to keep distinct:
+
+- **Belief** — a partial claim with confidence, justification, and any metrological error bounds.
+- **Defeater** — a specific reason a belief cannot stand. Not a lower probability of the same claim.
+- **Ignorance** — "I don't know." Not a flat distribution over the answers.
+
+## Epistemic Firewall
+
+The rule that uncertainty attaches only to epistemic claims. Ontological schemas (RDF triples, Iceberg entity tables, and equivalents) do not carry confidence, probability, or "maybe" as a property of existence.
+
+## Axiological Verdict
+
+The only permission Axiology may return, and the only authorization for systemic commitment:
+
+- **Commit** — write the categorical state and perform the admitted action.
+- **Forbid** — the act is in the action space and violates a value, safety, or compliance rule. Do not commit.
+- **Refuse to Act** — the proposal is Ignorance or has an unresolved defeater, or a required precondition is absent. Commit nothing. Do not pretend a decision was made.
+
+## Probabilistic Proposal
+
+The object Epistemology hands to the deterministic domain: an epistemic state, citations, and (when the state is Belief) a calibrated confidence. A proposal is not a permission.
 
 ## Data Substrate (Set-Theoretic Backbone)
 
@@ -51,9 +77,9 @@ The acronym for the five layers at the heart of the MOEPA 5-Layer Framework:
 
 - Metrology: measurement, telemetry, and data foundation
 - Ontology: structured reality and knowledge representation
-- Epistemology: truth, verification, and justification
-- Praxeology: purposeful action and workflow governance
-- Axiology: value, ethics, and policy alignment
+- Epistemology: probabilistic inference; Belief, Defeater, and Ignorance (proposes, does not commit)
+- Praxeology: action-space validation and state transitions
+- Axiology: final arbiter; Commit, Forbid, or Refuse to Act
 
 ## MOEPA Catalog
 

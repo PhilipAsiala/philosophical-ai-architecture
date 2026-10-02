@@ -1,6 +1,6 @@
 # Axiology Catalog
 
-Axiology is the value and governance layer. It enforces ethical constraints, compliance requirements, privacy protections, and strategic alignment.
+Axiology is the deterministic final arbiter. It returns exactly one verdict: Commit, Forbid, or Refuse to Act. It does not return a probability of permission. Refuse to Act is required for Ignorance and unresolved defeaters.
 
 ## Executive Summary
 
@@ -18,8 +18,8 @@ See the strategic rationale in [ARCHITECTURE.md](../../ARCHITECTURE.md) and the 
 
 ## Integration Points
 
-- Below: [Praxeology](../praxeology/README.md) executes decisions under governance constraints
-- Cross-cutting: controls influence all lower layers through policy requirements
+- Upstream: [Praxeology](../praxeology/README.md) presents an admitted or rejected transition. Execution of a state change happens only after Commit.
+- Cross-cutting: policy requirements constrain which proposals the lower layers are allowed to attempt. They do not turn Epistemology into an authorizer.
 
 ## Leadership Lens
 

@@ -105,25 +105,29 @@ Evidence strength:
   Unearned income: NOT AVAILABLE (no data sharing agreement)
                    — risk: potential unearned income not captured
 
-Confidence: 91.4% (HIGH — human spot-check sample)
+Epistemic state: belief
+Confidence (envelope only): 0.914
+Missing observation: unearned income NOT AVAILABLE — human checkpoint required
 Note: Unearned income not verifiable from current data sources.
       Policy: applicant attestation accepted for unearned income
       below $500/month under regulation § 42.114(b).
 Verification record: VER-2025-H-44821
 ```
 
-**Outcome:** The confidence score is 91.4% — HIGH, but not at the automated acceptance threshold of 95%. This routes to the human spot-check sample per policy.
+**Outcome:** Epistemology proposes a Belief at 0.914. Unearned income is NOT AVAILABLE, which is a missing observation, not a permission. The confidence stays in the envelope.
 
 ---
 
 ### Layer 4 — Praxeology: Route and Process
 
 **What happens:**  
-The workflow engine applies confidence-based routing.
+The workflow engine tests the action space. It does not route on a confidence band.
 
-**Routing decision:**
-- Score 91.4% → Human spot-check sample (5% of cases in 90–94% band are reviewed)
-- This case is selected for spot-check (by systematic sampling algorithm)
+**Admission:**
+- Wage evidence is CONFIRMED and matches the attestation
+- Unearned income is NOT AVAILABLE, and the procedure requires a human checkpoint in that case
+- The transition to auto-accept is therefore not admitted
+- The transition to spot-check review is admitted
 
 **Workflow state:**
 ```

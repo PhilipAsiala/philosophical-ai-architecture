@@ -1,6 +1,6 @@
 # Information Flow Across MOEPA Layers
 
-How data, knowledge, verification, and decisions flow through the Philosophical AI Architecture — from raw source data to a governed, auditable decision on the agency-owned Data Substrate.
+How a case moves through the Philosophical AI Architecture: the probabilistic domain proposes, and the deterministic domain arbitrates. Nothing is committed until Axiology returns **Commit**.
 
 ---
 
@@ -10,7 +10,7 @@ How data, knowledge, verification, and decisions flow through the Philosophical 
 flowchart TD
     SRC["External Sources\n(Third-party reporters, APIs,\ndocuments, sensor data)"]
 
-    subgraph M["LAYER 1 — METROLOGY"]
+    subgraph M["LAYER 1 — METROLOGY (probabilistic)"]
         M0["Semantic Parsing\n(Docling / Unstructured)\n→ Proto-SPOs"]
         M1["Quality Gate\n(completeness, accuracy,\nformat validation)"]
         M2["Provenance Stamp\n(source, timestamp, hash,\nquality results)"]
@@ -23,28 +23,28 @@ flowchart TD
         DS["Open-Format Lakehouse\n+ Knowledge Graph\n+ Audit Log\n(Iceberg / Parquet / Neo4j)"]
     end
 
-    subgraph O["LAYER 2 — ONTOLOGY"]
-        O1["Entity Resolution\n(link record to canonical entity)"]
-        O2["Graph Enrichment\n(add relationships, context,\nrelated entities)"]
-        O3["Vector Indexing\n(embed for semantic retrieval)"]
+    subgraph O["LAYER 2 — ONTOLOGY (deterministic)"]
+        O1["Match proposal to schema\n(categorical candidate)"]
+        O2["Firewall\n(reject confidence on the entity)"]
     end
 
-    subgraph E["LAYER 3 — EPISTEMOLOGY"]
-        E1["RAG Retrieval\n(retrieve owned evidence\nfor this query)"]
-        E2["Fact Verification\n(compare inference against\nowned ground truth)"]
-        E3["Confidence Scoring\n(evidence strength,\nsource quality, gaps)"]
+    subgraph E["LAYER 3 — EPISTEMOLOGY (probabilistic)"]
+        E1["Retrieve owned evidence"]
+        E2["Infer a proposal\nBelief · Defeater · Ignorance"]
+        E3["Attach citations and\ncalibrated confidence\n(envelope only)"]
     end
 
-    subgraph P["LAYER 4 — PRAXEOLOGY"]
-        P1["Workflow Gate\n(is this case in scope\nfor automated processing?)"]
-        P2["Human Review Gate\n(required for confidence\n< 90% or escalation cases)"]
-        P3["Action Execution\n(authorized action with\nfull audit logging)"]
+    subgraph P["LAYER 4 — PRAXEOLOGY (deterministic)"]
+        P1["Action-space check\n(verb, state, procedure)"]
+        P2["Human checkpoint\n(a required state, not a score)"]
+        P3["Execute only after Commit"]
     end
 
-    subgraph A["LAYER 5 — AXIOLOGY"]
-        A1["Policy Check\n(does this action comply\nwith all policies?)"]
-        A2["Constitutional Filter\n(does output violate\nany inviolable constraint?)"]
-        A3["Compliance Log\n(record policy status\nfor audit)"]
+    subgraph A["LAYER 5 — AXIOLOGY (final arbiter)"]
+        A1{"Verdict"}
+        A2["Commit"]
+        A3["Forbid"]
+        A4["Refuse to Act"]
     end
 
     OUT["Governed Output\n(decision / recommendation /\naction with full audit trail)"]
@@ -64,72 +64,71 @@ flowchart TD
     M2 --> DS
     M3 --> DS
 
-    DS --> O1
-    O1 --> O2
-    O2 --> O3
-    O3 --> DS
-
     DS --> E1
     E1 --> E2
     E2 --> E3
-    E3 --> DS
 
-    E3 -->|"HIGH confidence (≥90%)"| P1
-    E3 -->|"MEDIUM confidence (70-89%)"| P2
-    E3 -->|"LOW confidence (<70%)"| ESCALATE["Escalation\nWorkflow"]
-
-    P1 --> A1
-    P2 --> A1
-    A1 -->|"PASS"| A2
-    A1 -->|"FAIL"| BLOCKED["Action Blocked\n+ Violation Log"]
-    A2 -->|"PASS"| P3
-    A2 -->|"FAIL"| BLOCKED
-    P3 --> A3
-    A3 --> DS
+    E3 -->|"Belief"| O1
+    E3 -->|"Ignorance or defeater"| A4
+    O1 --> O2
+    O2 -->|"candidate triple\n(uncommitted)"| P1
+    P1 -->|"not viable"| A4
+    P1 -->|"viable, checkpoint required"| P2
+    P1 -->|"viable, no checkpoint"| A1
+    P2 -->|"checkpoint met"| A1
+    P2 -->|"checkpoint absent"| A4
+    A1 -->|"Commit"| A2
+    A1 -->|"Forbid"| BLOCKED["Forbid\n+ violation log\n(no write)"]
+    A2 --> P3
+    A4 --> REFUSE["Refuse to Act\n(no write)"]
+    P3 --> DS
     P3 --> OUT
 
     style DS fill:#1a3a5c,color:#ffffff
     style OUT fill:#1a4a1a,color:#ffffff
     style BLOCKED fill:#4a1a1a,color:#ffffff
     style QUARANTINE fill:#4a3a1a,color:#ffffff
-    style ESCALATE fill:#3a2a4a,color:#ffffff
+    style REFUSE fill:#3a2a4a,color:#ffffff
 ```
 
 ---
 
 ## Key Handoffs Between Layers
 
-### Metrology → Data Substrate → Ontology
-Every record that passes Metrology's quality gate enters the Data Substrate with a provenance stamp. Ontology then resolves the record's entity references against the canonical entity model and enriches the record with graph context.
+### Metrology → Data Substrate
+Every record that passes Metrology's quality gate is stored as an observation: value, unit, provenance, calibration, and error bounds. That write is not an entity commitment.
 
-**What passes:** Quality-validated, provenanced data records  
-**What gets added:** Entity linkage, relationship context, semantic embeddings
-
----
-
-### Ontology → Data Substrate → Epistemology
-Ontology's enriched records and vector embeddings are stored in the Data Substrate. Epistemology retrieves them during RAG and graph-augmented verification.
-
-**What passes:** Enriched records with entity graph context  
-**What gets added:** Verification results, confidence scores, source citations
+**What passes:** A qualified measurement  
+**What gets added:** Observational lineage and disagreement flags
 
 ---
 
-### Epistemology → Praxeology
-Epistemology's confidence score determines how Praxeology routes the case. This is the primary gate between "knowing" and "acting."
+### Epistemology → Ontology
+Epistemology reads owned evidence, including the standing schema, and emits one proposal: Belief, Defeater, or Ignorance. Ontology turns a Belief into an uncommitted candidate triple only when the schema matches. Confidence stays in the epistemic envelope.
 
-**Routing logic:**
-- ≥ 90% confidence → automated workflow eligible
-- 70–89% → human review required before action
-- < 70% → escalation required; no automated action
+**What passes:** A proposal  
+**What gets added:** A categorical candidate, or a rejection if the write would put uncertainty on the entity
+
+---
+
+### Epistemology → Ontology → Praxeology
+Epistemology emits one proposal. The epistemic state is Belief, Defeater, or Ignorance. Confidence, when present, stays in the envelope.
+
+Ontology accepts a candidate triple only when it matches a discrete schema. It rejects any write that would put confidence on the entity. The candidate is not yet committed.
+
+Praxeology then tests the action space: current state, allowed verb, and procedural preconditions. A human checkpoint is one of those preconditions. A confidence cutoff is not.
 
 ---
 
 ### Praxeology → Axiology → Output
-Every proposed action passes through Axiology's policy check and constitutional filter before execution. No action bypasses this check.
+Axiology is the final arbiter. It returns exactly one verdict:
 
-**What passes:** Proposed action + full context  
-**What gets added:** Policy compliance status, constitutional check result, compliance log entry
+- **Commit** — write the triple and perform the admitted action
+- **Forbid** — the act violates a value or compliance rule; write nothing for that act
+- **Refuse to Act** — the proposal is Ignorance, a defeater is unresolved, or a precondition is absent; write nothing and do not pretend a decision was made
+
+**What passes:** An admitted candidate plus its epistemic envelope  
+**What gets added:** The verdict, the rule id, and the compliance log entry
 
 ---
 
@@ -137,13 +136,13 @@ Every proposed action passes through Axiology's policy check and constitutional 
 
 | Layer | Records Written to Substrate |
 |---|---|
-| Metrology | Quality-validated records with provenance stamps and quality metrics |
-| Ontology | Entity linkages, relationship graph updates, vector index entries |
-| Epistemology | Verification results, confidence scores, source citations, hallucination flags |
-| Praxeology | Workflow state snapshots, human approval records, audit log entries |
-| Axiology | Policy check results, constitutional filter outcomes, compliance log entries |
+| Metrology | Observations with provenance, calibration, and error bounds. Not entity commitments. |
+| Epistemology | Proposals: epistemic state, citations, and confidence only inside the envelope. |
+| Ontology | Categorical triples, and only when the verdict on that proposal is Commit. |
+| Praxeology | Admission records: state, verb, precondition results. No confidence edge. |
+| Axiology | Verdict records: Commit, Forbid, or Refuse to Act, with rule id. |
 
-The Data Substrate accumulates a complete, immutable record of everything the system has observed, known, decided, and done.
+The Data Substrate accumulates observations and proposals immediately, and categorical facts only after Commit. Forbid and Refuse to Act are themselves durable records. They are not silent drops.
 
 ---
 

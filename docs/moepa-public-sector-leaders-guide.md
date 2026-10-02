@@ -49,9 +49,9 @@ To make these layers concrete, consider a federal benefits or eligibility scenar
 
 - **Metrology** asks: Is the income figure we are using trustworthy? Has it been measured, calibrated, and quality-checked against a known standard, or did it arrive unchecked from an unaudited vendor pipeline?
 - **Ontology** asks: Do we have a shared, agency-owned understanding of what "income," "applicant," "household," and "eligibility period" mean—or does each system define them differently?
-- **Epistemology** asks: With what confidence has this income figure been verified, and can we show the evidence chain to an IG examiner or a constituent challenging the determination?
-- **Praxeology** asks: Does the workflow map to actual adjudication rules—auto-approve routine cases, escalate edge cases, require human sign-off at defined thresholds—or does it produce a generic output disconnected from policy?
-- **Axiology** asks: Are the rights (right to appeal, right to explanation, non-discrimination requirements) hardcoded into the architecture, or are they only in a prompt that a developer can quietly modify?
+- **Epistemology** asks: Is this a belief, a defeater, or "I don't know," and can we show the evidence chain to an IG examiner or a constituent challenging the determination?
+- **Praxeology** asks: Does the workflow admit only transitions that match adjudication rules, including required human checkpoints, or can a score bypass the action space?
+- **Axiology** asks: Did the system return Commit, Forbid, or Refuse to Act — and are those rights hardcoded, rather than left in a prompt?
 
 Leaders do not need to understand every technical implementation detail. They do need to understand what the agency must own at each layer to protect accuracy, fairness, and accountability.
 
@@ -130,8 +130,8 @@ The lowest layer score sets the recommendation band. A system with four perfect 
 | --- | --- | --- |
 | Metrology | 5 | Internal data lake; calibrated against authorized third-party data sources (n = 125,000); observational lineage tracked |
 | Ontology | 5 | Agency-owned semantic model; applicant and income entities version-controlled |
-| Epistemology | 5 | 0.98 confidence with PROV-O evidence chain; fully traceable to source |
-| Praxeology | 4 | Deterministic workflow; auto-approve routine; human escalation at edge cases |
+| Epistemology | 5 | Belief with PROV-O evidence chain; Ignorance and defeaters kept distinct from low confidence |
+| Praxeology | 4 | Action space is discrete; routine path admitted only when preconditions hold; human checkpoint is a state |
 | Axiology | 4 | Statutory rights mandates enforced; fairness rules in architecture; appeals workflow linked |
 | **Overall** | **GO** | All layers ≥ 4 |
 
@@ -158,24 +158,26 @@ Triple: IncomeVerification:TX12345 — hasAmount → 85000
 ```
 
 **Step 3 — Epistemology (Verify the knowledge)**
-The base fact is enriched with an epistemic metadata envelope: confidence 0.98, justification from ThirdPartyStudy_2025, status HighReliability. The evidence chain is stored in the substrate using PROV-O-compatible provenance. An IG examiner or authorized representative can retrieve it on demand.
+The base fact is stored as a categorical triple only because the verdict is Commit. The epistemic envelope sits beside it: state belief, confidence 0.98, justification from ThirdPartyStudy_2025, no defeaters. The evidence chain is stored in the substrate using PROV-O-compatible provenance. An IG examiner or authorized representative can retrieve both the triple and the envelope. The confidence is not what authorized the write.
 
 ```json
 {
   "triple": {"s": "IncomeVerification:TX12345", "p": "hasAmount", "o": 85000},
   "epistemic_metadata": {
+    "state": "belief",
     "confidence": 0.98,
     "justification": "ThirdPartyStudy_2025_n=125000",
-    "status": "HighReliability"
-  }
+    "defeaters": []
+  },
+  "axiological_metadata": {"verdict": "commit", "rule": "routine_income_record_v3"}
 }
 ```
 
 **Step 4 — Praxeology (Align the action)**
-The workflow maps directly to agency policy: income ≤ threshold with confidence ≥ 0.95 → auto-approve routine determination; edge cases → human review queue with documented escalation reason. The decision procedure is a deterministic state machine the agency controls, not a generic AI output.
+The workflow is a state machine the agency controls. A transition is admitted only when discrete preconditions hold: the amount is at or under the statutory threshold, required evidence items are present, and any mandated human checkpoint is satisfied. The 0.98 confidence on the proposal is recorded. It is not the rule that admits the transition.
 
-**Step 5 — Axiology (Enforce the values)**
-Statutory rights and fairness mandates are architecturally enforced. The right to explanation, the right to appeal, and non-discrimination rules are checked before any determination is finalized. These are hardcoded constraints, not prompt-level guidelines.
+**Step 5 — Axiology (Final arbiter)**
+Statutory rights and fairness mandates return a verdict: Commit, Forbid, or Refuse to Act. The right to explanation, the right to appeal, and non-discrimination rules are hardcoded constraints. Only Commit finalizes the determination. Ignorance or an unresolved defeater yields Refuse to Act.
 
 **Result:** A defensible, auditable determination—traceable from the measurement standard through the verification evidence to the decision procedure to the rights check—all stored in the agency's owned knowledge library.
 

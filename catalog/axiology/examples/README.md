@@ -15,15 +15,18 @@ This example demonstrates the substrate pattern for the Axiology layer: the base
   "triple": {"s": "CustomerRights", "p": "constrains", "o": "RefundProcess"},
   "axiological_metadata": {
     "value_type": "Intrinsic (Fairness, DueProcess)",
-    "weight": 0.85,
-    "utility_function": "max(Compliance, CustomerSatisfaction) subject to Rights",
-    "ethical_rules": ["NEVER_auto_deny_without_human_review_if_confidence<0.9"],
+    "ethical_rules": [
+      "verdict_set: commit | forbid | refuse_to_act",
+      "refuse_to_act_on_ignorance",
+      "refuse_to_act_on_unresolved_defeater",
+      "forbid_denial_unless_human_checkpoint_admitted"
+    ],
     "priority": ["CustomerBillOfRights > Efficiency"]
   }
 }
 ```
 
-The base triple `(CustomerRights, constrains, RefundProcess)` is stored once in the shared SPO/quad backbone. The `axiological_metadata` envelope is the Axiology layer's contribution: it records *what values govern the action* — the value classification (intrinsic vs. instrumental), relative weight, utility function, non-negotiable ethical rules, and lexicographic priority ordering. Value hierarchies, PREFERS / CONSTRAINS edge weights, and normative constraint sets are stored as linked sub-graphs in the same substrate.
+The base triple `(CustomerRights, constrains, RefundProcess)` is stored once in the shared SPO/quad backbone. The `axiological_metadata` envelope records the deontic rules that produce a verdict. Runtime authorization is Commit, Forbid, or Refuse to Act. A preference ordering may explain why a rule exists; it is not itself a permission.
 
 ## Example Governance Artifacts
 

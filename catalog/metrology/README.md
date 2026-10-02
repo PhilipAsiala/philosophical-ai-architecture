@@ -1,6 +1,6 @@
 # Metrology Catalog
 
-Metrology is the measurement and data foundation layer. It ensures data is ingestion-ready, quality-assured, versioned, governed, and discoverable before higher layers consume it.
+Metrology is the probabilistic measurement layer. It qualifies observations — calibration, error bounds, disagreement, provenance — and does not commit entities.
 
 ## Executive Summary
 
@@ -21,7 +21,7 @@ See the strategic rationale in [ARCHITECTURE.md](../../ARCHITECTURE.md) and the 
 ## Integration Points
 
 - Below: infrastructure and storage systems
-- Above: [Ontology](../ontology/README.md) consumes clean, governed datasets
+- Above: [Epistemology](../epistemology/README.md) consumes qualified observations when forming a proposal. Ontology may later commit a categorical fact; Metrology does not.
 
 ## Leadership Lens
 

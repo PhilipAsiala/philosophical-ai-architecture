@@ -22,6 +22,7 @@ This repository is the canonical reference for the **Philosophical AI Architectu
 
 - The Philosophical AI Architecture and its term hierarchy
 - **Business-first framing** — MOEPA philosophical disciplines as business outcomes leaders must own
+- The dual-domain partition: probabilistic proposal (Metrology, Epistemology) and deterministic arbitration (Ontology, Praxeology, Axiology)
 - Cognition, Affect, Conation mapped to MOEPA layers
 - The MOEPA 5-Layer Framework (intake scoring and per-layer leadership questions)
 - Architectural evolution rules for builders — ([guidelines](MOEPA-Architectural-Governance-and-Evolution-Guidelines.md); not leader-facing)

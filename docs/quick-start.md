@@ -2,7 +2,7 @@
 
 ## What This Is
 
-The **Philosophical AI Architecture** decodes Intelligence into governable software — mapping Cognition, Affect, and Conation into the **MOEPA 5-Layer Framework** (Metrology, Ontology, Epistemology, Praxeology, Axiology), anchored by an organization-owned **Data Substrate** and **MOEPA Catalog**.
+The **Philosophical AI Architecture** decodes Intelligence into governable software. The **MOEPA Cognitive Architecture** (Metrology, Ontology, Epistemology, Praxeology, Axiology) splits at runtime into a probabilistic domain that proposes and a deterministic domain that arbitrates. Axiology is the final arbiter: Commit, Forbid, or Refuse to Act. The organization-owned **Data Substrate** and **MOEPA Catalog** hold the record.
 
 See the [Glossary](glossary.md) and [Pitch Strategy](pitch-strategy.md) for term definitions.
 

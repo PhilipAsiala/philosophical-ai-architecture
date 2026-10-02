@@ -1,65 +1,52 @@
 # Layered Architecture Diagram
 
-This diagram shows the Philosophical AI Architecture stack as a layered flow from measurable signals and domain structure up through knowledge validation, operational action, and value governance. The **Data Substrate** (Set-Theoretic Backbone) is the shared SPO/quad + lakehouse storage medium that all five layers write to and read from; it is not a scored layer.
+This diagram shows the control flow of the MOEPA Cognitive Architecture. Metrology and Epistemology propose. Ontology, Praxeology, and Axiology govern. The **Data Substrate** stores observations and envelopes immediately, and categorical triples only after Axiology returns Commit. It is not a scored layer.
 
 ```mermaid
 graph TD
-    SUB[["Data Substrate<br/>(Set-Theoretic Backbone)<br/>SPO/Quad + Lakehouse<br/><i>shared storage — not a scored layer</i>"]]
+    SUB[["Data Substrate<br/>SPO/Quad + Lakehouse<br/><i>commitments written only on Commit</i>"]]
 
-    A[Metrology] --> B[Ontology]
-    B --> C[Epistemology]
-    C --> D[Praxeology]
-    D --> E[Axiology]
+    A["Metrology<br/>(probabilistic)"] --> C["Epistemology<br/>(probabilistic)"]
+    C -->|"proposal"| B["Ontology<br/>(deterministic)"]
+    B --> D["Praxeology<br/>(deterministic)"]
+    D --> E["Axiology<br/>(final arbiter)"]
 
-    A --- A1[Measurements, telemetry, and evidence capture]
-    A --- A2[Data quality, provenance, and observability]
+    A --- A1[Calibration, error bounds, disagreement]
+    C --- C1["Belief, Defeater, or Ignorance"]
+    B --- B1[Categorical entities — no confidence on the schema]
+    D --- D1[Action space and procedural preconditions]
+    E --- E1["Commit, Forbid, or Refuse to Act"]
 
-    B --- B1[Entities, relationships, and domain boundaries]
-    B --- B2[Shared schemas, concepts, and semantic structure]
-
-    C --- C1[Truth evaluation, validation, and uncertainty handling]
-    C --- C2[Inference rules, justification, and verification loops]
-
-    D --- D1[Decision flows, orchestration, and agent execution]
-    D --- D2[Feedback cycles, adaptation, and operational policy]
-
-    E --- E1[Human values, ethics, and strategic priorities]
-    E --- E2[Governance constraints, compliance, and acceptable outcomes]
-
-    A -. stores into .-> SUB
-    B -. stores into .-> SUB
-    C -. stores into .-> SUB
-    D -. stores into .-> SUB
-    E -. stores into .-> SUB
+    A -. observation .-> SUB
+    C -. epistemic envelope .-> SUB
+    E -->|"Commit"| SUB
 ```
 
 ## Reading Guide
 
-- **Data Substrate** is the shared SPO/quad backbone and lakehouse that all five layers store into; it is the set-theoretic representation medium and is **not** a scored layer.
-- **Metrology** establishes the empirical base by defining what is measured, how signals are captured, and how evidence quality is maintained.
-- **Ontology** organizes reality into usable structures, including entities, relationships, boundaries, and shared semantic models.
-- **Epistemology** determines what can be treated as knowledge through validation, reasoning, traceability, and uncertainty-aware verification.
-- **Praxeology** translates knowledge into action through workflows, orchestration, decision logic, and adaptive execution.
-- **Axiology** governs the entire stack through values, ethics, policy constraints, and definitions of acceptable outcomes.
+- **Data Substrate** holds the SPO/quad backbone and lakehouse. Observations and proposals may be stored before a verdict. A categorical triple is written on Commit. The substrate is **not** a scored layer.
+- **Metrology** (probabilistic) qualifies observations: calibration, error bounds, disagreement.
+- **Epistemology** (probabilistic) proposes Belief, Defeater, or Ignorance. It does not authorize action.
+- **Ontology** (deterministic) accepts only categorical candidates. Confidence stays off the entity schema.
+- **Praxeology** (deterministic) admits a transition only when the action space and its procedural preconditions hold.
+- **Axiology** (deterministic, final arbiter) returns Commit, Forbid, or Refuse to Act.
 
-## Why this is layered
+## Why the flow is split
 
-The stack is intentionally cumulative:
+The probabilistic domain is allowed to be uncertain. The deterministic domain is not allowed to be unsure about permission.
 
-1. **Metrology** provides the measurable inputs.
-2. **Ontology** gives those inputs structure and meaning.
-3. **Epistemology** tests whether the resulting claims are justified.
-4. **Praxeology** uses justified knowledge to drive action.
-5. **Axiology** evaluates whether those actions align with human and institutional values.
+1. **Metrology** measures.
+2. **Epistemology** proposes, including the right to say "I don't know."
+3. **Ontology** shapes a discrete candidate and refuses to store uncertainty as existence.
+4. **Praxeology** tests viability.
+5. **Axiology** commits, forbids, or refuses. Only Commit changes committed state.
 
 ## Design implication for AI architecture
 
-In an AI system, each layer answers a different question:
+- **Metrology:** How good is this observation?
+- **Epistemology:** Is this a belief, a defeater, or ignorance?
+- **Ontology:** What categorical thing would this be, if we committed it?
+- **Praxeology:** Is that transition in the action space?
+- **Axiology:** Commit, Forbid, or Refuse to Act?
 
-- **Metrology:** What are we observing?
-- **Ontology:** What does it represent?
-- **Epistemology:** How do we know it is true or reliable?
-- **Praxeology:** What should the system do?
-- **Axiology:** What should the system never violate, and what outcomes matter most?
-
-Taken together, the diagram is not just a conceptual ladder; it is a control architecture for building AI systems that are measurable, structured, explainable, effective, and aligned.
+The diagram is the control architecture: statistical inference may propose; discrete governance decides.

@@ -5,5 +5,5 @@ This folder contains Mermaid diagrams illustrating the Philosophical AI Architec
 | File | Purpose |
 |---|---|
 | [moepa-stack.md](moepa-stack.md) | Full 5-layer stack with Data Substrate |
-| [information-flow.md](information-flow.md) | How information moves across layers (semantic ingestion, MCP boundary) |
+| [information-flow.md](information-flow.md) | Probabilistic proposal through deterministic arbiter |
 | [owned-vs-rented.md](owned-vs-rented.md) | Own vs. rent comparison diagram |

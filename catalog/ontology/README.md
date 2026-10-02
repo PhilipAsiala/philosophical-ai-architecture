@@ -1,6 +1,6 @@
 # Ontology Catalog
 
-Ontology is the structured reality layer. It transforms governed data into entities, relationships, taxonomies, and semantic meaning that can be reasoned over.
+Ontology is the deterministic structure layer. Entities and relations are categorical. Confidence, probability, and "maybe" are not properties of existence; they stay on the epistemic envelope.
 
 ## Executive Summary
 
@@ -18,8 +18,9 @@ See the strategic rationale in [ARCHITECTURE.md](../../ARCHITECTURE.md) and the 
 
 ## Integration Points
 
-- Below: [Metrology](../metrology/README.md) provides quality-assured source data
-- Above: [Epistemology](../epistemology/README.md) uses semantic context for grounded retrieval and validation
+- Schema is available to [Epistemology](../epistemology/README.md) as the categorical model a proposal must match
+- Instance triples are written only after [Axiology](../axiology/README.md) returns Commit
+- [Metrology](../metrology/README.md) observations are inputs to proposals, not entity writes
 
 ## Leadership Lens
 

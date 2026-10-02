@@ -39,10 +39,14 @@ If a leader-facing document mentions MCP, RAG, Iceberg, LangGraph, or similar be
 | **Affect** (valuing) | How the system encodes what matters and what is forbidden | Axiology |
 | **Conation** (acting) | How the system executes decisions under human oversight | Praxeology |
 
-**Philosophy vs. psychology in the stack:**
+**Runtime partition (say this when the audience is technical, or when a vendor treats a score as a decision):**
 
-- **Philosophy** is the operating system — the strict logical rules for defining reality and truth (Metrology, Ontology, Epistemology).
-- **Psychology** is the mechanics of behavior — how values and execution drives steer the cognitive engine (Axiology, Praxeology).
+| Domain | Layers | What leaders should hear |
+|---|---|---|
+| Probabilistic | Metrology, Epistemology | The system may measure and propose, including "I don't know." |
+| Deterministic | Ontology, Praxeology, Axiology | Only these layers commit structure, admit an action, or permit it. |
+
+Axiology is the final arbiter: **Commit**, **Forbid**, or **Refuse to Act**. A confidence number is not approval.
 
 **The mission:** We do not build black boxes. We build auditable, institutional brains.
 
@@ -56,7 +60,7 @@ Never conflate the overarching system with the operational tool.
 |---|---|---|
 | **Philosophical AI Architecture** | The overarching enterprise ecosystem: Data Substrate, MOEPA Catalog, security guardrails, own-vs-rent strategy, and cognitive control plane | Pitching the whole system; README; strategic docs |
 | **MOEPA 5-Layer Framework** | The operational engineering blueprint and governance engine *inside* the architecture: five layers, intake scoring, GO / CONDITIONAL GO / NO-GO rubric | Engineering translation; project intake; layer-by-layer evaluation |
-| **MOEPA Cognitive Architecture** | The technical stack specification: storage mapping, catalog integration, recommended tools, implementation playbook | `ARCHITECTURE.md`; architects and builders |
+| **MOEPA Cognitive Architecture** | The technical stack specification: dual-domain control, storage mapping, catalog integration, implementation playbook | `ARCHITECTURE.md`; architects and builders |
 | **Data Substrate** | The organization-owned knowledge library — truth, values, rules, and lineage in open formats | Always a physical metaphor; never a "vendor database" |
 | **MOEPA Catalog** | The routing and governance catalog — discoverability, deduplication, versioning, intake evidence | Enterprise and public sector intake lever; demand management |
 
