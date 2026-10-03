@@ -45,7 +45,9 @@ Runtime control uses a second cut, the **dual-domain partition**:
 | **Probabilistic** | Metrology, Epistemology | Measure and propose. Belief, Defeater, and Ignorance are distinct. |
 | **Deterministic** | Ontology, Praxeology, Axiology | Commit structure, admit actions, and arbitrate. |
 
-**Axiology is the final arbiter.** It returns Commit, Forbid, or Refuse to Act. A confidence score is not a permission.
+**Axiology is the final arbiter.** The guardrail's external result is committed or blocked. A confidence score is not a permission.
+
+The mind is probabilistic in handling evidence, and non-probabilistic in its commitments.
 
 **The mission:** Build auditable, institutional brains. Rent commodity compute. Own the truth, the values, and the rules.
 
@@ -179,7 +181,8 @@ ARCHITECTURE.md                    ← MOEPA Cognitive Architecture (technical s
 │
 ├── catalog/                               ← MOEPA Catalog (capabilities, tools, scoring)
 ├── diagrams/                              ← Architecture diagrams
-└── examples/                              ← Scenario walkthroughs (public-sector scenarios)
+├── examples/                              ← Scenario walkthroughs (public-sector scenarios)
+└── reference/                             ← Guardrail reference (no LLM client)
 ```
 
 ---
@@ -210,7 +213,7 @@ Open-source reference for the Philosophical AI Architecture. Feedback welcome vi
 - **Adapt for your organization:** MIT-licensed — fork and modify freely for your own use
 - **Contribution policy:** [CONTRIBUTING.md](CONTRIBUTING.md)
 
-> Theory and documentation only. No production code or working agents.
+> Documentation plus a small guardrail reference in [reference/](reference/). That package does not call a language model and is not a production runtime.
 
 ---
 

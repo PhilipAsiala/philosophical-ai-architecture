@@ -59,18 +59,45 @@ Every component, data model, and agent workflow belongs to one operational domai
 - **Axiology is the final arbiter of systemic commitment.** It returns exactly one of three permissions: **Commit**, **Forbid**, or **Refuse to Act**. It does not return a probability, a score, or a confidence that something is allowed. **Refuse to Act** is the correct verdict when the proposal is Ignorance or carries an unresolved defeater. **Forbid** is the correct verdict when the act is in the action space but violates a value, safety, or compliance rule. **Commit** is the only verdict that authorizes a write or an external effect.
 
 ### 1.4 Control Flow: Probabilistic Proposal → Deterministic Arbiter
-No layer in the probabilistic domain may write a committed fact or execute an action. The handoff is one-way until Axiology returns a verdict.
+The mind is probabilistic in handling evidence, and non-probabilistic in its commitments.
 
-1. **Measure (Metrology).** Qualify the observation: value, unit, calibration, error bounds, and any empirical disagreement. Persist the observation as measurement, not as an ontological commitment.
-2. **Propose (Epistemology).** Integrate the qualified evidence into one proposal whose epistemic state is Belief, Defeater, or Ignorance. Attach citations and confidence only inside the epistemic envelope. If the warranted output is Ignorance or a defeater, say so. Do not coerce that state into a low probability and continue.
-3. **Shape (Ontology).** Accept a candidate categorical state only when it matches a discrete schema. Reject any write that would place confidence, probability, or "maybe" onto the entity. The candidate remains uncommitted until step 5.
-4. **Admit (Praxeology).** Test the candidate transition against the action space: current state, allowed verbs, procedural preconditions, and required human checkpoints. A failed admission stops the flow. It does not lower a confidence score.
-5. **Arbitrate (Axiology).** Issue **Commit**, **Forbid**, or **Refuse to Act**.
-   - **Commit** writes the ontological triple (or equivalent row) and authorizes the admitted action. The epistemic envelope is stored beside the triple, never inside it.
-   - **Forbid** blocks the action and records the violated rule. No entity is committed for that act.
-   - **Refuse to Act** commits nothing and executes nothing. The ignorance or defeater is preserved so a later proposal can revise the belief without pretending a decision was made.
+A language model may propose. It may not commit. The external result of the guardrail is binary: **PASS / COMMITTED** or **FAIL / BLOCKED** (safe refusal). Inside a block, the audit still records whether Axiology **forbade** the act or **refused to act**.
 
-Orchestrators may call Metrology and Epistemology to form a proposal. They may not treat the model's token probabilities, a RAG score, or a calibrated confidence as authorization. Tool execution that changes state is reachable only after an axiological **Commit**.
+```
+[User / environment query]
+        │
+        ▼
+┌───────────────────────────────────────────────────────────┐
+│ 1. PROBABILISTIC INFERENCE (Epistemology and Metrology)   │
+│    LLM output is an uncommitted candidate                 │
+│    Metrology telemetry (confidence, uncertainty) attaches │
+│    StateCollapseEngine reduces that payload to one        │
+│    discrete action. It does not sample.                   │
+└────────────────────────────┬──────────────────────────────┘
+                             │ proposed state transition
+                             ▼
+┌───────────────────────────────────────────────────────────┐
+│ 2. DETERMINISTIC POLICY AGENTS                            │
+│    OntologyPolicyAgent    — grounded entities and schema  │
+│    PraxeologyPolicyAgent  — preconditions, resources      │
+│    AxiologyPolicyAgent    — binary compliance, last       │
+└────────────────────────────┬──────────────────────────────┘
+                             │
+              ┌──────────────┴──────────────┐
+              ▼                             ▼
+     PASS / COMMITTED                 FAIL / BLOCKED
+     discrete system action           fallback / safe refusal
+```
+
+1. **Propose.** Epistemology returns a candidate action or response. Metrology attaches telemetry. The candidate is not a system action. Belief, Defeater, and Ignorance stay distinct. Ignorance is not rewritten as a low probability.
+2. **Collapse.** `StateCollapseEngine` maps the candidate onto one discrete action. A unique mode of a distribution becomes that action. A tie, a defeater, or ignorance produces no commit-eligible action. The numeric confidence is stored on the audit record and is not an input to any policy agent.
+3. **Verify (Ontology).** `OntologyPolicyAgent` accepts the discrete action only when every referenced entity id exists and every triple matches the relation schema. A missing entity is a hallucination and fails the stage. The agent does not read a score.
+4. **Validate (Praxeology).** `PraxeologyPolicyAgent` checks preconditions, postconditions, and resource availability for that operation. Failure blocks. It does not lower a confidence.
+5. **Arbitrate (Axiology).** `AxiologyPolicyAgent` is the last gate. It returns pass only when the action is commit-eligible and not forbidden. A forbidden action fails here even when confidence is 0.99. Ignorance and unresolved defeaters fail as Refuse to Act.
+
+**PASS / COMMITTED** writes the RDF triple and the Iceberg commit metadata (schema id, snapshot id, partition). The entity table has no confidence column. **FAIL / BLOCKED** writes nothing. Forbid and Refuse to Act are both blocks; the audit rule id distinguishes them.
+
+The reference package in [reference/](reference/) implements this pipeline with no language-model client. A provider adapter's job ends when it has built an `UncommittedCandidate`.
 
 ## 2. MOEPA Layer Definitions — Philosophical Grounding & Practical Translation
 Each layer is named after a classical philosophical discipline and grounded in a specific mathematical formalization. This ensures the framework is both intellectually coherent and technically implementable.

@@ -1,6 +1,8 @@
 # Information Flow Across MOEPA Layers
 
-How a case moves through the Philosophical AI Architecture: the probabilistic domain proposes, and the deterministic domain arbitrates. Nothing is committed until Axiology returns **Commit**.
+How a case moves through the Philosophical AI Architecture. Epistemology and Metrology propose an uncommitted candidate. `StateCollapseEngine` reduces it to one discrete action. Ontology, Praxeology, and Axiology then run as deterministic policy agents. The external result is **committed** or **blocked**.
+
+The mind is probabilistic in handling evidence, and non-probabilistic in its commitments. The runnable form of this handoff is [reference/](../reference/).
 
 ---
 

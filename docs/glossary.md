@@ -53,7 +53,15 @@ The only permission Axiology may return, and the only authorization for systemic
 
 ## Probabilistic Proposal
 
-The object Epistemology hands to the deterministic domain: an epistemic state, citations, and (when the state is Belief) a calibrated confidence. A proposal is not a permission.
+The object Epistemology hands to the deterministic domain: an epistemic state, citations, and (when the state is Belief) a calibrated confidence. A proposal is not a permission. In the reference pipeline this object is an `UncommittedCandidate`.
+
+## State Collapse
+
+The deterministic step that turns a continuous proposal into one discrete action before any policy agent runs. A unique mode is kept. A tie, a defeater, or ignorance yields no commit-eligible action. Collapse does not sample, and it does not authorize.
+
+## Deterministic Policy Agent
+
+A rule, schema, or policy-as-code check that returns pass or fail. The reference agents are `OntologyPolicyAgent`, `PraxeologyPolicyAgent`, and `AxiologyPolicyAgent`, in that order. Their input has no confidence field. Axiology is last. The pipeline outcome is committed or blocked.
 
 ## Data Substrate (Set-Theoretic Backbone)
 
