@@ -2,49 +2,48 @@
 
 from __future__ import annotations
 
-from moepa_guard.agents.policy.world import OperationSpec, WorldSnapshot
+import tempfile
+from pathlib import Path
+
+from moepa_guard.agents.policy.world import WorldSnapshot
+from moepa_guard.mounts.bundle import BundleSync, seed_rules
+from moepa_guard.mounts.graph import GraphProjection
+from moepa_guard.mounts.ledger import IcebergLedger
 from moepa_guard.schemas.epistemic import EpistemicClaim, EpistemicState, MetrologyTelemetry
 from moepa_guard.schemas.ontology import OntologicalEntity, RdfTriple, RelationRule
 from moepa_guard.schemas.proposal import UncommittedCandidate
 
 
 def benefits_world() -> WorldSnapshot:
-    """One known applicant and two operations, one of which axiology forbids."""
+    """Iceberg holds the applicant and the Rego. Graph and OPA are mounts."""
 
     applicant = OntologicalEntity(
         entity_id="Applicant:TX12345",
         entity_type="Applicant",
         attributes={"program": "benefits"},
     )
-    return WorldSnapshot(
-        entities={applicant.entity_id: applicant},
-        triples=(
+    ledger = IcebergLedger(
+        entities=[applicant],
+        triples=[
             RdfTriple(
                 subject="Applicant:TX12345",
                 predicate="enrolledIn",
                 object="benefits",
-            ),
-        ),
-        relation_rules=(
+            )
+        ],
+        relation_rules=[
             RelationRule(subject_type="Applicant", predicate="enrolledIn", object_type=None),
-        ),
-        operations={
-            "record_income": OperationSpec(
-                action="record_income",
-                preconditions={"evidence_present": True},
-                required_resources={"review_slots": 1},
-                postconditions=("ledger_appended",),
-            ),
-            "export_pii": OperationSpec(
-                action="export_pii",
-                preconditions={"vendor_request": True},
-                required_resources={"review_slots": 1},
-                postconditions=("ledger_appended",),
-            ),
-        },
+        ],
+        policy_rules=seed_rules(),
+    )
+    bundle_dir = Path(tempfile.mkdtemp(prefix="moepa-bundle-"))
+    bundle = BundleSync().publish(ledger, bundle_dir)
+    return WorldSnapshot(
+        ledger=ledger,
+        graph=GraphProjection(ledger),
+        bundle=bundle,
         resources={"review_slots": 2},
         satisfiable_postconditions=frozenset({"ledger_appended"}),
-        forbidden_actions=frozenset({"export_pii"}),
         schema_id=3,
         table="ontological_entity",
     )

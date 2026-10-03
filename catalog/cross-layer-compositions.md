@@ -213,16 +213,16 @@ A reference stack for a well-integrated, self-hosted MOEPA implementation. All l
 tools are exposed through **MCP servers or facades** — orchestrators never call
 underlying APIs directly.
 
-| Layer | Primary Tool | Integration Point |
+| Layer | Source of truth | Execution mount |
 |---|---|---|
-| **MCP (cross-cutting)** | Model Context Protocol servers and facades | Sole interface for orchestrator tool discovery and invocation |
-| Data Substrate | Apache Iceberg + Neo4j | All layers read/write via MCP-governed substrate APIs |
-| Metrology | Docling/Unstructured + Great Expectations + OpenLineage | Semantic ingestion → Proto-SPOs; quality validation before layer 2+ |
-| Ontology | Neo4j + Chroma | Graph traversal + vector retrieval via MCP tools |
-| Epistemology | LlamaIndex + Guardrails AI | RAG grounded in Ontology via MCP; output validated by Axiology |
-| Praxeology | LangGraph/Temporal + Open Policy Agent | State machine execution via MCP; OPA enforces Axiology constraints |
-| Axiology | OPA + LLM Guard | Policy code enforced across Praxeology via MCP tools |
-| Observability | OpenTelemetry | Spans across all layers and MCP tool calls; fed to compliance monitoring |
+| **MCP (cross-cutting)** | Tool contracts in the catalog | Sole interface for orchestrator discovery. Not a store. |
+| Data substrate | Apache Iceberg | Ledger for every layer |
+| Metrology | Apache Iceberg | SQL / Trino, after semantic ingestion and quality checks |
+| Epistemology | Apache Iceberg | Qdrant for embeddings and partial beliefs. Proposals only. |
+| Ontology | Apache Iceberg | Graph engine over the entity and triple tables |
+| Praxeology | Apache Iceberg | OPA package `moepa.praxeology` (`allow_action`) |
+| Axiology | Apache Iceberg | OPA package `moepa.axiology` (`deny_action`), same bundle |
+| Observability | Apache Iceberg | OpenTelemetry spans written back to the ledger |
 
 ---
 

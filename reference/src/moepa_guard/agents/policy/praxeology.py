@@ -1,13 +1,14 @@
-"""Action-space checks: preconditions, postconditions, and resources."""
+"""Praxeology mount: package moepa.praxeology in the OPA bundle."""
 
 from __future__ import annotations
 
 from moepa_guard.agents.policy.base import DeterministicPolicyAgent, PolicyResult, PolicyView
 from moepa_guard.agents.policy.world import WorldSnapshot
+from moepa_guard.mounts.decision_input import policy_document
 
 
 class PraxeologyPolicyAgent(DeterministicPolicyAgent):
-    """Assert that the discrete operation is viable in the current world."""
+    """Ask allow_action. The rule text lives in the bundle, not in this class."""
 
     name = "praxeology"
 
@@ -19,42 +20,18 @@ class PraxeologyPolicyAgent(DeterministicPolicyAgent):
                 rule_id="PRX-NO-OP",
                 detail="No operation was proposed.",
             )
-        spec = world.operations.get(proposal.action)
-        if spec is None:
+        document = policy_document(proposal, world)
+        allowed = world.bundle.boolean("moepa.praxeology", "allow_action", document)
+        if not allowed:
             return PolicyResult(
                 agent=self.name,
                 passed=False,
-                rule_id="PRX-UNKNOWN-OPERATION",
-                detail=f"Action {proposal.action} is not in the action space.",
+                rule_id="PRX-IMPOSSIBLE",
+                detail=f"Action {proposal.action or '(none)'} is impossible in this state.",
             )
-        for name, expected in spec.preconditions.items():
-            if proposal.flags.get(name) is not expected:
-                return PolicyResult(
-                    agent=self.name,
-                    passed=False,
-                    rule_id="PRX-PRECONDITION",
-                    detail=f"Precondition {name}={expected} does not hold.",
-                )
-        for name, need in spec.required_resources.items():
-            available = world.resources.get(name, 0)
-            if available < need:
-                return PolicyResult(
-                    agent=self.name,
-                    passed=False,
-                    rule_id="PRX-RESOURCE",
-                    detail=f"Resource {name} has {available}, needs {need}.",
-                )
-        for name in spec.postconditions:
-            if name not in world.satisfiable_postconditions:
-                return PolicyResult(
-                    agent=self.name,
-                    passed=False,
-                    rule_id="PRX-POSTCONDITION",
-                    detail=f"Postcondition {name} cannot be satisfied.",
-                )
         return PolicyResult(
             agent=self.name,
             passed=True,
             rule_id="PRX-ADMITTED",
-            detail=f"Action {proposal.action} is inside the action space.",
+            detail=f"Action {proposal.action} is possible.",
         )

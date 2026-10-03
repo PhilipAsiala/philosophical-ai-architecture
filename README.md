@@ -47,7 +47,7 @@ Runtime control uses a second cut, the **dual-domain partition**:
 
 **Axiology is the final arbiter.** The guardrail's external result is committed or blocked. A confidence score is not a permission.
 
-The mind is probabilistic in handling evidence, and non-probabilistic in its commitments.
+The mind is probabilistic in handling evidence, and non-probabilistic in its commitments. Apache Iceberg is the ledger for every layer. Ontology is read through a graph mount. Praxeology and Axiology are separate Rego packages in one Open Policy Agent bundle.
 
 **The mission:** Build auditable, institutional brains. Rent commodity compute. Own the truth, the values, and the rules.
 

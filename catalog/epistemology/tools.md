@@ -8,7 +8,7 @@ These tool categories matter because they determine whether validation, explanat
 
 | Capability | Tools | Leadership Decision Lens |
 | --- | --- | --- |
-| Retrieval infrastructure | OpenSearch, Elasticsearch (self-managed), PGVector, Qdrant, Chroma | Keep indexes and source mappings inside controlled infrastructure so evidence remains exportable. |
+| Retrieval mount | Qdrant over vectors stored in Iceberg | Qdrant serves similarity and partial beliefs for proposals. It is not the source of truth and it is not a permission. |
 | RAG orchestration (MCP-exposed) | LlamaIndex, Haystack (behind MCP servers); LangChain only as legacy facade | Retrieval and grounding policies must be inspectable, versioned, and reachable through MCP — not called directly from orchestrator glue code. |
 | MCP integration | Model Context Protocol servers and facades | Epistemology capabilities (retrieval, verification, citation) exposed as MCP tools for governed orchestrator access. |
 | Validation and guardrails | Guardrails AI, NeMo Guardrails, custom policy engines | Choose options that allow leadership and auditors to inspect how conclusions are checked. Guardrails AI is particularly strong for open, declarative constraints. |

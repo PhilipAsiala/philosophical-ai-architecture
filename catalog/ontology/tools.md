@@ -8,7 +8,7 @@ These tool categories matter because they determine whether the organization own
 
 | Capability | Tools | Leadership Decision Lens |
 | --- | --- | --- |
-| Graph storage and querying | Neo4j (self-managed), JanusGraph, ArangoDB | Favor options that keep graph structures exportable and under institutional control. Neo4j is the most mature and widely supported choice for government knowledge graphs. |
+| Graph mount over Iceberg | PuppyGraph, Memgraph, Ontop, Neo4j (fed from Iceberg) | The graph is the ontology execution engine. Iceberg remains the ledger. If a node is not in the projection, it does not exist. |
 | RDF and semantic web | Apache Jena, RDF4J, Blazegraph, Oxigraph | Standards-based options are useful when long-term interoperability and W3C compliance matter. |
 | Vector + hybrid search (for RAG) | Chroma, Qdrant, Weaviate | Self-hosted vector stores keep embeddings under agency control rather than sending knowledge to vendor embedding APIs. |
 | Ontology modeling / authoring | Protégé, (self-hosted TopBraid or similar) | Semantic definitions should be treated as governed institutional assets, not project artifacts. Protégé is the established open tool in government/academic settings. |

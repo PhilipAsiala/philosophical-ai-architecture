@@ -2,7 +2,7 @@
 
 ## Is SPO/quad storage required on day one?
 
-No — but it is **imperative at end state**. The repository requires every agency-owned Data Substrate to **evolve toward** owned SPO/quad representation with layer metadata envelopes on a federated hypergraph + lakehouse. Agencies may start with open-format lakehouse storage (Iceberg/Parquet) using SPO-compatible schemas, then add a pilot triple store, then enterprise graph and federation. Interim storage is acceptable when the data is agency-owned, provenance-complete, open-format, and backed by a documented migration path to end state. See [End State vs. Evolution Path](Data-Substrate-Concept.md#end-state-vs-evolution-path).
+No — but it is **imperative at end state**. The ledger is Apache Iceberg. A graph database and an Open Policy Agent bundle are mounts over those tables, not a second copy of the facts. Agencies may start with Iceberg/Parquet using SPO-compatible schemas, then mount a graph for ontology and sync praxeology and axiology Rego into one OPA bundle. Interim storage is acceptable when it is agency-owned, open-format, provenance-complete, and backed by a documented path to that end state. See [End State vs. Evolution Path](Data-Substrate-Concept.md#end-state-vs-evolution-path).
 
 ## Is the Data Substrate a sixth layer?
 

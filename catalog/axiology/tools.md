@@ -18,7 +18,7 @@ These tool categories matter because they determine whether policy, privacy, fai
 
 ## Deployment Notes
 
-- **Policy-as-code**: OPA + Rego is mature, widely adopted in government, and integrates with Kubernetes, API gateways, CI/CD, and application code.
+- **Policy-as-code**: Axiology is the Rego package `moepa.axiology` (`deny_action`). It is the final arbiter in the same OPA bundle as praxeology. A possible act can still be denied. Rule text is versioned in Iceberg and synced into the bundle.
 - **Guardrails at inference time**: Guardrails AI can run in-process; combine with context separation for stronger constitutional patterns.
 - **Bias & fairness**: Fairlearn and AIF360 produce the kinds of metrics and reports that oversight bodies expect.
 - **Evidence**: Use OSCAL or equivalent structured formats so compliance artifacts are machine-readable and portable.

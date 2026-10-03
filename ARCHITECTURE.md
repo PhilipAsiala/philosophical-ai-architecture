@@ -99,6 +99,8 @@ A language model may propose. It may not commit. The external result of the guar
 
 The reference package in [reference/](reference/) implements this pipeline with no language-model client. A provider adapter's job ends when it has built an `UncommittedCandidate`.
 
+On the deterministic side the execution engines are mounts, not a second memory. Ontology is answered by a graph projection of the Iceberg tables. Praxeology and Axiology are separate Rego packages in one OPA bundle synced from those same tables. The full map is §5.1.2.
+
 ## 2. MOEPA Layer Definitions — Philosophical Grounding & Practical Translation
 Each layer is named after a classical philosophical discipline and grounded in a specific mathematical formalization. This ensures the framework is both intellectually coherent and technically implementable.
 
@@ -367,15 +369,45 @@ Provenance three-way split (to avoid double-claiming):
 
 #### 5.1.1 Per-Layer Storage Mapping
 
-Each MOEPA layer has a natural philosophical and computational representation for its knowledge artifacts. The shared substrate stores the **base triple once**; each layer attaches a **metadata envelope** (or a linked sub-graph) without duplicating the base fact.
+Apache Iceberg is the universal immutable ledger. Every layer writes its records there. No execution engine is a second source of truth. Each layer then **mounts** the tables it needs into an engine shaped for that kind of reasoning.
 
-| Layer | Natural Representation | Storage on Shared Substrate |
-| :--- | :--- | :--- |
-| **Data / Set Theory** *(substrate native)* | Raw mathematical objects: sets, multisets, relations, functions, probability distributions, tuples, arrays, tensors | Tabular datasets (Apache Iceberg / Polaris), Parquet files, matrix/vector stores. This is the substrate's own native representation — not a scored MOEPA layer. |
-| **Ontology / Graph** | Entities, categories, hierarchies, typed relations; graphs, taxonomies, semantic networks. Existence is categorical. | Native graph DBs (Neo4j, property graphs) or RDF-style triples; nodes = entities, edges = relations. Schema rejects confidence, probability, and "maybe" as properties of an entity. |
-| **Epistemology** | Beliefs, defeaters, ignorance, evidence trails, calibrated confidence, justificatory provenance (Bayesian networks, argumentation frameworks) | Epistemic envelope beside the triple: `state` ∈ {belief, defeater, ignorance}, confidence (null when ignorant), justification, defeater list, PROV-O links. The envelope is not part of the entity schema. |
-| **Praxeology** | Action space, state-transition rules, procedural preconditions, human checkpoints, action logs | Discrete transition records: current state, verb, admitted true/false, failed precondition if any. No confidence edge. |
-| **Axiology** | Deontic rules and the permission set {Commit, Forbid, Refuse to Act}. Preference models may explain why a rule was adopted; they are not the verdict. | Verdict record attached as metadata: `verdict`, rule id, policy version. Weighted value graphs may exist as design-time models. Runtime authorization reads only the verdict. |
+| Layer | Domain | Storage (source of truth) | Execution mount | Role |
+| :--- | :--- | :--- | :--- | :--- |
+| **Metrology** | Probabilistic | Apache Iceberg | SQL / Trino | Confidence, error bounds, calibration, disagreement |
+| **Epistemology** | Probabilistic | Apache Iceberg | Qdrant | Embeddings, partial beliefs, similarity for the proposer. Not a permission. |
+| **Ontology** | Deterministic | Apache Iceberg | Graph database | Discrete entities and relations. If the node is not in the graph, it does not exist. |
+| **Praxeology** | Deterministic | Apache Iceberg | Open Policy Agent | Whether an action is possible given the current state |
+| **Axiology** | Deterministic | Apache Iceberg | Open Policy Agent | Whether an action is permitted. Final arbiter. |
+
+Epistemic envelopes stay beside triples. Entity tables and graph edges do not carry confidence. Belief, Defeater, and Ignorance remain distinct states in the epistemic table that Qdrant indexes. They are not columns on the entity.
+
+#### 5.1.2 Deterministic Mounts
+
+**Ontology → Iceberg → graph.** Tabular scans are the wrong tool for multi-hop relations. A graph engine that reads the Iceberg files (PuppyGraph, Memgraph, Ontop, or an equivalent virtualization) answers existence and relationship queries. The graph is rebuilt from the ledger. It does not own a private copy of the entities.
+
+**Praxeology and Axiology → Iceberg → one OPA bundle, two packages.** Both layers are boolean. They use Rego, in separate namespaces, so possibility and permission cannot be confused.
+
+Praxeology is the physics of the action. The act is possible or it is not:
+
+```rego
+allow_action if {
+    input.requested_state == "transition_to_production"
+    input.current_state == "staged"
+}
+```
+
+If the item is not staged, the transition is impossible. Clearance is not this package's question.
+
+Axiology is the ethics and compliance of the action. It may deny an act that praxeology has already allowed:
+
+```rego
+deny_action if {
+    input.requested_state == "transition_to_production"
+    input.user_clearance < input.required_clearance
+}
+```
+
+Rule text is a versioned Iceberg row. A sync service publishes the latest praxeology and axiology documents as one OPA bundle. The bundle is the execution mount. The ledger remains the memory. Neither package receives a confidence score. A deny from axiology blocks the commit even when the action was possible and the proposer was highly confident.
 
 **Unification principle.** All five layers write to and read from the same SPO-centric hypergraph + lakehouse, under the control flow in §1.4. Probabilistic layers append observations and proposals. Deterministic layers append categorical state, admissions, and verdicts. A federation layer (Trino or equivalent) can ask: *"which committed income triples have a Belief envelope, an admitted transition, and verdict Commit."* That query reads history. It does not create a new commitment.
 
@@ -417,22 +449,19 @@ MCP server or MCP facade. Orchestrators (Bedrock Agents, LangGraph routers,
 policy-governed agent runtimes) discover and invoke tools only through MCP — never
 through direct RAG or data-layer API calls.
 
-- Metrology (Data Foundation): Self-hosted data lakes (MinIO + Iceberg), Great
-  Expectations or Monte Carlo for quality, DataHub for catalog — avoiding
-  external repository/catalog ownership. Semantic document parsing via Docling,
-  Unstructured, or equivalent; ingestion outputs Proto-SPOs with provenance
-  envelopes, exposed through an MCP ingestion server.
-- Ontology: Neo4j or Amazon Neptune (self-managed), internal schema governance;
-  entity resolution and graph queries exposed as MCP tools.
-- Epistemology: Self-hosted retrieval (PGVector/Chroma) plus an inference
-  runtime that returns Belief, Defeater, or Ignorance. RAG is an MCP server
-  that feeds the proposal. It is not an authorization path.
-- Praxeology: Deterministic workflow engines (LangGraph, Temporal, Camunda)
-  whose edges are preconditions, not confidence thresholds. Human checkpoints
-  are states. Transitions are MCP tools.
-- Axiology: OPA/Gatekeeper (or an equivalent policy agent) whose decision
-  set is Commit, Forbid, and Refuse to Act. Golden Master configs are
-  write-locked. State-changing tools call this gate and proceed only on Commit.
+- Metrology: Iceberg tables queried through Trino or direct SQL. Quality
+  frameworks (Great Expectations or equivalent) write calibration and error
+  bounds back to Iceberg. Ingestion produces Proto-SPOs through an MCP server.
+- Epistemology: Qdrant mounted on vectors stored in Iceberg. Retrieval feeds
+  a proposal (Belief, Defeater, or Ignorance). Qdrant is not an authorization
+  path. The proposer is any LLM adapter that stops at an uncommitted candidate.
+- Ontology: a graph engine mounted on the Iceberg entity and triple tables
+  (PuppyGraph, Memgraph, Ontop, or equivalent). MCP tools query the graph.
+  They do not query a second entity store.
+- Praxeology: Rego package `moepa.praxeology` (`allow_action`). State-machine
+  runtimes may sequence work, but possibility is an OPA decision.
+- Axiology: Rego package `moepa.axiology` (`deny_action`) in the same bundle.
+  State-changing tools run only when praxeology allows and axiology does not deny.
 
 ### 6.2 Quick-Start Checklist for New Projects
 - Define Metrology boundary: units, calibration, error bounds, and disagreement rules (internal control, not vendor-owned).

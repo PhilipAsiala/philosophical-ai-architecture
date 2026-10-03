@@ -44,14 +44,14 @@ graph TB
 
 ## Layer Definitions at a Glance
 
-| Layer | Domain | AI Governance Role | Core Tool Examples |
+| Layer | Domain | Storage | Execution mount |
 |---|---|---|---|
-| **5 — Axiology** | Deterministic arbiter | Commit, Forbid, or Refuse to Act | Open Policy Agent, Gatekeeper |
-| **4 — Praxeology** | Deterministic | Which transitions are in the action space | LangGraph, Temporal, Camunda |
-| **3 — Epistemology** | Probabilistic | Belief, Defeater, or Ignorance — proposal only | Owned RAG, calibrated inference |
-| **2 — Ontology** | Deterministic | Categorical entities; no confidence on the schema | Neo4j, Apache Jena, Iceberg |
-| **1 — Metrology** | Probabilistic | Calibration, error bounds, disagreement | Great Expectations, OpenLineage |
-| **Data Substrate** | *(architectural pattern)* | Shared knowledge library; owned by the organization | Iceberg + Parquet + Neo4j + Atlas |
+| **5 — Axiology** | Deterministic arbiter | Apache Iceberg | OPA package `moepa.axiology` |
+| **4 — Praxeology** | Deterministic | Apache Iceberg | OPA package `moepa.praxeology` |
+| **3 — Epistemology** | Probabilistic | Apache Iceberg | Qdrant |
+| **2 — Ontology** | Deterministic | Apache Iceberg | Graph database |
+| **1 — Metrology** | Probabilistic | Apache Iceberg | SQL / Trino |
+| **Data Substrate** | Ledger, not a scored layer | Apache Iceberg | The mounts above |
 
 ---
 

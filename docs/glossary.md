@@ -63,6 +63,14 @@ The deterministic step that turns a continuous proposal into one discrete action
 
 A rule, schema, or policy-as-code check that returns pass or fail. The reference agents are `OntologyPolicyAgent`, `PraxeologyPolicyAgent`, and `AxiologyPolicyAgent`, in that order. Their input has no confidence field. Axiology is last. The pipeline outcome is committed or blocked.
 
+## Execution Mount
+
+A read-only engine over Apache Iceberg. Iceberg remains the source of truth. The end-state mounts are Trino (Metrology), Qdrant (Epistemology), a graph database (Ontology), and one Open Policy Agent bundle (Praxeology and Axiology in separate Rego packages).
+
+## OPA Bundle
+
+The synced execution copy of the praxeology and axiology Rego documents. Rule text is versioned in Iceberg. A sync service publishes the latest documents as one bundle. `moepa.praxeology` defines `allow_action` (possible or impossible). `moepa.axiology` defines `deny_action` (permitted or not). A deny blocks a commit even when the action is possible.
+
 ## Data Substrate (Set-Theoretic Backbone)
 
 The agency-owned knowledge library — the cross-cutting representation medium where truth, values, rules, and lineage live in open, portable formats. At end state: an SPO/quad backbone plus federated lakehouse storage that all five MOEPA layers read from and write to. The substrate holds each base fact once; every layer attaches its own metadata envelope without duplicating the base triple. Explicitly **not** a sixth scored layer. Agencies evolve toward end state incrementally; see [Substrate Evolution Path](#substrate-evolution-path).

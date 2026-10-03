@@ -74,6 +74,8 @@ class GuardrailPipeline:
                     commit=None,
                     blocking_rule_id=result.rule_id,
                 )
+        record = _commit_record(collapsed, self._world)
+        self._world.ledger.commits.append(record)
         return PipelineResult(
             outcome="committed",
             axiological_verdict="commit",
@@ -81,7 +83,7 @@ class GuardrailPipeline:
             collapsed_action=collapsed.action,
             collapse_rule=collapsed.collapse_rule,
             epistemic_confidence=collapsed.confidence,
-            commit=_commit_record(collapsed, self._world),
+            commit=record,
             blocking_rule_id=None,
         )
 

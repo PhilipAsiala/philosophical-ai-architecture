@@ -1,30 +1,33 @@
-"""Final binary gate. The view carries no score."""
+"""Axiology mount: package moepa.axiology in the same OPA bundle."""
 
 from __future__ import annotations
 
 from moepa_guard.agents.policy.base import DeterministicPolicyAgent, PolicyResult, PolicyView
 from moepa_guard.agents.policy.world import WorldSnapshot
+from moepa_guard.mounts.decision_input import policy_document
 
 
 class AxiologyPolicyAgent(DeterministicPolicyAgent):
-    """Commit, or block. The decision reads rules, not a numeric weight."""
+    """Ask deny_action. A possible act can still be denied."""
 
     name = "axiology"
 
     def evaluate(self, proposal: PolicyView, world: WorldSnapshot) -> PolicyResult:
-        if not proposal.commit_eligible or proposal.epistemic_state != "belief":
+        document = policy_document(proposal, world)
+        denied = world.bundle.boolean("moepa.axiology", "deny_action", document)
+        if denied and not proposal.commit_eligible:
             return PolicyResult(
                 agent=self.name,
                 passed=False,
                 rule_id="AX-REFUSE",
-                detail="Refuse to act: the proposal is not a belief eligible to commit.",
+                detail="Refuse to act: the proposal is not eligible to commit.",
             )
-        if proposal.action in world.forbidden_actions:
+        if denied:
             return PolicyResult(
                 agent=self.name,
                 passed=False,
                 rule_id="AX-FORBID",
-                detail=f"Forbid {proposal.action}: it violates a safety or compliance rule.",
+                detail=f"Forbid {proposal.action}: denied by the axiology package.",
             )
         return PolicyResult(
             agent=self.name,

@@ -65,8 +65,19 @@ At maturity, every agency-owned Data Substrate **must** converge on this logical
 - **SPO-centric hypergraph + lakehouse** — graph semantics and tabular storage federated as one queryable, auditable whole
 - **Cross-layer queries** — e.g. high-confidence facts that satisfy axiological fairness and support praxeological auto-approval
 - **Agency ownership throughout** — open formats, full provenance, point-in-time reconstruction
+- **One ledger, specialized mounts** — Apache Iceberg stores every layer. Engines mount those tables and do not become a second source of truth:
 
-This is not optional at end state. A substrate that cannot represent facts as owned SPO/quad records with cross-layer envelopes does not meet the architectural target.
+| Layer | Domain | Storage | Mount |
+|---|---|---|---|
+| Metrology | Probabilistic | Apache Iceberg | SQL / Trino |
+| Epistemology | Probabilistic | Apache Iceberg | Qdrant |
+| Ontology | Deterministic | Apache Iceberg | Graph database |
+| Praxeology | Deterministic | Apache Iceberg | Open Policy Agent (`moepa.praxeology`) |
+| Axiology | Deterministic | Apache Iceberg | Open Policy Agent (`moepa.axiology`) |
+
+Praxeology and Axiology share one OPA bundle and stay in separate Rego packages. Possibility (`allow_action`) is not permission (`deny_action`). The graph answers ontology: a node that is not in the projection does not exist. The specification is [ARCHITECTURE.md](../ARCHITECTURE.md) §5.1.2.
+
+This is not optional at end state. A substrate that cannot represent facts as owned SPO/quad records with cross-layer envelopes, or that lets a graph or a policy engine become the only copy of those facts, does not meet the architectural target.
 
 ### Evolution path (allowed)
 
@@ -77,8 +88,8 @@ Agencies **evolve** toward that end state incrementally. Interim physical implem
 | **1 — Foundation** | Inventory sources; define core entity model; establish provenance standards | Ownership and audit requirements locked in from day one |
 | **2 — Lakehouse** | Iceberg/Parquet for validated tabular facts | Records use SPO-compatible schemas; triple mapping documented |
 | **3 — Pilot graph** | Owned SPO triple store (or JSON triples + SQLite) for one domain | First domain converges to end-state logical model |
-| **4 — Enterprise graph** | Property graph or RDF store integrated with lakehouse | Semantic layer matches SPO/quad backbone |
-| **5 — Federation** | Trino, LangGraph router, or equivalent cross-plane query layer | Full hypergraph + lakehouse end state operational |
+| **4 — Graph mount** | Graph engine reading Iceberg entity and triple files | Ontology queries hit the projection, not a second store |
+| **5 — Policy mount** | Praxeology and axiology Rego versioned in Iceberg and synced as one OPA bundle | Possibility and permission are separate packages over the same ledger |
 
 > **Rule of thumb:** Start where you are. Document the migration path. Every new dataset and AI project must move the institution closer to owned SPO/quad representation — not create another vendor silo.
 

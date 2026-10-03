@@ -22,7 +22,7 @@ flowchart TD
     MCP["MCP Integration Layer\n(orchestrators discover\ntools here only)"]
 
     subgraph SUB["DATA SUBSTRATE (Shared)"]
-        DS["Open-Format Lakehouse\n+ Knowledge Graph\n+ Audit Log\n(Iceberg / Parquet / Neo4j)"]
+        DS["Apache Iceberg ledger\nEntities · Triples · Rego versions\nGraph and OPA mount this"]
     end
 
     subgraph O["LAYER 2 — ONTOLOGY (deterministic)"]

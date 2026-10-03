@@ -20,7 +20,7 @@ These tool categories matter because they determine whether workflow logic, appr
 
 - **Agentic workflows with human oversight**: LangGraph is the leading open-source library designed for stateful, graph-based, human-in-the-loop agent workflows.
 - **Enterprise process governance**: Camunda is mature and widely used in government; strong BPMN + audit features.
-- **Policy-as-code enforcement**: OPA can enforce both workflow rules and Axiology constraints in one place.
+- **Policy-as-code enforcement**: Praxeology is the Rego package `moepa.praxeology` (`allow_action`: possible or impossible). It shares an OPA bundle with axiology and does not decide permission.
 - **Long-running / durable execution**: Temporal is excellent when workflows must survive restarts and provide replay for audits.
 
 ## Leadership Guidance
